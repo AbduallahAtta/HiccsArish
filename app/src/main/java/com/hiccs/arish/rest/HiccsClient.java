@@ -21,21 +21,26 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class HiccsClient {
 
     private static Retrofit sRetrofit;
-   Gson gson = new GsonBuilder()
+    private static Gson gson = new GsonBuilder()
             .setLenient()
             .create();
+
+
     public static Retrofit getsRetrofit(String baseURL) {
         if (sRetrofit == null) {
             Log.v("server_data", "Started to get Retrofit");
+            Log.v("HiccsArish", "Started to get Retrofit");
             sRetrofit = new Retrofit.Builder()
                     .baseUrl(baseURL)
                     // using GsonConverterFactory to convert
                     // JSON response automatically to POGOs "models"
                     .addConverterFactory(GsonConverterFactory.create())
+                    .addConverterFactory(GsonConverterFactory.create(gson))
                     .build();
 
         }
         Log.v(Constants.NETWORK_TAG, "Done getting Retrofit");
+        Log.v("HiccsArish", "Done getting Retrofit");
         return sRetrofit;
     }
 }

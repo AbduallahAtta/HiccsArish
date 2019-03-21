@@ -2,6 +2,7 @@ package com.hiccs.arish.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
@@ -37,17 +38,19 @@ public class ExtraCoursesActivity extends AppCompatActivity {
 
 
     private void ExtraCourses() {
-        logger("Started to fetch staff");
+        logger("Started to fetch data");
         APIUtils.getHiccsAPI().getExtraCourses()
                 .enqueue(new Callback<List<ExtraCoursesModel>>() {
                     @Override
                     public void onResponse(Call<List<ExtraCoursesModel>> call, Response<List<ExtraCoursesModel>> response) {
                         logger("Started to get response");
 
+
                         if (response.isSuccessful()) {
                             linkExtraCoursesAdapter(response.body());
 
                             logger(response.body().get(0).toString());
+                            logger(response.body().get(0).getCourseName());
                         } else {
                             logger("response code = " + response.code());
                         }
@@ -62,11 +65,15 @@ public class ExtraCoursesActivity extends AppCompatActivity {
     }
 
     private void logger(String s) {
-        Log.v(Constants.NETWORK_TAG, s);
+        Log.v(Constants.NETWORK_TAG,s);
+        Log.v("HiccsArish",s);
     }
 
     private void linkExtraCoursesAdapter(List<ExtraCoursesModel> body) {
         ExtraCoursesAdapter adapter = new ExtraCoursesAdapter(this, body);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
+        ExtraCoursesRecyclerView.setLayoutManager(linearLayoutManager);
         ExtraCoursesRecyclerView.setAdapter(adapter);
     }
 
