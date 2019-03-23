@@ -33,7 +33,7 @@ public class StudentInformationsAdapter extends RecyclerView.Adapter<StudentInfo
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View itemView = LayoutInflater.from(StudentInformationsContext).inflate(R.layout.staff_item, parent, false);
+        View itemView = LayoutInflater.from(StudentInformationsContext).inflate(R.layout.student_info_item, parent, false);
 
         return new StudentInformationsAdapter.ViewHolder(itemView);
     }
@@ -60,21 +60,21 @@ public class StudentInformationsAdapter extends RecyclerView.Adapter<StudentInfo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.StudentId)
+        @BindView(R.id./*StudentId*/staff_recycler)
         TextView StudentId;
-        @BindView(R.id.FullName)
+        @BindView(R.id./*FullName*/staff_recycler)
         TextView FullName;
-        @BindView(R.id.Gender)
+        @BindView(R.id./*Gender*/staff_recycler)
         TextView Gender;
-        @BindView(R.id.AcademicYear)
+        @BindView(R.id./*AcademicYear*/staff_recycler)
         TextView AcademicYear;
-        @BindView(R.id.Department)
+        @BindView(R.id./*Department*/staff_recycler)
         TextView Department;
-        @BindView(R.id.Phone)
+        @BindView(R.id./*Phone*/staff_recycler)
         TextView Phone;
-        @BindView(R.id.Address)
+        @BindView(R.id./*Address*/staff_recycler)
         TextView Address;
-        @BindView(R.id.AcademicSemester)
+        @BindView(R.id./*AcademicSemester*/staff_recycler)
         TextView AcademicSemester;
 
 

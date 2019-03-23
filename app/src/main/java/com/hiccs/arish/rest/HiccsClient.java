@@ -32,8 +32,6 @@ public class HiccsClient {
             Log.v("HiccsArish", "Started to get Retrofit");
             sRetrofit = new Retrofit.Builder()
                     .baseUrl(baseURL)
-                    // using GsonConverterFactory to convert
-                    // JSON response automatically to POGOs "models"
                     .addConverterFactory(GsonConverterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .build();

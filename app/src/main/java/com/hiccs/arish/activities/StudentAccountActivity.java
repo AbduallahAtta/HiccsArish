@@ -39,7 +39,7 @@ public class StudentAccountActivity extends AppCompatActivity {
 
     private void StudentInfoData() {
         logger("Started to fetch StudentInformation");
-        APIUtils.getHiccsAPI().StudentInformation(0)
+        APIUtils.getHiccsAPI().StudentInformation(1)
                 .enqueue(new Callback<List<StudentAccountModel>>() {
                     @Override
                     public void onResponse(Call<List<StudentAccountModel>> call, Response<List<StudentAccountModel>> response) {

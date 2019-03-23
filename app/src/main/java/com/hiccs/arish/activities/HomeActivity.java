@@ -26,7 +26,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void staff(View view) {
-        Intent i = new Intent(HomeActivity.this, StaffActivity.class);
+        Intent i = new Intent(HomeActivity.this, StafffActivity.class);
         startActivity(i);
     }
 
