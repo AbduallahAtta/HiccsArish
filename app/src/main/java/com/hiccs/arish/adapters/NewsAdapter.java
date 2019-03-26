@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.hiccs.arish.R;
 import com.hiccs.arish.models.news.News;
 
@@ -39,7 +40,10 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull NewsViewHolder newsViewHolder, int i) {
-        // TODO: 2/26/2019 when API is ready, populate news
+        newsViewHolder.mTitle.setText(mNews.get(i).getTitle());
+        Glide.with(mContext)
+                .load(mNews.get(i).getImgUrl())
+                .into(newsViewHolder.mImage);
     }
 
     @Override

@@ -1,7 +1,7 @@
 package com.hiccs.arish.activities;
 
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -38,11 +38,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
- mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
         // Add a marker in hicss and move the camera
-        LatLng hicss = new LatLng(31.138467,33.82041);
+        LatLng hicss = new LatLng(31.138467, 33.82041);
         mMap.addMarker(new MarkerOptions().position(hicss).title("hicss"));
-        
+
         mMap.moveCamera(CameraUpdateFactory.newLatLng(hicss));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(15), 2000, null);
     }

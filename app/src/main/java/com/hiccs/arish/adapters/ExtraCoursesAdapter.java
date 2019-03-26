@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.hiccs.arish.R;
-import com.hiccs.arish.activities.ExtraCoursesActivity;
 import com.hiccs.arish.models.ExtraCoursesModel;
 
 import java.util.List;
@@ -64,8 +63,6 @@ public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapte
 
 
         public ViewHolder(@NonNull View itemView) {
-
-
 
 
             super(itemView);

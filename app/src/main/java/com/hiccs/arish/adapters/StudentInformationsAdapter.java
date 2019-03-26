@@ -6,17 +6,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.hiccs.arish.R;
 import com.hiccs.arish.models.StudentAccountModel;
 
 import java.util.List;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class StudentInformationsAdapter extends RecyclerView.Adapter<StudentInformationsAdapter.ViewHolder> {
     private Context StudentInformationsContext;
@@ -41,17 +35,17 @@ public class StudentInformationsAdapter extends RecyclerView.Adapter<StudentInfo
     @Override
     public void onBindViewHolder(@NonNull StudentInformationsAdapter.ViewHolder holder, int position) {
 
-        holder.StudentId.setText(StudentInformationsList.get(position).getId());
-        holder.FullName.setText(StudentInformationsList.get(position).getFullName());
-        holder.Gender.setText(StudentInformationsList.get(position).getGender());
-        holder.AcademicYear.setText(StudentInformationsList.get(position).getAcademicYear());
-        holder.Department.setText(StudentInformationsList.get(position).getDepartment());
-        holder.Phone.setText(StudentInformationsList.get(position).getPhone());
-        holder.Address.setText(StudentInformationsList.get(position).getAddress());
-        holder.AcademicSemester.setText(StudentInformationsList.get(position).getAcademicSemester());
+//        holder.StudentId.setText(StudentInformationsList.get(position).getId());
+//        holder.FullName.setText(StudentInformationsList.get(position).getFullName());
+//        holder.Gender.setText(StudentInformationsList.get(position).getGender());
+//        holder.AcademicYear.setText(StudentInformationsList.get(position).getAcademicYear());
+//        holder.Department.setText(StudentInformationsList.get(position).getDepartment());
+//        holder.Phone.setText(StudentInformationsList.get(position).getPhone());
+//        holder.Address.setText(StudentInformationsList.get(position).getAddress());
+//        holder.AcademicSemester.setText(StudentInformationsList.get(position).getAcademicSemester());
 
-       /* Glide.with(StudentInformationsContext).load(StudentInformationsList.get(position).getImgUrl()).into(holder.staff_img);
-       */
+        /* Glide.with(StudentInformationsContext).load(StudentInformationsList.get(position).getImgUrl()).into(holder.staff_img);
+         */
     }
 
     @Override
@@ -60,33 +54,28 @@ public class StudentInformationsAdapter extends RecyclerView.Adapter<StudentInfo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id./*StudentId*/staff_recycler)
-        TextView StudentId;
-        @BindView(R.id./*FullName*/staff_recycler)
-        TextView FullName;
-        @BindView(R.id./*Gender*/staff_recycler)
-        TextView Gender;
-        @BindView(R.id./*AcademicYear*/staff_recycler)
-        TextView AcademicYear;
-        @BindView(R.id./*Department*/staff_recycler)
-        TextView Department;
-        @BindView(R.id./*Phone*/staff_recycler)
-        TextView Phone;
-        @BindView(R.id./*Address*/staff_recycler)
-        TextView Address;
-        @BindView(R.id./*AcademicSemester*/staff_recycler)
-        TextView AcademicSemester;
 
+        // TODO: 3/24/2019 bind the correct view to the corresponding id
 
-     /*   @BindView(R.id.img)
-        ImageView _img;
-        */
+        /**
+         * @BindView(R.id.staff_recycler) TextView StudentId;
+         * @BindView(R.id.staff_recycler) TextView FullName;
+         * @BindView(R.id.staff_recycler) TextView Gender;
+         * @BindView(R.id.staff_recycler) TextView AcademicYear;
+         * @BindView(R.id.staff_recycler) TextView Department;
+         * @BindView(R.id.staff_recycler) TextView Phone;
+         * @BindView(R.id.staff_recycler) TextView Address;
+         * @BindView(R.id.staff_recycler) TextView AcademicSemester;
+         * /**
+         * <p>
+         * /*   @BindView(R.id.img)
+         * ImageView _img;
+         */
 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            ButterKnife.bind(this, itemView);
-
+            //ButterKnife.bind(this, itemView);
         }
     }
 }

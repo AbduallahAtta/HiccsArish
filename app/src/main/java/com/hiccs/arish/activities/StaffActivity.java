@@ -2,6 +2,7 @@ package com.hiccs.arish.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
@@ -12,7 +13,7 @@ import com.hiccs.arish.rest.APIUtils;
 import com.hiccs.arish.utils.Constants;
 
 import java.util.List;
-import android.support.v7.widget.LinearLayoutManager;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import retrofit2.Call;
@@ -61,8 +62,8 @@ public class StaffActivity extends AppCompatActivity {
     }
 
     private void logger(String s) {
-        Log.v(Constants.NETWORK_TAG,s);
-        Log.v("HiccsArish",s);
+        Log.v(Constants.NETWORK_TAG, s);
+        Log.v("HiccsArish", s);
     }
 
     private void linkstaffAdapter(List<StaffModel> body) {

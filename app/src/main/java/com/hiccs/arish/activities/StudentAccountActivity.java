@@ -1,15 +1,13 @@
 package com.hiccs.arish.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import com.hiccs.arish.R;
-import com.hiccs.arish.adapters.StaffAdapter;
 import com.hiccs.arish.adapters.StudentInformationsAdapter;
-import com.hiccs.arish.models.StaffModel;
 import com.hiccs.arish.models.StudentAccountModel;
 import com.hiccs.arish.rest.APIUtils;
 import com.hiccs.arish.utils.Constants;
@@ -32,9 +30,9 @@ public class StudentAccountActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_account);
 
-     ButterKnife.bind(this);
-    StudentInfoData();
-}
+        ButterKnife.bind(this);
+        StudentInfoData();
+    }
 
 
     private void StudentInfoData() {
@@ -64,9 +62,10 @@ public class StudentAccountActivity extends AppCompatActivity {
     }
 
     private void logger(String s) {
-        Log.v(Constants.NETWORK_TAG,s);
-        Log.v("HiccsArish",s);
+        Log.v(Constants.NETWORK_TAG, s);
+        Log.v("HiccsArish", s);
     }
+
     private void linkStudentInfoAdapter(List<StudentAccountModel> body) {
         StudentInformationsAdapter adapter = new StudentInformationsAdapter(this, body);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);

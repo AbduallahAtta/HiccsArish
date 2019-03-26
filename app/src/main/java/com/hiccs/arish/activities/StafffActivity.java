@@ -1,23 +1,21 @@
 package com.hiccs.arish.activities;
 
 
-import android.support.design.widget.TabLayout;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.TextView;
 
 import com.hiccs.arish.R;
@@ -39,6 +37,7 @@ public class StafffActivity extends AppCompatActivity {
      */
     private ViewPager mViewPager;
     private TabLayout mTabLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +51,7 @@ public class StafffActivity extends AppCompatActivity {
 
 
         //tab id
-        mTabLayout= findViewById(R.id.tabs);
+        mTabLayout = findViewById(R.id.tabs);
         mTabLayout.setupWithViewPager(mViewPager);
 
         //add the tabs
@@ -61,15 +60,12 @@ public class StafffActivity extends AppCompatActivity {
         mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
 
-
         // Set up the ViewPager with the sections adapter.
         mViewPager = findViewById(R.id.container);
 
-        FragmentAdapter adapter=new FragmentAdapter(getSupportFragmentManager(), mTabLayout.getTabCount());
+        FragmentAdapter adapter = new FragmentAdapter(getSupportFragmentManager(), mTabLayout.getTabCount());
 
         mViewPager.setAdapter(adapter);
-
-
 
 
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -90,7 +86,6 @@ public class StafffActivity extends AppCompatActivity {
 
             }
         });
-
 
 
         mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

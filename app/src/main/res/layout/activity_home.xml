@@ -1,374 +1,291 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeActivityParent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".activities.HomeActivity">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="8dp"
-        android:layout_weight="5"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants">
+
+        <com.github.florent37.shapeofview.shapes.ArcView
+            android:id="@+id/arcView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_activity_arc_height"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shape_arc_height="@dimen/home_activity_arc_view_height"
+            app:shape_arc_position="bottom">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@color/secondaryColor" />
+
+        </com.github.florent37.shapeofview.shapes.ArcView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/studentImageProfile"
+            android:layout_width="@dimen/student_profile_image_width"
+            android:layout_height="@dimen/student_profile_image_height"
+            app:layout_constraintBottom_toBottomOf="@+id/arcView"
+            app:layout_constraintEnd_toEndOf="@+id/arcView"
+            app:layout_constraintStart_toStartOf="@+id/arcView"
+            app:layout_constraintTop_toBottomOf="@+id/arcView" />
+
+        <TextView
+            android:id="@+id/studentLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/student_label_margin"
+            android:text="@string/student_label"
+            app:layout_constraintEnd_toEndOf="@+id/studentImageProfile"
+            app:layout_constraintStart_toStartOf="@+id/studentImageProfile"
+            app:layout_constraintTop_toBottomOf="@+id/studentImageProfile" />
+
+        <com.github.florent37.shapeofview.shapes.TriangleView
+            android:id="@+id/triangleView"
+            android:layout_width="@dimen/visitors_label_width"
+            android:layout_height="@dimen/visitors_label_height"
+            android:layout_marginTop="@dimen/visitors_label_margin_top"
+            android:background="@color/primaryDarkColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/studentLabel"
+            app:shape_triangle_percentBottom="0"
+            app:shape_triangle_percentLeft="0"
+            app:shape_triangle_percentRight="0.5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primaryDarkColor"
+                android:gravity="center"
+                android:text="@string/visitors_features_label"
+                android:textColor="@color/primaryTextColor" />
+        </com.github.florent37.shapeofview.shapes.TriangleView>
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-
-                >
-
-                <ImageButton
-                    android:id="@+id/stu_img"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="3"
-                    android:background="@android:drawable/menuitem_background"
-                    android:clickable="true"
-                    android:onClick="student" />
-
-                <Button
-                    android:id="@+id/stu_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:background="@android:drawable/menuitem_background"
-                    android:contextClickable="false"
-                    android:onClick="student"
-                    android:text="الطالب"
-                    android:textAlignment="center"
-
-                    android:textAllCaps="true"
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".80"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="staff"
-                android:orientation="vertical"
-
-                >
-
-                <ImageButton
-                    android:id="@+id/staff_img"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="3"
-                    android:background="@android:drawable/menuitem_background"
-                    android:clickable="true"
-                    android:contextClickable="false"
-                    android:onClick="staff"
-
-                    />
-
-                <Button
-                    android:id="@+id/staff_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:background="@android:drawable/menuitem_background"
-                    android:onClick="staff"
-                    android:text="اعضاء هيئه التدريس"
-
-                    android:textAlignment="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Button"
-                    android:textColor="@android:color/black" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-
-                >
-
-                <ImageButton
-                    android:id="@+id/gallery_img"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-
-                    android:layout_weight="3"
-                    android:background="@android:drawable/menuitem_background"
-                    android:clickable="true"
-                    android:contextClickable="false"
-                    android:onClick="Gallery"
-
-
-                    />
-
-                <TextView
-                    android:id="@+id/gallery_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:background="@android:drawable/menuitem_background"
-
-                    android:onClick="Gallery"
-                    android:text="معرض الصور"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".80"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-
-                >
-
-                <ImageButton
-                    android:id="@+id/extra_courses_img"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="3"
-                    android:background="@android:drawable/menuitem_background"
-                    android:clickable="true"
-                    android:onClick="extra_courses" />
-
-                <Button
-                    android:id="@+id/extra_courses_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:background="@android:drawable/menuitem_background"
-                    android:contextClickable="false"
-                    android:onClick="extra_courses"
-                    android:text="التدريبات والكورسات الاضافيه"
-                    android:textAlignment="center"
-
-                    android:textAllCaps="true"
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-
-                >
-
-                <ImageButton
-                    android:id="@+id/news_img"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="3"
-                    android:background="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-
-                    android:contextClickable="false"
-                    android:onClick="news"
-
-                    />
-
-                <Button
-                    android:id="@+id/news_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:background="@android:drawable/menuitem_background"
-                    android:onClick="news"
-                    android:text="جريده لمعهد "
-
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/home_activity_visitors_features_margin_top"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/triangleView">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
+                <android.support.v7.widget.CardView
+                    android:id="@+id/staffParent"
+                    style="@style/visitorFeatureCardStyle"
+                    android:stateListAnimator="@animator/left_on_touch"
+                    app:cardCornerRadius="@dimen/visitor_feature_card_corner_radius"
+                    app:cardElevation="@dimen/visitor_feature_card_elevation">
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-
-                    >
-
-                    <ImageButton
-                        android:id="@+id/info"
+                    <android.support.constraint.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="3"
-                        android:background="@android:drawable/menuitem_background"
-                        android:clickable="true"
-                        android:onClick="infoo" />
+                        android:layout_height="match_parent">
 
-                    <Button
-                        android:id="@+id/info_bu"
+                        <ImageView
+                            android:id="@+id/staffImage"
+                            style="@style/visitorFeatureImageStyle"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@color/primaryColor" />
+
+                        <TextView
+                            android:id="@+id/staffLabelTextView"
+                            style="@style/visitorFeatureTitleStyle"
+                            android:text="@string/visitors_feature_staff_label"
+                            app:layout_constraintBottom_toBottomOf="@+id/staffImage"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/staffImage"
+                            app:layout_constraintVertical_bias="1.0" />
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/galleryParent"
+                    style="@style/visitorFeatureCardStyle"
+                    android:stateListAnimator="@animator/left_on_touch"
+                    app:cardCornerRadius="@dimen/visitor_feature_card_corner_radius"
+                    app:cardElevation="@dimen/visitor_feature_card_elevation">
+
+                    <android.support.constraint.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:background="@android:drawable/menuitem_background"
-                        android:contextClickable="false"
-                        android:onClick="infoo"
-                        android:text="سيره المعهد"
-                        android:textAlignment="center"
+                        android:layout_height="match_parent">
 
-                        android:textAllCaps="true"
-                        android:textColor="@android:color/black"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        <ImageView
+                            android:id="@+id/galleryImageView"
+                            style="@style/visitorFeatureImageStyle"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@color/primaryColor" />
 
+                        <TextView
+                            android:id="@+id/galleryLabelTextView"
+                            style="@style/visitorFeatureTitleStyle"
+                            android:text="@string/visitors_feature_gallery_label"
+                            app:layout_constraintBottom_toBottomOf="@+id/galleryImageView"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/galleryImageView"
+                            app:layout_constraintVertical_bias="1.0" />
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
 
-                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/extraCoursesParent"
+                    style="@style/visitorFeatureCardStyle"
+                    android:stateListAnimator="@animator/left_on_touch"
+                    app:cardCornerRadius="@dimen/visitor_feature_card_corner_radius"
+                    app:cardElevation="@dimen/visitor_feature_card_elevation">
 
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
+                        <ImageView
+                            android:id="@+id/extraCoursesImageView"
+                            style="@style/visitorFeatureImageStyle"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@color/primaryColor" />
+
+                        <TextView
+                            android:id="@+id/extraCoursesLabelTextView"
+                            style="@style/visitorFeatureTitleStyle"
+                            android:text="@string/visitors_feature_extra_courses_label"
+                            app:layout_constraintBottom_toBottomOf="@+id/extraCoursesImageView"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/extraCoursesImageView"
+                            app:layout_constraintVertical_bias="1.0" />
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/newsParent"
+                    style="@style/visitorFeatureCardStyle"
+                    android:stateListAnimator="@animator/left_on_touch"
+                    app:cardCornerRadius="@dimen/visitor_feature_card_corner_radius"
+                    app:cardElevation="@dimen/visitor_feature_card_elevation">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/newsImageView"
+                            style="@style/visitorFeatureImageStyle"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@color/primaryColor" />
+
+                        <TextView
+                            android:id="@+id/newsLabelTextView"
+                            style="@style/visitorFeatureTitleStyle"
+                            android:text="@string/visitors_feature_news_label"
+                            app:layout_constraintBottom_toBottomOf="@+id/newsImageView"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/newsImageView"
+                            app:layout_constraintVertical_bias="1.0" />
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/aboutParent"
+                style="@style/visitorFeatureCardStyle"
+                android:layout_width="match_parent"
+                android:stateListAnimator="@animator/left_on_touch"
+                app:cardCornerRadius="@dimen/visitor_feature_card_corner_radius"
+                app:cardElevation="@dimen/visitor_feature_card_elevation">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/aboutImageView"
+                        style="@style/visitorFeatureImageStyle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@color/primaryColor" />
+
+                    <TextView
+                        android:id="@+id/aboutLabelTextView"
+                        style="@style/visitorFeatureTitleStyle"
+                        android:gravity="center"
+                        android:text="@string/visitors_feature_about_label"
+                        app:layout_constraintBottom_toBottomOf="@+id/aboutImageView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/aboutImageView"
+                        app:layout_constraintVertical_bias="1.0" />
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
 
         </LinearLayout>
 
-        <LinearLayout
+        <com.michaldrabik.tapbarmenulib.TapBarMenu
+            android:id="@+id/tapBarMenu"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".50"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_height="@dimen/social_networks_menu_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:tbm_backgroundColor="@color/primaryColor">
+
+            <ImageView
+                android:id="@+id/hiccsWebSiteImage"
+                style="@style/socialNetworkImageStyle"
+                app:srcCompat="@drawable/ic_www" />
 
 
-            <ImageButton
-                android:id="@+id/imkagedVihew"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                app:srcCompat="@drawable/ic_www"
-                tools:ignore="VectorDrawableCompat" />
+            <ImageView
+                android:id="@+id/hiccsFacebookImage"
+                style="@style/socialNetworkImageStyle"
+                app:srcCompat="@drawable/ic_facebook" />
 
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:onClick="website"
-
-                app:srcCompat="@drawable/ic_phone"
-                tools:ignore="VectorDrawableCompat" />
-
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:onClick="map"
-
-                app:srcCompat="@drawable/ic_placeholder"
-                tools:ignore="VectorDrawableCompat" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".300"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-
-            <ImageButton
-                android:id="@+id/facebook"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:onClick="facebook"
-                app:srcCompat="@drawable/ic_facebook"
-                tools:ignore="OnClick,VectorDrawableCompat" />
-
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:onClick="website"
-
-                app:srcCompat="@drawable/ic_linkedin" />
-
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:onClick="website"
+            <ImageView
+                android:id="@+id/hiccsYoutubeImage"
+                style="@style/socialNetworkImageStyle"
                 app:srcCompat="@drawable/ic_youtube" />
 
+            <Space
+                android:layout_width="@dimen/social_network_divider_width"
+                android:layout_height="match_parent" />
 
-            />
+            <ImageView
+                android:id="@+id/hiccsLinkedInImage"
+                style="@style/socialNetworkImageStyle"
+                app:srcCompat="@drawable/ic_linkedin" />
 
 
-        </LinearLayout>
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/hiccsLocationImage"
+                style="@style/socialNetworkImageStyle"
+                app:srcCompat="@drawable/ic_placeholder" />
 
-</LinearLayout>
 
+            <ImageView
 
-
+                android:id="@+id/hiccsLandLineNumberImage"
+                style="@style/socialNetworkImageStyle"
+                app:srcCompat="@drawable/ic_phone" />
+        </com.michaldrabik.tapbarmenulib.TapBarMenu>
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

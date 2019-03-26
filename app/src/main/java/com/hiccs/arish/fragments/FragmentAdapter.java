@@ -5,28 +5,27 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.hiccs.arish.R;
-
 public class FragmentAdapter extends FragmentStatePagerAdapter {
 
     int tabCount;
 
-    public FragmentAdapter(FragmentManager fm, int tabCount){
+    public FragmentAdapter(FragmentManager fm, int tabCount) {
         super(fm);
-        this.tabCount=tabCount;
+        this.tabCount = tabCount;
     }
 
     @Override
     public Fragment getItem(int position) {
-        switch(position){
-            case 0 :
-                ProfessorsFragment ProfessorsFragment=new ProfessorsFragment();
+        switch (position) {
+            case 0:
+                ProfessorsFragment ProfessorsFragment = new ProfessorsFragment();
                 return ProfessorsFragment;
-            case 1 :
-                AssistantsFragment AssistantsFragment=new AssistantsFragment();
+            case 1:
+                AssistantsFragment AssistantsFragment = new AssistantsFragment();
                 return AssistantsFragment;
 
-            default: return null;
+            default:
+                return null;
         }
     }
 

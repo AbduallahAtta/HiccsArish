@@ -8,9 +8,7 @@ import android.util.Log;
 
 import com.hiccs.arish.R;
 import com.hiccs.arish.adapters.ExtraCoursesAdapter;
-import com.hiccs.arish.adapters.StaffAdapter;
 import com.hiccs.arish.models.ExtraCoursesModel;
-import com.hiccs.arish.models.StaffModel;
 import com.hiccs.arish.rest.APIUtils;
 import com.hiccs.arish.utils.Constants;
 
@@ -65,8 +63,8 @@ public class ExtraCoursesActivity extends AppCompatActivity {
     }
 
     private void logger(String s) {
-        Log.v(Constants.NETWORK_TAG,s);
-        Log.v("HiccsArish",s);
+        Log.v(Constants.NETWORK_TAG, s);
+        Log.v("HiccsArish", s);
     }
 
     private void linkExtraCoursesAdapter(List<ExtraCoursesModel> body) {
