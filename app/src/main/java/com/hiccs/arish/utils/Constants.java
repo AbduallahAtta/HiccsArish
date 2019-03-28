@@ -27,4 +27,5 @@ public class Constants {
 
     public static final int WORKING_DAYS_OF_WEEK = 5;
     public static final String NETWORK_TAG = "server_data";
+    public static final String TAG_ERROR = "error";
 }

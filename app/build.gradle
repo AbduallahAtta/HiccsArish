@@ -55,5 +55,6 @@ dependencies {
 
     implementation 'android.arch.lifecycle:extensions:1.1.1'
 
+    implementation 'com.victor:lib:1.0.4'
 
 }
