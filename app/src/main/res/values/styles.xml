@@ -63,4 +63,16 @@
         <item name="android:layout_width">@dimen/loading_indicator_width</item>
         <item name="android:layout_height">@dimen/loading_indicator_height</item>
     </style>
+
+    <style name="newsDetailsActivityStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/secondaryColor</item>
+        <item name="android:fontFamily">@font/ubuntu</item>
+    </style>
+
+    <style name="FABStyle">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+    </style>
 </resources>

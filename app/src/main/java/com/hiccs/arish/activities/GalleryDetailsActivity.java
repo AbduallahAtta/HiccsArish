@@ -62,7 +62,7 @@ public class GalleryDetailsActivity extends AppCompatActivity {
     }
 
     private void errorUponLaunch() {
-        Toast.makeText(this, "this is missed up", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.activity_launch_error_msg, Toast.LENGTH_SHORT).show();
         finish();
     }
 

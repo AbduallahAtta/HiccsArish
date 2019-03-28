@@ -52,5 +52,12 @@
     <dimen name="loading_indicator_width">80dp</dimen>
     <dimen name="loading_indicator_height">80dp</dimen>
     <dimen name="loading_indicator_border_width">5dp</dimen>
+    <dimen name="fab_translation_z">6dp</dimen>
+    <dimen name="news_details_collapsing_toolbar_height">300dp</dimen>
+    <dimen name="news_details_collapsing_expanded_title_margin">16dp</dimen>
+    <dimen name="news_details_collapsing_expanded_title_margin_end">16dp</dimen>
+    <dimen name="news_details_collapsing_expanded_title_margin_start">16dp</dimen>
+    <dimen name="news_details_body_margin">8dp</dimen>
+    <dimen name="news_details_body_margin_top">16dp</dimen>
 
 </resources>
