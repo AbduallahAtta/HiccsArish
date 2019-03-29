@@ -25,25 +25,20 @@ import retrofit2.http.Query;
  */
 public interface HiccsAPI {
 
-    @GET("news/endpoint")
+    @GET("news.php")
     Call<List<News>> getHICCSNews();
-
 
     @GET("staff.php")
     Call<List<StaffModel>> getStaffModel();
 
     @GET("students.php")
-    Call<List<StudentAccountModel>> StudentInformation(@Query("id")int id);
-
+    Call<List<StudentAccountModel>> StudentInformation(@Query("id") int id);
 
     @GET("additional_courses.php")
     Call<List<ExtraCoursesModel>> getExtraCourses();
 
-
     @POST("suggestions.php")
-    Call<List<suggestionsModel>> postSuggestions(@Field("title")String title,@Field("content")String content);
-
-
+    Call<List<suggestionsModel>> postSuggestions(@Field("title") String title, @Field("content") String content);
 
 }
 

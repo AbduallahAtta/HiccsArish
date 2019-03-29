@@ -1,14 +1,13 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/secondaryColor</item>
         <item name="android:fontFamily">@font/ubuntu</item>
     </style>
-
 
 
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
@@ -21,9 +20,59 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
-    <style name="AppTheme.PopupOverlayy" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.PopupOverlayy" parent="ThemeOverlay.AppCompat.Light" />
 
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="visitorFeatureCardStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">@dimen/visitor_feature_card_height</item>
+        <item name="android:layout_margin">@dimen/visitor_feature_card_margin</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="visitorFeatureImageStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="visitorFeatureTitleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/feature_background</item>
+        <item name="android:padding">@dimen/visitor_feature_title_padding</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="socialNetworkImageStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">@dimen/social_network_padding_top</item>
+        <item name="android:paddingBottom">@dimen/social_network_padding_bottom</item>
+    </style>
+
+    <style name="loadingIndicatorStyle">
+        <item name="android:layout_width">@dimen/loading_indicator_width</item>
+        <item name="android:layout_height">@dimen/loading_indicator_height</item>
+    </style>
+
+    <style name="newsDetailsActivityStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/secondaryColor</item>
+        <item name="android:fontFamily">@font/ubuntu</item>
+    </style>
+
+    <style name="FABStyle">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+    </style>
 </resources>

@@ -3,9 +3,9 @@
 <ScrollView
 
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
 
     android:fillViewport="true">
 
@@ -18,11 +18,11 @@
         <LinearLayout
 
             xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_margin="@dimen/list_item_news_parent_margin"
             android:clickable="true"
             android:focusable="true"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:gravity="right"
             android:orientation="vertical">
 
@@ -30,12 +30,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/logo1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:gravity="center"
 
                     app:srcCompat="@drawable/logo1" />
@@ -44,10 +45,10 @@
                     android:id="@+id/tvcnewssss"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
-                    android:gravity="center"
                     android:layout_centerInParent="true"
                     android:layout_gravity="center"
+                    android:layout_weight="6"
+                    android:gravity="center"
 
                     android:text="@string/hicss_full_name"
                     android:textAllCaps="true"
@@ -63,14 +64,12 @@
                     app:srcCompat="@drawable/logo2" />
 
 
-
-
-
             </LinearLayout>
+
             <view
+                style="@style/Widget.Design.Snackbar"
                 android:layout_width="match_parent"
-                android:layout_height="1.5dp"
-                style="@style/Widget.Design.Snackbar" />
+                android:layout_height="1.5dp" />
 
 
             <LinearLayout
@@ -81,33 +80,34 @@
                 <TextView
                     android:id="@+id/creation"
                     android:layout_width="0dp"
-                    android:layout_weight="4"
                     android:layout_height="wrap_content"
+                    android:layout_weight="4"
                     android:text="@string/creation"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
                 <view
+                    style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
-                    android:layout_height="match_parent"
-                    style="@style/Widget.Design.Snackbar" />
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/creation_title"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="@string/creation_title"
-                    android:textSize="30dp"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:gravity="center"
+                    android:text="@string/creation_title"
                     android:textAllCaps="true"
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="30dp" />
 
             </LinearLayout>
+
             <view
+                style="@style/Widget.Design.Snackbar"
                 android:layout_width="match_parent"
-                android:layout_height="1.5dp"
-                style="@style/Widget.Design.Snackbar" />
+                android:layout_height="1.5dp" />
 
 
             <LinearLayout
@@ -119,35 +119,35 @@
                     android:id="@+id/granted_degrees_title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="4"
                     android:gravity="right"
-                    android:layout_gravity="center"
                     android:text="@string/granted_degrees"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
                 <view
+                    style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
-                    android:layout_height="match_parent"
-                    style="@style/Widget.Design.Snackbar" />
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/granted_degrees"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="@string/granted_degrees_title"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="30dp"
+                    android:text="@string/granted_degrees_title"
                     android:textAllCaps="true"
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="30dp" />
 
             </LinearLayout>
 
             <view
+                style="@style/Widget.Design.Snackbar"
                 android:layout_width="match_parent"
-                android:layout_height="1.5dp"
-                style="@style/Widget.Design.Snackbar" />
+                android:layout_height="1.5dp" />
 
 
             <LinearLayout
@@ -159,35 +159,35 @@
                     android:id="@+id/duration_of_study"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="4"
                     android:gravity="right"
-                    android:layout_gravity="center"
                     android:text="@string/duration_of_study"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
                 <view
+                    style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
-                    android:layout_height="match_parent"
-                    style="@style/Widget.Design.Snackbar" />
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/duration_of_study_title"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="@string/duration_of_study_title"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="30dp"
+                    android:text="@string/duration_of_study_title"
                     android:textAllCaps="true"
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="30dp" />
 
             </LinearLayout>
 
             <view
+                style="@style/Widget.Design.Snackbar"
                 android:layout_width="match_parent"
-                android:layout_height="1.5dp"
-                style="@style/Widget.Design.Snackbar" />
+                android:layout_height="1.5dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -198,35 +198,36 @@
                     android:id="@+id/departments"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="4"
                     android:gravity="right"
-                    android:layout_gravity="center"
                     android:text="@string/departments"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
                 <view
+                    style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
-                    android:layout_height="match_parent"
-                    style="@style/Widget.Design.Snackbar" />
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/departments_title"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="@string/departments_title"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="30dp"
+                    android:text="@string/departments_title"
                     android:textAllCaps="true"
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="30dp" />
 
             </LinearLayout>
 
             <view
+                style="@style/Widget.Design.Snackbar"
                 android:layout_width="match_parent"
-                android:layout_height="1.5dp"
-                style="@style/Widget.Design.Snackbar" />
+                android:layout_height="1.5dp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -236,73 +237,75 @@
                     android:id="@+id/admission_requirements"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="4"
                     android:gravity="right"
-                    android:layout_gravity="center"
                     android:text="@string/admission_requirements"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
                 <view
+                    style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
-                    android:layout_height="match_parent"
-                    style="@style/Widget.Design.Snackbar" />
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/admission_requirements_title"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="@string/admission_requirements_title"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="30dp"
+                    android:text="@string/admission_requirements_title"
                     android:textAllCaps="true"
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="30dp" />
 
             </LinearLayout>
 
             <view
+                style="@style/Widget.Design.Snackbar"
                 android:layout_width="match_parent"
-                android:layout_height="1.5dp"
-                style="@style/Widget.Design.Snackbar" />
+                android:layout_height="1.5dp" />
+
             <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/goals"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:gravity="right"
-                android:layout_gravity="center"
-                android:text="@string/goals"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <view
-                android:layout_width="1.5dp"
-                android:layout_height="match_parent"
-                style="@style/Widget.Design.Snackbar" />
-
-            <TextView
-                android:id="@+id/goals_title"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="@string/goals_title"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textSize="30dp"
-                android:textAllCaps="true"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        </LinearLayout>
-
-            <view
                 android:layout_width="match_parent"
-                android:layout_height="1.5dp"
-                style="@style/Widget.Design.Snackbar" />
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/goals"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:gravity="right"
+                    android:text="@string/goals"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <view
+                    style="@style/Widget.Design.Snackbar"
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/goals_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/goals_title"
+                    android:textAllCaps="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="30dp" />
+
+            </LinearLayout>
+
+            <view
+                style="@style/Widget.Design.Snackbar"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -312,35 +315,35 @@
                     android:id="@+id/address"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="4"
                     android:gravity="right"
-                    android:layout_gravity="center"
                     android:text="@string/address"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
                 <view
+                    style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
-                    android:layout_height="match_parent"
-                    style="@style/Widget.Design.Snackbar" />
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/address_title"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="@string/address_title"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="30dp"
+                    android:text="@string/address_title"
                     android:textAllCaps="true"
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="30dp" />
 
             </LinearLayout>
 
             <view
+                style="@style/Widget.Design.Snackbar"
                 android:layout_width="match_parent"
-                android:layout_height="1.5dp"
-                style="@style/Widget.Design.Snackbar" />
+                android:layout_height="1.5dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -351,35 +354,36 @@
                     android:id="@+id/connection_info"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="4"
                     android:gravity="right"
-                    android:layout_gravity="center"
                     android:text="@string/connection_info"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
                 <view
+                    style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
-                    android:layout_height="match_parent"
-                    style="@style/Widget.Design.Snackbar" />
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/connection_info_title"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="@string/connection_info_title"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="30dp"
+                    android:text="@string/connection_info_title"
                     android:textAllCaps="true"
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="30dp" />
 
             </LinearLayout>
 
             <view
+                style="@style/Widget.Design.Snackbar"
                 android:layout_width="match_parent"
-                android:layout_height="1.5dp"
-                style="@style/Widget.Design.Snackbar" />
+                android:layout_height="1.5dp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -406,11 +410,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="4"
-                    android:textColor="#00004d"
                     android:fontFamily="casual"
-                    android:textStyle="bold"
                     android:gravity="center_vertical"
-
                     android:text="1-Faculty of Education
 \n
 2-Faculty of Agriculture
@@ -428,9 +429,12 @@
 8-Faculty of Home Economics
 \n
  *-Institute of Environmental Studies (Graduate Studies)"
-
                     android:textAllCaps="true"
-                    android:textSize="12sp">
+
+                    android:textColor="#00004d"
+
+                    android:textSize="12sp"
+                    android:textStyle="bold">
 
                 </TextView>
 
@@ -449,6 +453,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="1dp"
                     android:background="@android:color/black" />
+
                 <TextView
                     android:id="@+id/tfgvnewsss"
                     android:layout_width="wrap_content"
@@ -458,6 +463,7 @@
                     android:textColor="@android:color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
+
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="1dp"
@@ -596,6 +602,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="1dp"
                     android:background="@android:color/black" />
+
                 <TextView
                     android:id="@+id/tfvnewsss"
                     android:layout_width="wrap_content"
@@ -605,6 +612,7 @@
                     android:textColor="@android:color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
+
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="1dp"
@@ -674,15 +682,14 @@
                     android:layout_weight="1"
                     android:onClick="plus"
 
-             />
+                    />
 
                 <ImageView
                     android:id="@+id/imkagedVihew"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="facebook"
-                     />
+                    android:onClick="facebook" />
 
                 <ImageView
                     android:layout_width="0dp"

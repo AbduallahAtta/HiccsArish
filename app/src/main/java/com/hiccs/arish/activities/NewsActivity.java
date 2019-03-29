@@ -1,61 +1,84 @@
 package com.hiccs.arish.activities;
 
+import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import android.view.MenuItem;
+import android.view.View;
 
 import com.hiccs.arish.R;
 import com.hiccs.arish.adapters.NewsAdapter;
 import com.hiccs.arish.models.news.News;
-import com.hiccs.arish.rest.APIUtils;
+import com.hiccs.arish.viewmodel.NewsViewModel;
+import com.victor.loading.rotate.RotateLoading;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class NewsActivity extends AppCompatActivity {
-    private static final String TAG = NewsActivity.class.getSimpleName();
     @BindView(R.id.newsRecyclerView)
     RecyclerView mNewsRecyclerView;
+    @BindView(R.id.loadingIndicator)
+    RotateLoading loadingIndicator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
         ButterKnife.bind(this);
-        loadNews();
+        setupToolbar();
+        getNewsOfViewModel();
     }
 
-    private void loadNews() {
-        APIUtils.getHiccsAPI().getHICCSNews()
-                .enqueue(new Callback<List<News>>() {
-                    @Override
-                    public void onResponse(Call<List<News>> call, Response<List<News>> response) {
-                        if (response.isSuccessful()) {
-                            setNewsToAdapter(response.body());
-                        } else {
-                            logger(String.valueOf(response.code()));
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<List<News>> call, Throwable t) {
-                        logger(t.getMessage());
-                    }
-                });
+    private void setupToolbar() {
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setTitle(R.string.news_toolbar_title);
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setDisplayShowHomeEnabled(true);
+        }
     }
 
-    private void logger(String msg) {
-        Log.d(TAG, msg);
+    private void getNewsOfViewModel() {
+
+        showLoadingIndicator();
+        NewsViewModel newsViewModel = ViewModelProviders.of(this).get(NewsViewModel.class);
+        newsViewModel.getNewsList().observe(this, news -> {
+            hideLoadingIndicator();
+            setNewsToAdapter(news);
+        });
+
     }
 
-    private void setNewsToAdapter(List<News> body) {
-        NewsAdapter adapter = new NewsAdapter(this, body);
+    private void hideLoadingIndicator() {
+        loadingIndicator.stop();
+        mNewsRecyclerView.setVisibility(View.VISIBLE);
+    }
+
+    private void showLoadingIndicator() {
+        mNewsRecyclerView.setVisibility(View.GONE);
+        loadingIndicator.start();
+    }
+
+    private void setNewsToAdapter(List<News> news) {
+        hideLoadingIndicator();
+        NewsAdapter adapter = new NewsAdapter(this, news);
         mNewsRecyclerView.setAdapter(adapter);
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }

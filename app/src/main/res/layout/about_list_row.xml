@@ -2,11 +2,11 @@
 <LinearLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_margin="@dimen/list_item_news_parent_margin"
     android:clickable="true"
     android:focusable="true"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:gravity="right"
     android:orientation="vertical">
 
@@ -24,23 +24,24 @@
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <view
+            style="@style/Widget.Design.Snackbar"
             android:layout_width="1.5dp"
-            android:layout_height="match_parent"
-            style="@style/Widget.Design.Snackbar" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Large Text"
             android:layout_gravity="center"
-            android:textSize="30dp"
+            android:text="Large Text"
             android:textAllCaps="true"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="30dp" />
 
     </LinearLayout>
+
     <view
+        style="@style/Widget.Design.Snackbar"
         android:layout_width="match_parent"
-        android:layout_height="1.5dp"
-        style="@style/Widget.Design.Snackbar" />
+        android:layout_height="1.5dp" />
 </LinearLayout>

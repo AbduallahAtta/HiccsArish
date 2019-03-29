@@ -8,8 +8,9 @@ import android.net.NetworkInfo;
  */
 
 public class ConnectionManager {
-    public static boolean isIntenetConectted(Context context) {
+    public static boolean isInternetConnected(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        assert connectivityManager != null;
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         if (networkInfo != null)
             return true;

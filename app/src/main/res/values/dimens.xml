@@ -30,4 +30,34 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="visitor_feature_card_width">120dp</dimen>
+    <dimen name="visitor_feature_card_height">120dp</dimen>
+    <dimen name="visitor_feature_card_margin">4dp</dimen>
+    <dimen name="visitor_feature_card_corner_radius">2dp</dimen>
+    <dimen name="visitor_feature_title_padding">8dp</dimen>
+    <dimen name="visitor_feature_card_elevation">1dp</dimen>
+    <dimen name="home_activity_arc_height">150dp</dimen>
+    <dimen name="home_activity_arc_view_height">20dp</dimen>
+    <dimen name="student_profile_image_width">96dp</dimen>
+    <dimen name="student_profile_image_height">96dp</dimen>
+    <dimen name="student_label_margin">8dp</dimen>
+    <dimen name="visitors_label_width">150dp</dimen>
+    <dimen name="visitors_label_height">100dp</dimen>
+    <dimen name="visitors_label_margin_top">16dp</dimen>
+    <dimen name="home_activity_visitors_features_margin_top">8dp</dimen>
+    <dimen name="social_networks_menu_height">56dp</dimen>
+    <dimen name="social_network_padding_top">10dp</dimen>
+    <dimen name="social_network_padding_bottom">10dp</dimen>
+    <dimen name="social_network_divider_width">20dp</dimen>
+    <dimen name="loading_indicator_width">80dp</dimen>
+    <dimen name="loading_indicator_height">80dp</dimen>
+    <dimen name="loading_indicator_border_width">5dp</dimen>
+    <dimen name="fab_translation_z">6dp</dimen>
+    <dimen name="news_details_collapsing_toolbar_height">300dp</dimen>
+    <dimen name="news_details_collapsing_expanded_title_margin">16dp</dimen>
+    <dimen name="news_details_collapsing_expanded_title_margin_end">16dp</dimen>
+    <dimen name="news_details_collapsing_expanded_title_margin_start">16dp</dimen>
+    <dimen name="news_details_body_margin">8dp</dimen>
+    <dimen name="news_details_body_margin_top">16dp</dimen>
+
 </resources>

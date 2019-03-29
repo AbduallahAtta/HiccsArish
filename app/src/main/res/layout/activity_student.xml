@@ -85,9 +85,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:onClick="inbox"
                         android:text="بريدي"
-                        android:gravity="center"
 
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Button"
@@ -122,8 +122,8 @@
 
                         android:background="?android:attr/selectableItemBackground"
                         android:clickable="true"
-                        android:onClick="Courses_table"
                         android:gravity="center"
+                        android:onClick="Courses_table"
 
 
                         />
@@ -133,13 +133,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:onClick="Courses_table"
                         android:text="جدول المحاضرات"
                         android:textAlignment="center"
                         android:textAllCaps="true"
                         android:textColor="@android:color/black"
                         android:textSize="14sp"
-                        android:gravity="center"
 
                         android:textStyle="bold" />
 
@@ -169,13 +169,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:onClick="previos_exams"
                         android:text="امتحانات سابقه "
                         android:textAlignment="center"
                         android:textAllCaps="true"
                         android:textColor="@android:color/black"
                         android:textSize="14sp"
-                        android:gravity="center"
 
                         android:textStyle="bold" />
 
@@ -214,13 +214,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:onClick="suggestion"
                         android:text="اقترح"
                         android:textAlignment="center"
                         android:textAllCaps="true"
                         android:textColor="@android:color/black"
                         android:textSize="14sp"
-                        android:gravity="center"
 
                         android:textStyle="bold" />
 
@@ -250,13 +250,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
+                        android:gravity="center"
                         android:onClick="report"
                         android:text="التقدير العام"
                         android:textAlignment="center"
                         android:textAllCaps="true"
                         android:textColor="@android:color/black"
                         android:textSize="14sp"
-                        android:gravity="center"
 
                         android:textStyle="bold" />
 
