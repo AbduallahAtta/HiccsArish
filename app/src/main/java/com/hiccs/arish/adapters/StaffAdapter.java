@@ -3,6 +3,7 @@ package com.hiccs.arish.adapters;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView.Adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +19,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class StaffAdapter extends RecyclerView.Adapter<StaffAdapter.ViewHolder> {
+public class StaffAdapter extends Adapter<StaffAdapter.ViewHolder> {
 
     private Context staffcontext;
     private List<StaffModel> staff_List;

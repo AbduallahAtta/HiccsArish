@@ -18,28 +18,44 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.hiccs.arish.R;
 import com.hiccs.arish.adapters.StaffAdapter;
+import com.hiccs.arish.models.StaffModel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class AssistantsFragment extends Fragment {
+
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater,
                              @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState)
-    {
-        View view=inflater.inflate(R.layout.activity_staff, container, false);
+                             @Nullable Bundle savedInstanceState) {
+
+        View View = inflater.inflate(R.layout.activity_staff, container, false);
 
 
+        RecyclerView recyclerView = View.findViewById(R.id.staff_recycler);
 
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+
+       /* StaffAdapter userAdapter = new StaffAdapter(new ArrayList<StaffModel>(List));;
+
+        recyclerView.setAdapter(userAdapter);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        return View;
+
+/*
         RecyclerView recyclerView = view.findViewById(R.id.staff_recycler);
-      /* StaffAdapter adapter = new StaffAdapter(this, );
-       LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        StaffAdapter adapter = new StaffAdapter(this, );
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));*/
-        return view;
+        return View;
     }
 }
