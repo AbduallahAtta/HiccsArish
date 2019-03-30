@@ -17,7 +17,6 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.hiccs.arish.R;
-import com.hiccs.arish.activities.NewsDetailsActivity;
 import com.hiccs.arish.models.news.News;
 import com.hiccs.arish.utils.Constants;
 
@@ -77,7 +76,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 startNewsDetailsWithTransition();
             } else {
-                startNewsDetailsActivity();
+           //     startNewsDetailsActivity();
             }
         }
 
@@ -88,7 +87,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
         private void startNewsDetailsWithTransition() {
             Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext, mImage, mImage.getTransitionName()).toBundle();
-            Intent intent = new Intent(mContext, NewsDetailsActivity.class);
+          /* Intent intent = new Intent(mContext, NewsDetailsActivity.class);
             intent.putExtra(Constants.NEWS_SELECTED_INTENT_KEY, mNews.get(getAdapterPosition()));
             mContext.startActivity(intent, bundle);
         }
@@ -96,7 +95,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         private void startNewsDetailsActivity() {
             Intent intent = new Intent(mContext, NewsDetailsActivity.class);
             intent.putExtra(Constants.NEWS_SELECTED_INTENT_KEY, mNews.get(getAdapterPosition()));
-            mContext.startActivity(intent);
+            mContext.startActivity(intent);*/
         }
     }
 

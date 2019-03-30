@@ -16,10 +16,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activities.ExtraCoursesDetailsActivity"></activity>
         <activity
             android:name=".activities.NewsDetailsActivity"
             android:parentActivityName=".activities.NewsActivity"
-            android:theme="@style/newsDetailsActivityStyle"></activity>
+            android:theme="@style/newsDetailsActivityStyle" />
         <activity android:name=".activities.StafffActivity" />
         <activity android:name=".activities.StaffDetailsActivity" />
         <activity android:name=".activities.StudentAccountActivity" />

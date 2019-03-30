@@ -30,6 +30,8 @@ public interface HiccsAPI {
 
     @GET("staff.php")
     Call<List<StaffModel>> getStaffModel();
+    @GET("Assistants.php")
+    Call<List<StaffModel>> Assistants();
 
     @GET("students.php")
     Call<List<StudentAccountModel>> StudentInformation(@Query("id") int id);

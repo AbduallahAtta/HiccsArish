@@ -75,7 +75,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void startStaffActivity() {
-        Intent intent = new Intent(this, StaffActivity.class);
+        Intent intent = new Intent(this, StafffActivity.class);
         startActivity(intent);
     }
 
