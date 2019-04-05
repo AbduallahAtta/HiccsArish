@@ -3,7 +3,6 @@ package com.hiccs.arish.adapters;
 import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -17,16 +16,15 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.hiccs.arish.R;
-import com.hiccs.arish.activities.ExtraCoursesActivity;
-import com.hiccs.arish.activities.ExtraCoursesDetailsActivity;
 import com.hiccs.arish.models.ExtraCoursesModel;
-import com.hiccs.arish.utils.Constants;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+//import com.hiccs.arish.activities.ExtraCoursesDetailsActivity;
 
 public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapter.ViewHolder> {
     private Context ExtraCoursesContext;
@@ -60,7 +58,7 @@ public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapte
 
     @Override
     public int getItemCount() {
-        return Extra_Courses_List== null ? 0 : Extra_Courses_List.size();
+        return Extra_Courses_List == null ? 0 : Extra_Courses_List.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -79,12 +77,13 @@ public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapte
             ButterKnife.bind(this, itemView);
 
         }
+
         @OnClick(R.id.cardView)
         public void onNewsClick() {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 startExtraCoursesDetails();
             } else {
-             //   startExtraCoursesDetails();
+                //   startExtraCoursesDetails();
             }
         }
 
@@ -96,7 +95,7 @@ public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapte
         private void startExtraCoursesDetails() {
             Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) ExtraCoursesContext,
                     extra_course_img, extra_course_img.getTransitionName()).toBundle();
-           Intent intent = new Intent(ExtraCoursesContext, ExtraCoursesDetailsActivity.class);
+            //  Intent intent = new Intent(ExtraCoursesContext, ExtraCoursesDetailsActivity.class);
         /*    intent.putExtra(Constants.EXTRA_COURSES_SELECTED_INTENT_KEY, Extra_Courses_List.get(getAdapterPosition()));
             ExtraCoursesContext.startActivity(intent, bundle);
         }

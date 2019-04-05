@@ -1,6 +1,8 @@
 package com.hiccs.arish;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
 
 import static org.junit.Assert.assertEquals;
 
@@ -9,6 +11,9 @@ import static org.junit.Assert.assertEquals;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
+
+@RunWith(Suite.class)
+@Suite.SuiteClasses({GalleryTest.class})
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {

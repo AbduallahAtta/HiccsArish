@@ -3,7 +3,6 @@ package com.hiccs.arish.adapters;
 import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -18,7 +17,6 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.hiccs.arish.R;
 import com.hiccs.arish.models.news.News;
-import com.hiccs.arish.utils.Constants;
 
 import java.util.List;
 
@@ -76,7 +74,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 startNewsDetailsWithTransition();
             } else {
-           //     startNewsDetailsActivity();
+                //     startNewsDetailsActivity();
             }
         }
 
