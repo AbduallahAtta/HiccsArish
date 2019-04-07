@@ -72,6 +72,8 @@ public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapte
         ImageView extra_course_img;
 
 
+
+
         public ViewHolder(@NonNull View itemView) {
 
 
