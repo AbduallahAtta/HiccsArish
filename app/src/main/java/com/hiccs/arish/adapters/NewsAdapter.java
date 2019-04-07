@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.hiccs.arish.R;
+import com.hiccs.arish.activities.NewsDetailsActivity;
 import com.hiccs.arish.models.news.News;
 import com.hiccs.arish.utils.Constants;
 
@@ -42,7 +43,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
     @NonNull
     @Override
     public NewsViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View newsView = LayoutInflater.from(mContext).inflate(R.layout.list_item_news, viewGroup, false);
+        View newsView = LayoutInflater.from(mContext).inflate(R.layout.list_item_news,
+                viewGroup, false);
         return new NewsViewHolder(newsView);
     }
 
@@ -72,11 +74,12 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         }
 
         @OnClick(R.id.cardView)
+
         public void onNewsClick() {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 startNewsDetailsWithTransition();
             } else {
-           //     startNewsDetailsActivity();
+                startNewsDetailsActivity();
             }
         }
 
@@ -85,17 +88,20 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
          * of the WebService returns real value
          */
         @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+
         private void startNewsDetailsWithTransition() {
             Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext, mImage, mImage.getTransitionName()).toBundle();
-          /* Intent intent = new Intent(mContext, NewsDetailsActivity.class);
-            intent.putExtra(Constants.NEWS_SELECTED_INTENT_KEY, mNews.get(getAdapterPosition()));
+          Intent intent = new Intent(mContext, NewsDetailsActivity.class);
+            intent.putExtra(Constants.NEWS_SELECTED_INTENT_KEY,
+                    mNews.get(getAdapterPosition()));
             mContext.startActivity(intent, bundle);
         }
 
         private void startNewsDetailsActivity() {
             Intent intent = new Intent(mContext, NewsDetailsActivity.class);
-            intent.putExtra(Constants.NEWS_SELECTED_INTENT_KEY, mNews.get(getAdapterPosition()));
-            mContext.startActivity(intent);*/
+            intent.putExtra(Constants.NEWS_SELECTED_INTENT_KEY,
+                    mNews.get(getAdapterPosition()));
+            mContext.startActivity(intent);
         }
     }
 

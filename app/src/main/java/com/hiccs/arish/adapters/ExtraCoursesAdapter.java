@@ -17,7 +17,6 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.hiccs.arish.R;
-import com.hiccs.arish.activities.ExtraCoursesActivity;
 import com.hiccs.arish.activities.ExtraCoursesDetailsActivity;
 import com.hiccs.arish.models.ExtraCoursesModel;
 import com.hiccs.arish.utils.Constants;
@@ -32,8 +31,8 @@ public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapte
     private Context ExtraCoursesContext;
     private List<ExtraCoursesModel> Extra_Courses_List;
 
-    public ExtraCoursesAdapter(Context context, List<ExtraCoursesModel> Extra_Courses_List) {
-        this.ExtraCoursesContext = context;
+    public ExtraCoursesAdapter(Context ExtraCoursesContext, List<ExtraCoursesModel> Extra_Courses_List) {
+        this.ExtraCoursesContext = ExtraCoursesContext;
         this.Extra_Courses_List = Extra_Courses_List;
     }
 
@@ -54,9 +53,13 @@ public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapte
 
         holder.extra_course_name.setText(Extra_Courses_List.get(position).getCourseName());
         holder.extra_course_des.setText(Extra_Courses_List.get(position).getDescription());
-        Glide.with(ExtraCoursesContext).load(Extra_Courses_List.get(position).getImgUrl()).into(holder.extra_course_img);
+        Glide.with(ExtraCoursesContext)
+                .load(Extra_Courses_List.get(position).getImgUrl())
+                .into(holder.extra_course_img);
 
     }
+
+
 
     @Override
     public int getItemCount() {
@@ -66,25 +69,29 @@ public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapte
     public class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.extra_course_name)
         TextView extra_course_name;
+
         @BindView(R.id.extra_course_des)
         TextView extra_course_des;
+
         @BindView(R.id.extra_course_img)
         ImageView extra_course_img;
 
 
         public ViewHolder(@NonNull View itemView) {
-
-
             super(itemView);
             ButterKnife.bind(this, itemView);
 
         }
+
+        /**
+         *
+         */
         @OnClick(R.id.cardView)
-        public void onNewsClick() {
+        public void onCourseClick() {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                startExtraCoursesDetails();
+                startCoursesDetailsWithTransition();
             } else {
-             //   startExtraCoursesDetails();
+                startCourseDetailsActivity();
             }
         }
 
@@ -93,18 +100,22 @@ public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapte
          * of the WebService returns real value
          */
         @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-        private void startExtraCoursesDetails() {
+
+        private void startCoursesDetailsWithTransition() {
             Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) ExtraCoursesContext,
                     extra_course_img, extra_course_img.getTransitionName()).toBundle();
            Intent intent = new Intent(ExtraCoursesContext, ExtraCoursesDetailsActivity.class);
-        /*    intent.putExtra(Constants.EXTRA_COURSES_SELECTED_INTENT_KEY, Extra_Courses_List.get(getAdapterPosition()));
+
+            intent.putExtra(Constants.EXTRA_COURSES_SELECTED_INTENT_KEY,
+                    Extra_Courses_List.get(getAdapterPosition()));
             ExtraCoursesContext.startActivity(intent, bundle);
         }
 
-        private void startNewsDetailsActivity() {
+        private void startCourseDetailsActivity() {
             Intent intent = new Intent(ExtraCoursesContext, ExtraCoursesDetailsActivity.class);
-            intent.putExtra(Constants.EXTRA_COURSES_SELECTED_INTENT_KEY, Extra_Courses_List.get(getAdapterPosition()));
-            ExtraCoursesContext.startActivity(intent);*/
+            intent.putExtra(Constants.EXTRA_COURSES_SELECTED_INTENT_KEY,
+                    Extra_Courses_List.get(getAdapterPosition()));
+            ExtraCoursesContext.startActivity(intent);
         }
     }
 

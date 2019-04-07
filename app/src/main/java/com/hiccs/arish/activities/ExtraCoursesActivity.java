@@ -1,16 +1,25 @@
 package com.hiccs.arish.activities;
 
+import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.MenuItem;
+import android.view.View;
 
 import com.hiccs.arish.R;
 import com.hiccs.arish.adapters.ExtraCoursesAdapter;
+import com.hiccs.arish.adapters.NewsAdapter;
 import com.hiccs.arish.models.ExtraCoursesModel;
 import com.hiccs.arish.rest.APIUtils;
 import com.hiccs.arish.utils.Constants;
+import com.hiccs.arish.viewmodel.ExtraCoursesViewModel;
+import com.hiccs.arish.viewmodel.NewsViewModel;
+import com.victor.loading.rotate.RotateLoading;
 
 import java.util.List;
 
@@ -22,7 +31,9 @@ import retrofit2.Response;
 
 public class ExtraCoursesActivity extends AppCompatActivity {
 
-    private static final String TAG = ExtraCoursesActivity.class.getSimpleName();
+    @BindView(R.id.loadingIndicator)
+    RotateLoading loadingIndicator;
+
     @BindView(R.id.ExtraCoursesRecyclerView)
     RecyclerView ExtraCoursesRecyclerView;
 
@@ -31,48 +42,54 @@ public class ExtraCoursesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_extra_courses);
         ButterKnife.bind(this);
-        ExtraCourses();
+        setupToolbar();
+        getCoursesOfViewModel();
     }
 
-
-    private void ExtraCourses() {
-        logger("Started to fetch data");
-        APIUtils.getHiccsAPI().getExtraCourses()
-                .enqueue(new Callback<List<ExtraCoursesModel>>() {
-                    @Override
-                    public void onResponse(Call<List<ExtraCoursesModel>> call, Response<List<ExtraCoursesModel>> response) {
-                        logger("Started to get response");
-
-
-                        if (response.isSuccessful()) {
-                            linkExtraCoursesAdapter(response.body());
-
-                            logger(response.body().get(0).toString());
-                            logger(response.body().get(0).getCourseName());
-                        } else {
-                            logger("response code = " + response.code());
-                        }
-
-                    }
-
-                    @Override
-                    public void onFailure(Call<List<ExtraCoursesModel>> call, Throwable t) {
-                        logger(t.getMessage());
-                    }
-                });
+    private void setupToolbar() {
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setTitle(R.string.extra_courses_toolbar_title);
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setDisplayShowHomeEnabled(true);
+        }
     }
 
-    private void logger(String s) {
-        Log.v(Constants.NETWORK_TAG, s);
-        Log.v("HiccsArish", s);
+    private void getCoursesOfViewModel() {
+
+        showLoadingIndicator();
+       ExtraCoursesViewModel coursesViewModel = ViewModelProviders.of(this).get(ExtraCoursesViewModel.class);
+        coursesViewModel.Extra_Courses_List().observe(this, ExtraCoursesModel -> {
+            hideLoadingIndicator();
+            setCoursesToAdapter(ExtraCoursesModel);
+        });
+
     }
 
-    private void linkExtraCoursesAdapter(List<ExtraCoursesModel> body) {
-        ExtraCoursesAdapter adapter = new ExtraCoursesAdapter(this, body);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
-        ExtraCoursesRecyclerView.setLayoutManager(linearLayoutManager);
+    private void hideLoadingIndicator() {
+        loadingIndicator.stop();
+        ExtraCoursesRecyclerView.setVisibility(View.VISIBLE);
+    }
+
+    private void showLoadingIndicator() {
+        ExtraCoursesRecyclerView.setVisibility(View.GONE);
+        loadingIndicator.start();
+    }
+
+    private void setCoursesToAdapter(List<ExtraCoursesModel> ExtraCoursesModel) {
+        hideLoadingIndicator();
+        ExtraCoursesAdapter adapter = new ExtraCoursesAdapter(this, ExtraCoursesModel);
         ExtraCoursesRecyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

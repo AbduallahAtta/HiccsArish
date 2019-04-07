@@ -23,6 +23,7 @@ import butterknife.ButterKnife;
 public class NewsActivity extends AppCompatActivity {
     @BindView(R.id.newsRecyclerView)
     RecyclerView mNewsRecyclerView;
+
     @BindView(R.id.loadingIndicator)
     RotateLoading loadingIndicator;
 

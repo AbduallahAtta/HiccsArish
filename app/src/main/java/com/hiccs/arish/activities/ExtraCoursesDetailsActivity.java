@@ -1,10 +1,10 @@
 package com.hiccs.arish.activities;
 
-import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -12,20 +12,21 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.hiccs.arish.R;
-import com.hiccs.arish.models.news.News;
+import com.hiccs.arish.models.ExtraCoursesModel;
 import com.hiccs.arish.utils.Constants;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class NewsDetailsActivity extends AppCompatActivity {
+public class ExtraCoursesDetailsActivity extends AppCompatActivity {
 
-    @BindView(R.id.newsBodyTextView)
-    TextView newsBodyTextView;
 
-    @BindView(R.id.newsImageView)
-    ImageView newsImageView;
+    @BindView(R.id.extra_course_des)
+    TextView extra_course_des;
+
+    @BindView(R.id.extra_course_img)
+    ImageView extra_course_img;
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -33,15 +34,15 @@ public class NewsDetailsActivity extends AppCompatActivity {
     @BindView(R.id.collapsingToolbar)
     CollapsingToolbarLayout collapsingToolbar;
 
-    private News mNews;
+    private ExtraCoursesModel extraCoursesModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_news_details);
+        setContentView(R.layout.activity_extra_courses_details);
         ButterKnife.bind(this);
-        if (getIntent() != null && getIntent().hasExtra(Constants.NEWS_SELECTED_INTENT_KEY)) {
-            mNews = getIntent().getParcelableExtra(Constants.NEWS_SELECTED_INTENT_KEY);
+        if (getIntent() != null && getIntent().hasExtra(Constants.EXTRA_COURSES_SELECTED_INTENT_KEY)) {
+            extraCoursesModel = getIntent().getParcelableExtra(Constants.EXTRA_COURSES_SELECTED_INTENT_KEY);
             setupViews();
         } else {
             errorUponLaunch();
@@ -60,21 +61,21 @@ public class NewsDetailsActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
-        collapsingToolbar.setTitle(mNews.getTitle());
+        collapsingToolbar.setTitle(extraCoursesModel.getCourseName());
         Glide.with(this)
-                .load(mNews.getImgUrl())
-                .into(newsImageView);
-        newsBodyTextView.setText(String.valueOf(mNews.getContent()));
+                .load(extraCoursesModel.getImgUrl())
+                .into(extra_course_img);
+        extra_course_des.setText(String.valueOf(extraCoursesModel.getDescription()));
     }
 
     @OnClick(R.id.shareNewsFab)
     public void onShareFABClick() {
         ShareCompat.IntentBuilder.from(this)
-                .setChooserTitle(getString(R.string.share_article_text) + " " + mNews.getTitle())
+                .setChooserTitle(getString(R.string.share_article_text) + " " + extraCoursesModel.getCourseName())
                 .setType("text/plain")
                 .setText("Check what's written by " +
                         "\n" + getString(R.string.app_name) +
-                        "\n\n" + mNews.getContent())
+                        "\n\n" + extraCoursesModel.getDescription())
                 .startChooser();
     }
 }
