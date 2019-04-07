@@ -1,29 +1,21 @@
 package com.hiccs.arish.fragments;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+
 import com.hiccs.arish.R;
 import com.hiccs.arish.adapters.StaffAdapter;
 import com.hiccs.arish.models.StaffModel;
 import com.hiccs.arish.rest.APIUtils;
 import com.hiccs.arish.utils.Constants;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
