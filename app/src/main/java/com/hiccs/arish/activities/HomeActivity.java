@@ -53,7 +53,7 @@ public class HomeActivity extends AppCompatActivity {
                 .transition(DrawableTransitionOptions.withCrossFade())
                 .into(extraCoursesImageView);
 
-        Glide.with(this).load(Constants.STUDENT_BACKGROUND)
+        Glide.with(this).load(R.drawable.hiccs_building_image)
                 .transition(DrawableTransitionOptions.withCrossFade())
                 .into(studentLoginKBV);
 

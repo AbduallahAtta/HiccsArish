@@ -34,14 +34,15 @@
 
                     >
 
-                    <ImageButton
-                        android:id="@+id/student"
+                    <ImageView
+                        android:id="@+id/studentProfileImage"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
                         android:background="?android:attr/selectableItemBackground"
                         android:clickable="true"
                         android:onClick="StudentAccount"
+                        android:scaleType="centerCrop"
 
 
                         />
@@ -71,14 +72,15 @@
 
                     >
 
-                    <ImageButton
-                        android:id="@+id/contact"
+                    <ImageView
+                        android:id="@+id/contactMailImage"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
                         android:background="?android:attr/selectableItemBackground"
                         android:clickable="true"
-                        android:onClick="inbox" />
+                        android:onClick="inbox"
+                        android:scaleType="centerCrop" />
 
                     <TextView
                         android:id="@+id/tvmap"
@@ -114,16 +116,17 @@
 
                     >
 
-                    <ImageButton
-                        android:id="@+id/about"
+                    <ImageView
+                        android:id="@+id/coursesTableImage"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
-
                         android:background="?android:attr/selectableItemBackground"
+
                         android:clickable="true"
                         android:gravity="center"
                         android:onClick="Courses_table"
+                        android:scaleType="centerCrop"
 
 
                         />
@@ -154,15 +157,16 @@
 
                     >
 
-                    <ImageButton
-                        android:id="@+id/map"
+                    <ImageView
+                        android:id="@+id/lastExamsImage"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
                         android:background="?android:attr/selectableItemBackground"
                         android:clickable="true"
                         android:contextClickable="false"
-                        android:onClick="previos_exams" />
+                        android:onClick="previos_exams"
+                        android:scaleType="centerCrop" />
 
                     <TextView
                         android:id="@+id/textView"
@@ -199,15 +203,16 @@
 
                     >
 
-                    <ImageButton
-                        android:id="@+id/studentf"
+                    <ImageView
+                        android:id="@+id/suggestImage"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
                         android:background="?android:attr/selectableItemBackground"
                         android:clickable="true"
+                        android:onClick="suggestion"
 
-                        android:onClick="suggestion" />
+                        android:scaleType="centerCrop" />
 
                     <TextView
                         android:id="@+id/tvvcontact"
@@ -235,15 +240,15 @@
 
                     >
 
-                    <ImageButton
-                        android:id="@+id/aboduft"
+                    <ImageView
+                        android:id="@+id/studentGradesImage"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
                         android:background="?android:attr/selectableItemBackground"
                         android:clickable="true"
-
-                        android:onClick="report" />
+                        android:onClick="report"
+                        android:scaleType="centerCrop" />
 
                     <TextView
                         android:id="@+id/tvnefws"
