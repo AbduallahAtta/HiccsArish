@@ -30,4 +30,14 @@ public class Constants {
     public static final int WORKING_DAYS_OF_WEEK = 5;
     public static final String NETWORK_TAG = "server_data";
     public static final String TAG_ERROR = "error";
+
+    /**
+     * Images URLs
+     */
+    public static final String NEWS_IMAGE_URL = "https://images.unsplash.com/photo-1548056561-075b8a40c9e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1416&q=80";
+    public static final String GALLERY_IMAGE_URL = "https://images.unsplash.com/photo-1533158307587-828f0a76ef46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80";
+    public static final String EXTRA_COURSES_IMAGE_URL = "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1404&q=80";
+    public static final String STAFF_IMAGE_URL = "https://images.unsplash.com/photo-1511629091441-ee46146481b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80";
+    public static final String ABOUT_IMAGE_URL = "https://images.unsplash.com/photo-1537202108838-e7072bad1927?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1370&q=80";
+    public static final String STUDENT_BACKGROUND = "https://images.unsplash.com/photo-1462536943532-57a629f6cc60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80";
 }

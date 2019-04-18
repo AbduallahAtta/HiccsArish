@@ -66,7 +66,7 @@
 
             </LinearLayout>
 
-            <view
+            <View
                 style="@style/Widget.Design.Snackbar"
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp" />
@@ -85,7 +85,7 @@
                     android:text="@string/creation"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
-                <view
+                <View
                     style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
                     android:layout_height="match_parent" />
@@ -104,7 +104,7 @@
 
             </LinearLayout>
 
-            <view
+            <View
                 style="@style/Widget.Design.Snackbar"
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp" />
@@ -125,7 +125,7 @@
                     android:text="@string/granted_degrees"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
-                <view
+                <View
                     style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
                     android:layout_height="match_parent" />
@@ -144,7 +144,7 @@
 
             </LinearLayout>
 
-            <view
+            <View
                 style="@style/Widget.Design.Snackbar"
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp" />
@@ -165,7 +165,7 @@
                     android:text="@string/duration_of_study"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
-                <view
+                <View
                     style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
                     android:layout_height="match_parent" />
@@ -184,7 +184,7 @@
 
             </LinearLayout>
 
-            <view
+            <View
                 style="@style/Widget.Design.Snackbar"
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp" />
@@ -204,7 +204,7 @@
                     android:text="@string/departments"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
-                <view
+                <View
                     style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
                     android:layout_height="match_parent" />
@@ -223,7 +223,7 @@
 
             </LinearLayout>
 
-            <view
+            <View
                 style="@style/Widget.Design.Snackbar"
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp" />
@@ -243,7 +243,7 @@
                     android:text="@string/admission_requirements"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
-                <view
+                <View
                     style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
                     android:layout_height="match_parent" />
@@ -262,7 +262,7 @@
 
             </LinearLayout>
 
-            <view
+            <View
                 style="@style/Widget.Design.Snackbar"
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp" />
@@ -282,7 +282,7 @@
                     android:text="@string/goals"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
-                <view
+                <View
                     style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
                     android:layout_height="match_parent" />
@@ -301,7 +301,7 @@
 
             </LinearLayout>
 
-            <view
+            <View
                 style="@style/Widget.Design.Snackbar"
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp" />
@@ -321,7 +321,7 @@
                     android:text="@string/address"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
-                <view
+                <View
                     style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
                     android:layout_height="match_parent" />
@@ -340,7 +340,7 @@
 
             </LinearLayout>
 
-            <view
+            <View
                 style="@style/Widget.Design.Snackbar"
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp" />
@@ -360,7 +360,7 @@
                     android:text="@string/connection_info"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
-                <view
+                <View
                     style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
                     android:layout_height="match_parent" />
@@ -379,7 +379,7 @@
 
             </LinearLayout>
 
-            <view
+            <View
                 style="@style/Widget.Design.Snackbar"
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp" />

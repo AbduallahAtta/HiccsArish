@@ -9,7 +9,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.flaviofaria.kenburnsview.KenBurnsView;
 import com.hiccs.arish.R;
 import com.hiccs.arish.utils.Constants;
 import com.michaldrabik.tapbarmenulib.TapBarMenu;
@@ -22,22 +26,64 @@ public class HomeActivity extends AppCompatActivity {
     private static final String TAG = HomeActivity.class.getSimpleName();
     @BindView(R.id.tapBarMenu)
     TapBarMenu tapBarMenu;
+    @BindView(R.id.studentLoginKBV)
+    KenBurnsView studentLoginKBV;
+    @BindView(R.id.staffImage)
+    ImageView staffImage;
+    @BindView(R.id.galleryImageView)
+    ImageView galleryImageView;
+    @BindView(R.id.extraCoursesImageView)
+    ImageView extraCoursesImageView;
+    @BindView(R.id.newsImageView)
+    ImageView newsImageView;
+    @BindView(R.id.aboutImageView)
+    ImageView aboutImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
+        loadImages();
         setupSocialNetworksMenuClick();
+    }
+
+    private void loadImages() {
+        Glide.with(this).load(Constants.EXTRA_COURSES_IMAGE_URL)
+                .transition(DrawableTransitionOptions.withCrossFade())
+                .into(extraCoursesImageView);
+
+        Glide.with(this).load(Constants.STUDENT_BACKGROUND)
+                .transition(DrawableTransitionOptions.withCrossFade())
+                .into(studentLoginKBV);
+
+        Glide.with(this).load(Constants.NEWS_IMAGE_URL)
+                .transition(DrawableTransitionOptions.withCrossFade())
+                .into(newsImageView);
+
+        Glide.with(this).load(Constants.GALLERY_IMAGE_URL)
+                .transition(DrawableTransitionOptions.withCrossFade())
+                .into(galleryImageView);
+
+        Glide.with(this).load(Constants.ABOUT_IMAGE_URL)
+                .transition(DrawableTransitionOptions.withCrossFade())
+                .into(aboutImageView);
+
+        Glide.with(this).load(Constants.STAFF_IMAGE_URL)
+                .transition(DrawableTransitionOptions.withCrossFade())
+                .into(staffImage);
     }
 
     private void setupSocialNetworksMenuClick() {
         tapBarMenu.setOnClickListener(v -> tapBarMenu.toggle());
     }
 
-    @OnClick({R.id.staffParent, R.id.galleryParent, R.id.extraCoursesParent, R.id.newsParent, R.id.aboutParent, R.id.hiccsWebSiteImage, R.id.hiccsFacebookImage, R.id.hiccsYoutubeImage, R.id.hiccsLinkedInImage, R.id.hiccsLocationImage, R.id.hiccsLandLineNumberImage})
+    @OnClick({R.id.studentImageProfile, R.id.staffParent, R.id.galleryParent, R.id.extraCoursesParent, R.id.newsParent, R.id.aboutParent, R.id.hiccsWebSiteImage, R.id.hiccsFacebookImage, R.id.hiccsYoutubeImage, R.id.hiccsLinkedInImage, R.id.hiccsLocationImage, R.id.hiccsLandLineNumberImage})
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            case R.id.studentImageProfile:
+                startStudentLoginActivity();
+                break;
             case R.id.staffParent:
                 startStaffActivity();
                 break;
@@ -72,6 +118,11 @@ public class HomeActivity extends AppCompatActivity {
                 openHiccsLocation();
                 break;
         }
+    }
+
+    private void startStudentLoginActivity() {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 
     private void startStaffActivity() {

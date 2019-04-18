@@ -6,6 +6,7 @@ package com.hiccs.arish.rest;
 
 import com.hiccs.arish.models.ExtraCoursesModel;
 import com.hiccs.arish.models.StaffModel;
+import com.hiccs.arish.models.Student;
 import com.hiccs.arish.models.StudentAccountModel;
 import com.hiccs.arish.models.news.News;
 import com.hiccs.arish.models.suggestionsModel;
@@ -24,6 +25,9 @@ import retrofit2.http.Query;
  * using the Type-Safe HTTP Client "Retrofit"
  */
 public interface HiccsAPI {
+
+    @POST("login.php")
+    Call<Student> loginStudent(Student student);
 
     @GET("news.php")
     Call<List<News>> getHICCSNews();

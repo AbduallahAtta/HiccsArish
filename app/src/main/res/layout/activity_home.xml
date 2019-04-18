@@ -20,21 +20,23 @@
             app:shape_arc_height="@dimen/home_activity_arc_view_height"
             app:shape_arc_position="bottom">
 
-            <ImageView
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/studentLoginKBV"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@color/secondaryColor" />
 
         </com.github.florent37.shapeofview.shapes.ArcView>
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <ImageView
             android:id="@+id/studentImageProfile"
             android:layout_width="@dimen/student_profile_image_width"
             android:layout_height="@dimen/student_profile_image_height"
             app:layout_constraintBottom_toBottomOf="@+id/arcView"
             app:layout_constraintEnd_toEndOf="@+id/arcView"
             app:layout_constraintStart_toStartOf="@+id/arcView"
-            app:layout_constraintTop_toBottomOf="@+id/arcView" />
+            app:layout_constraintTop_toBottomOf="@+id/arcView"
+            app:srcCompat="@drawable/ic_student" />
 
         <TextView
             android:id="@+id/studentLabel"
@@ -46,26 +48,6 @@
             app:layout_constraintStart_toStartOf="@+id/studentImageProfile"
             app:layout_constraintTop_toBottomOf="@+id/studentImageProfile" />
 
-        <com.github.florent37.shapeofview.shapes.TriangleView
-            android:id="@+id/triangleView"
-            android:layout_width="@dimen/visitors_label_width"
-            android:layout_height="@dimen/visitors_label_height"
-            android:layout_marginTop="@dimen/visitors_label_margin_top"
-            android:background="@color/primaryDarkColor"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/studentLabel"
-            app:shape_triangle_percentBottom="0"
-            app:shape_triangle_percentLeft="0"
-            app:shape_triangle_percentRight="0.5">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/primaryDarkColor"
-                android:gravity="center"
-                android:text="@string/visitors_features_label"
-                android:textColor="@color/primaryTextColor" />
-        </com.github.florent37.shapeofview.shapes.TriangleView>
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -73,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/home_activity_visitors_features_margin_top"
             android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@+id/triangleView">
+            app:layout_constraintTop_toBottomOf="@+id/studentLabel">
 
             <LinearLayout
                 android:layout_width="match_parent"
