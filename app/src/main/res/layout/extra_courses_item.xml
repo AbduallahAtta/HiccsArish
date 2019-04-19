@@ -2,7 +2,7 @@
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/cardView"
+    android:id="@+id/extraCoursesCardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/list_item_news_parent_margin"
@@ -24,6 +24,7 @@
 
         <ImageView
             android:id="@+id/extra_course_img"
+            android:transitionName="@string/extra_courses_shared_transition_name"
             android:layout_width="128dp"
             android:layout_height="128dp" />
 

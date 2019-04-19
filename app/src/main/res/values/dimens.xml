@@ -59,5 +59,6 @@
     <dimen name="news_details_collapsing_expanded_title_margin_start">16dp</dimen>
     <dimen name="news_details_body_margin">8dp</dimen>
     <dimen name="news_details_body_margin_top">16dp</dimen>
+    <dimen name="student_portal_parent_margin">8dp</dimen>
 
 </resources>

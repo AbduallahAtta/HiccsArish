@@ -17,7 +17,6 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.hiccs.arish.R;
-import com.hiccs.arish.activities.ExtraCoursesActivity;
 import com.hiccs.arish.activities.ExtraCoursesDetailsActivity;
 import com.hiccs.arish.models.ExtraCoursesModel;
 import com.hiccs.arish.utils.Constants;
@@ -60,7 +59,7 @@ public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapte
 
     @Override
     public int getItemCount() {
-        return Extra_Courses_List== null ? 0 : Extra_Courses_List.size();
+        return Extra_Courses_List == null ? 0 : Extra_Courses_List.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -72,21 +71,18 @@ public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapte
         ImageView extra_course_img;
 
 
-
-
         public ViewHolder(@NonNull View itemView) {
-
-
             super(itemView);
             ButterKnife.bind(this, itemView);
 
         }
-        @OnClick(R.id.cardView)
+
+        @OnClick(R.id.extraCoursesCardView)
         public void onNewsClick() {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                startExtraCoursesDetails();
+                startExtraCoursesDetailsWithTransition();
             } else {
-             //   startExtraCoursesDetails();
+                startExtraCoursesDetailsWithoutTransition();
             }
         }
 
@@ -95,18 +91,18 @@ public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapte
          * of the WebService returns real value
          */
         @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-        private void startExtraCoursesDetails() {
+        private void startExtraCoursesDetailsWithTransition() {
             Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) ExtraCoursesContext,
                     extra_course_img, extra_course_img.getTransitionName()).toBundle();
-           Intent intent = new Intent(ExtraCoursesContext, ExtraCoursesDetailsActivity.class);
-        /*    intent.putExtra(Constants.EXTRA_COURSES_SELECTED_INTENT_KEY, Extra_Courses_List.get(getAdapterPosition()));
+            Intent intent = new Intent(ExtraCoursesContext, ExtraCoursesDetailsActivity.class);
+            intent.putExtra(Constants.EXTRA_COURSES_SELECTED_INTENT_KEY, Extra_Courses_List.get(getAdapterPosition()));
             ExtraCoursesContext.startActivity(intent, bundle);
         }
 
-        private void startNewsDetailsActivity() {
+        private void startExtraCoursesDetailsWithoutTransition() {
             Intent intent = new Intent(ExtraCoursesContext, ExtraCoursesDetailsActivity.class);
             intent.putExtra(Constants.EXTRA_COURSES_SELECTED_INTENT_KEY, Extra_Courses_List.get(getAdapterPosition()));
-            ExtraCoursesContext.startActivity(intent);*/
+            ExtraCoursesContext.startActivity(intent);
         }
     }
 

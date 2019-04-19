@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
+
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.hiccs.arish"
@@ -22,6 +23,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
 
     }
+
 }
 
 dependencies {

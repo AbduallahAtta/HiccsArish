@@ -9,7 +9,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="20dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -28,6 +27,7 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
+                    android:layout_margin="@dimen/student_portal_parent_margin"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical"
@@ -65,6 +65,8 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:layout_margin="@dimen/student_portal_parent_margin"
+
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -112,6 +114,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_margin="@dimen/student_portal_parent_margin"
+
                     android:orientation="vertical"
 
                     >
@@ -154,6 +158,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical"
+                    android:layout_margin="@dimen/student_portal_parent_margin"
 
                     >
 
@@ -197,6 +202,8 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
+                    android:layout_margin="@dimen/student_portal_parent_margin"
+
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical"
@@ -236,6 +243,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_margin="@dimen/student_portal_parent_margin"
+
                     android:orientation="vertical"
 
                     >

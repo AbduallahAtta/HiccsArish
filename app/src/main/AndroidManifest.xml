@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.hiccs.arish">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -18,13 +17,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activities.LoginActivity"></activity>
-        <activity android:name=".activities.ExtraCoursesDetailsActivity" />
+        <activity
+            android:name=".activities.ExtraCoursesDetailsActivity"
+            android:theme="@style/NoActionBarActivityStyle" />
         <activity
             android:name=".activities.NewsDetailsActivity"
             android:parentActivityName=".activities.NewsActivity"
-            android:theme="@style/newsDetailsActivityStyle" />
+            android:theme="@style/NoActionBarActivityStyle" />
 
-        <activity android:name=".activities.StafffActivity"
+        <activity
+            android:name=".activities.StafffActivity"
             android:theme="@style/AppTheme.NoActionBar"
 
             />
