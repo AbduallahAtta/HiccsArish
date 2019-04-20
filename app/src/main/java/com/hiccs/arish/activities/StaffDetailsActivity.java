@@ -20,15 +20,13 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class StaffDetailsActivity extends AppCompatActivity {
+
     @BindView(R.id.DescribtionTextView)
     TextView DescribtionTextView;
-
     @BindView(R.id.ImageView)
     ImageView ImageView;
-
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-
     @BindView(R.id.collapsingToolbar)
     CollapsingToolbarLayout collapsingToolbar;
 

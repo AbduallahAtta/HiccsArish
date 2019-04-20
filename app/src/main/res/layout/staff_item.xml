@@ -9,21 +9,19 @@
     android:orientation="horizontal">
 
 
-        <TextView
-            android:id="@+id/staff_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-
+    <TextView
+        android:id="@+id/staff_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
 
     <ImageView
         android:id="@+id/staff_img"
         android:layout_width="128dp"
         android:layout_height="128dp"
-        />
+        android:transitionName="@string/staff_image_shared_transition" />
 
 
 </android.support.v7.widget.CardView>

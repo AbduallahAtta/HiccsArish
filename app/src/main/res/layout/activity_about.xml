@@ -327,9 +327,9 @@
                     android:layout_gravity="center"
                     android:layout_weight="4"
                     android:gravity="right"
-                    android:textSize="14sp"
                     android:text="@string/address"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="14sp" />
 
                 <View
                     style="@style/Widget.Design.Snackbar"
@@ -367,9 +367,9 @@
                     android:layout_gravity="center"
                     android:layout_weight="4"
                     android:gravity="right"
-                    android:textSize="14sp"
                     android:text="@string/connection_info"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="14sp" />
 
                 <View
                     style="@style/Widget.Design.Snackbar"

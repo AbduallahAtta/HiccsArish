@@ -113,6 +113,7 @@ E-mail:m-saihizoo@hotmail.com
     <string name="activity_launch_error_msg">Error Occurred</string>
     <string name="student_login_label">Login</string>
     <string name="extra_courses_shared_transition_name">extra-courses-image</string>
+    <string name="staff_image_shared_transition">staff-image-transition</string>
 
 
 </resources>
