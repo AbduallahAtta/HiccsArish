@@ -1,10 +1,10 @@
 package com.hiccs.arish.activities;
 
+import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -68,7 +68,7 @@ public class ExtraCoursesDetailsActivity extends AppCompatActivity {
         extra_course_des.setText(String.valueOf(extraCoursesModel.getDescription()));
     }
 
-    @OnClick(R.id.shareNewsFab)
+    @OnClick(R.id.shareCoursesFab)
     public void onShareFABClick() {
         ShareCompat.IntentBuilder.from(this)
                 .setChooserTitle(getString(R.string.share_article_text) + " " + extraCoursesModel.getCourseName())

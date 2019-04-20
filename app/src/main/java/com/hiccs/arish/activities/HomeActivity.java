@@ -130,6 +130,11 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    private void startAboutActivity() {
+        Intent intent = new Intent(this, AboutActivity.class);
+        startActivity(intent);
+    }
+
     private void startGalleryActivity() {
         Intent intent = new Intent(this, GalleryActivity.class);
         startActivity(intent);
@@ -145,11 +150,6 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void startAboutActivity() {
-        // TODO: 3/26/2019 throws RuntimeException, needs to be fixed
-        Intent intent = new Intent(this, AboutActivity.class);
-        startActivity(intent);
-    }
 
     private void openHiccsYouTubeChannel() {
         try {

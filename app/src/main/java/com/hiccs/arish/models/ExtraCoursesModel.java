@@ -5,7 +5,6 @@ import android.os.Parcelable;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.hiccs.arish.models.news.News;
 
 public class ExtraCoursesModel implements Parcelable {
     public static final Creator<ExtraCoursesModel> CREATOR = new Creator<ExtraCoursesModel>() {

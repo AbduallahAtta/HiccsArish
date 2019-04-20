@@ -5,7 +5,6 @@ import android.arch.lifecycle.ViewModel;
 import android.util.Log;
 
 import com.hiccs.arish.models.ExtraCoursesModel;
-import com.hiccs.arish.models.news.News;
 import com.hiccs.arish.rest.APIUtils;
 
 import java.util.List;
@@ -14,7 +13,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ExtraCoursesViewModel  extends ViewModel {
+public class ExtraCoursesViewModel extends ViewModel {
     private static final String TAG = ExtraCoursesViewModel.class.getSimpleName();
     private MutableLiveData<List<ExtraCoursesModel>> Extra_Courses_List;
 
@@ -30,7 +29,8 @@ public class ExtraCoursesViewModel  extends ViewModel {
         APIUtils.getHiccsAPI().getExtraCourses()
                 .enqueue(new Callback<List<ExtraCoursesModel>>() {
                     @Override
-                    public void onResponse(Call<List<ExtraCoursesModel>> call, Response<List<ExtraCoursesModel>> response) {
+                    public void onResponse(Call<List<ExtraCoursesModel>> call,
+                                           Response<List<ExtraCoursesModel>> response) {
                         if (response.isSuccessful()) {
                             Extra_Courses_List.setValue(response.body());
                         } else {

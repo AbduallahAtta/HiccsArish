@@ -5,29 +5,20 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.hiccs.arish.R;
 import com.hiccs.arish.adapters.ExtraCoursesAdapter;
-import com.hiccs.arish.adapters.NewsAdapter;
 import com.hiccs.arish.models.ExtraCoursesModel;
-import com.hiccs.arish.rest.APIUtils;
-import com.hiccs.arish.utils.Constants;
 import com.hiccs.arish.viewmodel.ExtraCoursesViewModel;
-import com.hiccs.arish.viewmodel.NewsViewModel;
 import com.victor.loading.rotate.RotateLoading;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class ExtraCoursesActivity extends AppCompatActivity {
 
@@ -58,7 +49,7 @@ public class ExtraCoursesActivity extends AppCompatActivity {
     private void getCoursesOfViewModel() {
 
         showLoadingIndicator();
-       ExtraCoursesViewModel coursesViewModel = ViewModelProviders.of(this).get(ExtraCoursesViewModel.class);
+        ExtraCoursesViewModel coursesViewModel = ViewModelProviders.of(this).get(ExtraCoursesViewModel.class);
         coursesViewModel.Extra_Courses_List().observe(this, ExtraCoursesModel -> {
             hideLoadingIndicator();
             setCoursesToAdapter(ExtraCoursesModel);

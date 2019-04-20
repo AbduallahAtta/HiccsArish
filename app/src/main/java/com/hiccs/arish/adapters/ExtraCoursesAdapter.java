@@ -52,8 +52,9 @@ public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapte
 
 
         holder.extra_course_name.setText(Extra_Courses_List.get(position).getCourseName());
-        holder.extra_course_des.setText(Extra_Courses_List.get(position).getDescription());
-        Glide.with(ExtraCoursesContext).load(Extra_Courses_List.get(position).getImgUrl()).into(holder.extra_course_img);
+        //  holder.extra_course_des.setText(Extra_Courses_List.get(position).getDescription());
+        Glide.with(ExtraCoursesContext).load(Extra_Courses_List.get(position).getImgUrl())
+                .into(holder.extra_course_img);
 
     }
 
@@ -65,33 +66,30 @@ public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapte
     public class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.extra_course_name)
         TextView extra_course_name;
-        @BindView(R.id.extra_course_des)
-        TextView extra_course_des;
         @BindView(R.id.extra_course_img)
         ImageView extra_course_img;
 
 
         public ViewHolder(@NonNull View itemView) {
+
+
             super(itemView);
             ButterKnife.bind(this, itemView);
 
         }
 
-        @OnClick(R.id.extraCoursesCardView)
-        public void onNewsClick() {
+        @OnClick(R.id.cardView)
+        public void onCourseClick() {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                startExtraCoursesDetailsWithTransition();
+                startExtraCoursesDetails();
             } else {
-                startExtraCoursesDetailsWithoutTransition();
+                startExtraCoursesDetailsActivity();
             }
         }
 
-        /**
-         * Won't be visible anyway until the imgUrl attribute
-         * of the WebService returns real value
-         */
+
         @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-        private void startExtraCoursesDetailsWithTransition() {
+        private void startExtraCoursesDetails() {
             Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) ExtraCoursesContext,
                     extra_course_img, extra_course_img.getTransitionName()).toBundle();
             Intent intent = new Intent(ExtraCoursesContext, ExtraCoursesDetailsActivity.class);
@@ -99,7 +97,7 @@ public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapte
             ExtraCoursesContext.startActivity(intent, bundle);
         }
 
-        private void startExtraCoursesDetailsWithoutTransition() {
+        private void startExtraCoursesDetailsActivity() {
             Intent intent = new Intent(ExtraCoursesContext, ExtraCoursesDetailsActivity.class);
             intent.putExtra(Constants.EXTRA_COURSES_SELECTED_INTENT_KEY, Extra_Courses_List.get(getAdapterPosition()));
             ExtraCoursesContext.startActivity(intent);

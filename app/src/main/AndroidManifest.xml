@@ -44,8 +44,12 @@
         <activity android:name=".activities.HicssInfoActivity" />
 
         <activity android:name=".activities.CoursesTableActivity" />
-        <activity android:name=".activities.AboutActivity" />
-        <activity android:name=".activities.ExtraCoursesActivity" />
+        <activity
+            android:name=".activities.AboutActivity"
+            android:parentActivityName=".activities.HomeActivity" />
+        <activity
+            android:name=".activities.ExtraCoursesActivity"
+            android:parentActivityName=".activities.HomeActivity" />
         <activity
             android:name=".activities.NewsActivity"
             android:launchMode="singleTop"

@@ -104,6 +104,8 @@ E-mail:m-saihizoo@hotmail.com
     <string name="visitors_feature_extra_courses_label">Extra Courses</string>
     <string name="news_toolbar_title">News</string>
     <string name="extra_courses_toolbar_title">Extra Courses</string>
+    <string name="image_courses_transition">extra_courses-image-transition</string>
+
 
     <string name="image_news_transition">news-image-transition</string>
     <string name="news_body_label">This is a body</string>

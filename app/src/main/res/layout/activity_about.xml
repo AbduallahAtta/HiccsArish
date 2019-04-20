@@ -83,7 +83,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
                     android:text="@string/creation"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="14sp" />
 
                 <View
                     style="@style/Widget.Design.Snackbar"
@@ -100,7 +101,7 @@
                     android:text="@string/creation_title"
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="30dp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -123,7 +124,9 @@
                     android:layout_weight="4"
                     android:gravity="right"
                     android:text="@string/granted_degrees"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="14sp" />
 
                 <View
                     style="@style/Widget.Design.Snackbar"
@@ -140,7 +143,7 @@
                     android:text="@string/granted_degrees_title"
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="30dp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -163,7 +166,9 @@
                     android:layout_weight="4"
                     android:gravity="right"
                     android:text="@string/duration_of_study"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="14sp" />
 
                 <View
                     style="@style/Widget.Design.Snackbar"
@@ -180,7 +185,7 @@
                     android:text="@string/duration_of_study_title"
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="30dp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -202,7 +207,9 @@
                     android:layout_weight="4"
                     android:gravity="right"
                     android:text="@string/departments"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="14sp" />
 
                 <View
                     style="@style/Widget.Design.Snackbar"
@@ -241,7 +248,8 @@
                     android:layout_weight="4"
                     android:gravity="right"
                     android:text="@string/admission_requirements"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="14sp" />
 
                 <View
                     style="@style/Widget.Design.Snackbar"
@@ -258,7 +266,7 @@
                     android:text="@string/admission_requirements_title"
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="30dp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -280,7 +288,8 @@
                     android:layout_weight="4"
                     android:gravity="right"
                     android:text="@string/goals"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="14sp" />
 
                 <View
                     style="@style/Widget.Design.Snackbar"
@@ -297,7 +306,7 @@
                     android:text="@string/goals_title"
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="30dp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -318,6 +327,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="4"
                     android:gravity="right"
+                    android:textSize="14sp"
                     android:text="@string/address"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -336,7 +346,7 @@
                     android:text="@string/address_title"
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="30dp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -357,6 +367,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="4"
                     android:gravity="right"
+                    android:textSize="14sp"
                     android:text="@string/connection_info"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -368,14 +379,14 @@
                 <TextView
                     android:id="@+id/connection_info_title"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="31dp"
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/connection_info_title"
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="30dp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -384,331 +395,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tvphrtos"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#F5F5F5"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:textAlignment="center"
-
-                    android:textAllCaps="true"
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvsnesfdfs"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="4"
-                    android:fontFamily="casual"
-                    android:gravity="center_vertical"
-                    android:text="1-Faculty of Education
-\n
-2-Faculty of Agriculture
-\n
-3-Faculty of Sciences
-\n
-4-Faculty of Arts
-\n
-5-Faculty of Physical Education
-\n
-6-Faculty of Commerce
-\n
-7-College of fisheries technology and aquaculture
-\n
-8-Faculty of Home Economics
-\n
- *-Institute of Environmental Studies (Graduate Studies)"
-                    android:textAllCaps="true"
-
-                    android:textColor="#00004d"
-
-                    android:textSize="12sp"
-                    android:textStyle="bold">
-
-                </TextView>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:background="#d9d9d9"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dp"
-                    android:background="@android:color/black" />
-
-                <TextView
-                    android:id="@+id/tfgvnewsss"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dp"
-                    android:background="@android:color/black" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/twvphtos"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#F5F5F5"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:textAlignment="center"
-
-                    android:textAllCaps="true"
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-                <TextView
-                    android:id="@+id/tvnewss"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="4"
-
-                    android:fontFamily="casual"
-                    android:text="El-Arish"
-                    android:textAllCaps="true"
-                    android:textColor="#00004d"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#f2f2f2"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:textAlignment="center"
-
-                    android:textAllCaps="true"
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="4"
-
-                    android:fontFamily="casual"
-                    android:text="45511"
-                    android:textAllCaps="true"
-                    android:textColor="#00004d"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-
-                <TextView
-                    android:id="@+id/tvedfphtos"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-
-                    android:layout_weight="1"
-                    android:background="#F5F5F5"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:textAlignment="center"
-
-                    android:textAllCaps="true"
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/imagedView"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" />
-
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-
-                    android:layout_weight="3"
-                    android:fontFamily="casual"
-                    android:text="Egypt"
-                    android:textAllCaps="true"
-                    android:textColor="#00004d"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#d9d9d9"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dp"
-                    android:background="@android:color/black" />
-
-                <TextView
-                    android:id="@+id/tfvnewsss"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dp"
-                    android:background="@android:color/black" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#F5F5F5"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:textAlignment="center"
-
-                    android:textAllCaps="true"
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="4"
-                    android:fontFamily="casual"
-                    android:onClick="web"
-                    android:text="http://www.aru.edu.eg"
-                    android:textAllCaps="true"
-                    android:textColor="#00004d"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tfvnsewssswd"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#F5F5F5"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/imagpedView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="plus"
-
-                    />
-
-                <ImageView
-                    android:id="@+id/imkagedVihew"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:onClick="facebook" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:onClick="twitter"
-
-                    />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:onClick="twitter"
-
-                    />
-
-
-            </LinearLayout>
 
         </LinearLayout>
     </TableLayout>
