@@ -48,7 +48,7 @@ public class GalleryDetailsActivity extends AppCompatActivity {
                 getIntent().hasExtra(Constants.GALLERY_POSITION_INTENT_KEY) ||
                 getIntent().hasExtra(Constants.GALLERY_LIST_INTENT_KEY)) {
             getImagesFromIntent();
-            setTitle(mImages.get(mSelectedPosition).getImageName());
+            setTitle(mImages.get(mSelectedPosition).getId());
             setupViewPager();
         } else {
             errorUponLaunch();
@@ -79,7 +79,7 @@ public class GalleryDetailsActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int i) {
-                setTitle(mImages.get(i).getImageName());
+                setTitle(mImages.get(i).getId());
             }
 
             @Override
@@ -139,8 +139,8 @@ public class GalleryDetailsActivity extends AppCompatActivity {
         @Override
         public Fragment getItem(int position) {
             return PlaceholderFragment.newInstance(position,
-                    gallery.get(position).getImageName(),
-                    gallery.get(position).getImageUrl());
+                    gallery.get(position).getId(),
+                    gallery.get(position).getImgUrl());
         }
 
         @Override
@@ -151,7 +151,7 @@ public class GalleryDetailsActivity extends AppCompatActivity {
         @Nullable
         @Override
         public CharSequence getPageTitle(int position) {
-            return gallery.get(position).getImageName();
+            return gallery.get(position).getId();
         }
     }
 

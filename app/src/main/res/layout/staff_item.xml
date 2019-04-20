@@ -35,6 +35,7 @@
 
     <ImageView
         android:id="@+id/staff_img"
+        android:transitionName="@string/staff_image_shared_transition"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="4sp"

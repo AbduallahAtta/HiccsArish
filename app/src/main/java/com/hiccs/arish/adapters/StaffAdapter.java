@@ -19,6 +19,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.hiccs.arish.R;
 import com.hiccs.arish.activities.NewsDetailsActivity;
+import com.hiccs.arish.activities.StaffDetailsActivity;
 import com.hiccs.arish.models.StaffModel;
 import com.hiccs.arish.utils.Constants;
 
@@ -91,13 +92,13 @@ public class StaffAdapter extends Adapter<StaffAdapter.ViewHolder> {
         private void startStaffDetailsWithTransition() {
             Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) staffcontext,
                     staff_img, staff_img.getTransitionName()).toBundle();
-            Intent intent = new Intent(staffcontext, NewsDetailsActivity.class);
+            Intent intent = new Intent(staffcontext, StaffDetailsActivity.class);
             intent.putExtra(Constants.Staff_SELECTED_INTENT_KEY, staff_List.get(getAdapterPosition()));
             staffcontext.startActivity(intent, bundle);
         }
 
         private void startStaffDetailsActivity() {
-            Intent intent = new Intent(staffcontext, NewsDetailsActivity.class);
+            Intent intent = new Intent(staffcontext, StaffDetailsActivity.class);
             intent.putExtra(Constants.Staff_SELECTED_INTENT_KEY, staff_List.get(getAdapterPosition()));
             staffcontext.startActivity(intent);
         }

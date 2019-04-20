@@ -28,7 +28,9 @@
         <activity
             android:name=".activities.StafffActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.StaffDetailsActivity" />
+        <activity
+            android:name=".activities.StaffDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.StudentAccountActivity" />
 
         <meta-data

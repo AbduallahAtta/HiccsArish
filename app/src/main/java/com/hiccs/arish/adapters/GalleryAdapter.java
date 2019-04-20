@@ -17,6 +17,7 @@ import com.hiccs.arish.models.GalleryImages;
 import com.hiccs.arish.utils.Constants;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -44,7 +45,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
     @Override
     public void onBindViewHolder(@NonNull GalleryViewHolder galleryViewHolder, int i) {
         Glide.with(mContext)
-                .load(mGallery.get(i).getImageUrl())
+                .load(mGallery.get(i).getImgUrl())
                 .thumbnail(0.25f)
                 .transition(DrawableTransitionOptions.withCrossFade())
                 .into(galleryViewHolder.galleryImage);

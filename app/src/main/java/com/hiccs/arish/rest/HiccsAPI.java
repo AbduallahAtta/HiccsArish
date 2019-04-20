@@ -5,6 +5,7 @@ package com.hiccs.arish.rest;
  */
 
 import com.hiccs.arish.models.ExtraCoursesModel;
+import com.hiccs.arish.models.GalleryImages;
 import com.hiccs.arish.models.StaffModel;
 import com.hiccs.arish.models.Student;
 import com.hiccs.arish.models.StudentAccountModel;
@@ -12,6 +13,7 @@ import com.hiccs.arish.models.Suggestion;
 import com.hiccs.arish.models.news.News;
 import com.hiccs.arish.models.suggestionsModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -32,6 +34,9 @@ public interface HiccsAPI {
 
     @POST("suggestin.php")
     Call<Suggestion> postSuggestion(Suggestion suggestion);
+
+    @GET("Gallery.php")
+    Call<ArrayList<GalleryImages>> getGalleryImages();
 
     @GET("news.php")
     Call<List<News>> getHICCSNews();

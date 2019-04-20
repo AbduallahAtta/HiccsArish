@@ -50,6 +50,7 @@
             android:id="@+id/extra_course_img"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:transitionName="@string/extra_courses_shared_transition_name"
             android:layout_margin="4sp"
             android:layout_gravity="center"
             android:layout_weight="1.5"/>

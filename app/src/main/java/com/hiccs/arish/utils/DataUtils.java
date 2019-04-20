@@ -70,7 +70,7 @@ public class DataUtils {
         String[] images = getImages();
         ArrayList<GalleryImages> gallery = new ArrayList<>();
         for (int i = 0; i < images.length; i++) {
-            gallery.add(new GalleryImages("Image: " + String.valueOf(i), images[i]));
+//            gallery.add(new GalleryImages("Image: " + String.valueOf(i), images[i]));
         }
         return gallery;
     }
