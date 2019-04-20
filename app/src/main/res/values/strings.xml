@@ -91,19 +91,19 @@ E-mail:m-saihizoo@hotmail.com
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="professors">professors</string>
-    <string name="assistants">assistants</string>
+    <string name="professors">أساتذة</string>
+    <string name="assistants">أساتذة مساعدين</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
-    <string name="student_label">Student Login</string>
+    <string name="student_label">تسجيل دخول الطالب</string>
     <string name="visitors_features_label">Other Features</string>
-    <string name="visitors_feature_staff_label">Staff</string>
-    <string name="visitors_feature_gallery_label">Gallery</string>
-    <string name="visitors_feature_about_label">About</string>
-    <string name="visitors_feature_news_label">News</string>
-    <string name="visitors_feature_extra_courses_label">Extra Courses</string>
-    <string name="news_toolbar_title">News</string>
-    <string name="extra_courses_toolbar_title">Extra Courses</string>
+    <string name="visitors_feature_staff_label">أعضاء هيئة التدريس</string>
+    <string name="visitors_feature_gallery_label">معرض الصور</string>
+    <string name="visitors_feature_about_label">نبذة مختصرة</string>
+    <string name="visitors_feature_news_label">جريدة المعهد</string>
+    <string name="visitors_feature_extra_courses_label">دورات تدريبة</string>
+    <string name="news_toolbar_title">جريدة المعهد</string>
+    <string name="extra_courses_toolbar_title">دورات تدريبة</string>
     <string name="image_courses_transition">extra_courses-image-transition</string>
 
 
@@ -111,11 +111,11 @@ E-mail:m-saihizoo@hotmail.com
     <string name="news_body_label">This is a body</string>
     <string name="share_article_text">Share</string>
     <string name="activity_launch_error_msg">Error Occurred</string>
-    <string name="student_login_label">Login</string>
+    <string name="student_login_label">تسجيل الدخول </string>
     <string name="extra_courses_shared_transition_name">extra-courses-image</string>
     <string name="staff_image_shared_transition">staff-image-transition</string>
     <string name="suggest_edit_text_hint">Suggest</string>
-    <string name="submit_suggest_button_label">Submit</string>
+    <string name="submit_suggest_button_label">إقترح</string>
 
 
 </resources>

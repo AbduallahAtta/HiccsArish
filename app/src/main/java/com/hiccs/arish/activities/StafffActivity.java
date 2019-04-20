@@ -53,8 +53,8 @@ public class StafffActivity extends AppCompatActivity {
         mTabLayout = findViewById(R.id.tabs);
         mTabLayout.setupWithViewPager(mViewPager);
 
-        mTabLayout.addTab(mTabLayout.newTab().setText("Professors"));
-        mTabLayout.addTab(mTabLayout.newTab().setText("Assistants"));
+        mTabLayout.addTab(mTabLayout.newTab().setText(R.string.professors));
+        mTabLayout.addTab(mTabLayout.newTab().setText(R.string.assistants));
         mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
 
