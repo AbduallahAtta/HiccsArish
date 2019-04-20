@@ -33,6 +33,7 @@ public class StaffActivity extends AppCompatActivity {
     @BindView(R.id.loadingIndicator)
     RotateLoading loadingIndicator;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -45,5 +45,15 @@
         android:layout_gravity="end|bottom"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
+    <com.victor.loading.rotate.RotateLoading
+        android:id="@+id/loadingIndicator"
+        style="@style/loadingIndicatorStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:loading_color="@color/primaryColor"
+        app:loading_width="@dimen/loading_indicator_border_width" />
+
 
 </android.support.design.widget.CoordinatorLayout>

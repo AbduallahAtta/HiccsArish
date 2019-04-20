@@ -18,8 +18,14 @@ import android.widget.TextView;
 
 import com.hiccs.arish.R;
 import com.hiccs.arish.fragments.FragmentAdapter;
+import com.victor.loading.rotate.RotateLoading;
+
+import butterknife.BindView;
 
 public class StafffActivity extends AppCompatActivity {
+
+    @BindView(R.id.loadingIndicator)
+    RotateLoading loadingIndicator;
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -100,7 +106,7 @@ public class StafffActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "إسحب للتبديل ", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
