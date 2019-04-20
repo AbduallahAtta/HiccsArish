@@ -39,14 +39,22 @@ public class CourseTableDayAdapter extends RecyclerView.Adapter<CourseTableDayAd
     public void onBindViewHolder(@NonNull CoursesTableDayViewHolder holder, int i) {
         CourseTime day = mCourseTimes[i];
         if (!day.isInDay()) {
-            holder.courseName.setVisibility(View.GONE);
-            holder.profName.setVisibility(View.GONE);
-            holder.duration.setVisibility(View.GONE);
+            hideViews(holder);
         } else {
-            holder.courseName.setText(day.getCourseName());
-            holder.profName.setText(day.getProfName());
-            holder.duration.setText(day.getCourseDuration());
+            showDay(holder, day);
         }
+    }
+
+    private void showDay(@NonNull CoursesTableDayViewHolder holder, CourseTime day) {
+        holder.courseName.setText(day.getCourseName());
+        holder.profName.setText(day.getProfName());
+        holder.duration.setText(day.getCourseDuration());
+    }
+
+    private void hideViews(@NonNull CoursesTableDayViewHolder holder) {
+        holder.courseName.setVisibility(View.GONE);
+        holder.profName.setVisibility(View.GONE);
+        holder.duration.setVisibility(View.GONE);
     }
 
     @Override

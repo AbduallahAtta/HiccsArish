@@ -78,7 +78,7 @@ public class ExtraCoursesAdapter extends RecyclerView.Adapter<ExtraCoursesAdapte
 
         }
 
-        @OnClick(R.id.cardView)
+        @OnClick(R.id.extraCoursesCardView)
         public void onCourseClick() {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 startExtraCoursesDetails();

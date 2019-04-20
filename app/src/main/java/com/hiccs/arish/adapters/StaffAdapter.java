@@ -53,7 +53,6 @@ public class StaffAdapter extends Adapter<StaffAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         holder.staff_name.setText(staff_List.get(position).getDrName());
-        holder.staff_des.setText(staff_List.get(position).getDescription());
         Glide.with(staffcontext)
                 .load(staff_List.get(position).getImgUrl())
                 .into(holder.staff_img);
@@ -68,8 +67,6 @@ public class StaffAdapter extends Adapter<StaffAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.staff_name)
         TextView staff_name;
-        @BindView(R.id.staff_des)
-        TextView staff_des;
         @BindView(R.id.staff_img)
         ImageView staff_img;
 

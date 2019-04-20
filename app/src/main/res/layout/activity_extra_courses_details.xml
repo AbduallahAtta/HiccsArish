@@ -72,7 +72,7 @@
     </android.support.design.widget.AppBarLayout>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/shareNewsFab"
+        android:id="@+id/shareCoursesFab"
         style="@style/FABStyle"
         android:layout_margin="@dimen/fab_margin"
         app:layout_anchor="@id/appBarLayout"
