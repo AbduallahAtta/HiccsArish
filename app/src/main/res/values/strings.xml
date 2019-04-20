@@ -114,6 +114,8 @@ E-mail:m-saihizoo@hotmail.com
     <string name="student_login_label">Login</string>
     <string name="extra_courses_shared_transition_name">extra-courses-image</string>
     <string name="staff_image_shared_transition">staff-image-transition</string>
+    <string name="suggest_edit_text_hint">Suggest</string>
+    <string name="submit_suggest_button_label">Submit</string>
 
 
 </resources>

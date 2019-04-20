@@ -8,6 +8,7 @@ import com.hiccs.arish.models.ExtraCoursesModel;
 import com.hiccs.arish.models.StaffModel;
 import com.hiccs.arish.models.Student;
 import com.hiccs.arish.models.StudentAccountModel;
+import com.hiccs.arish.models.Suggestion;
 import com.hiccs.arish.models.news.News;
 import com.hiccs.arish.models.suggestionsModel;
 
@@ -28,6 +29,9 @@ public interface HiccsAPI {
 
     @POST("login.php")
     Call<Student> loginStudent(Student student);
+
+    @POST("suggestin.php")
+    Call<Suggestion> postSuggestion(Suggestion suggestion);
 
     @GET("news.php")
     Call<List<News>> getHICCSNews();

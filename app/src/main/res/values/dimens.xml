@@ -60,5 +60,9 @@
     <dimen name="news_details_body_margin">8dp</dimen>
     <dimen name="news_details_body_margin_top">16dp</dimen>
     <dimen name="student_portal_parent_margin">8dp</dimen>
+    <dimen name="suggest_edit_text_height">350dp</dimen>
+    <dimen name="suggest_edit_text_margin">8dp</dimen>
+    <dimen name="suggest_edit_text_padding">4dp</dimen>
+    <dimen name="submit_suggest_button_margin">16dp</dimen>
 
 </resources>
