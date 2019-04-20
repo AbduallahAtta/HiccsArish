@@ -40,6 +40,8 @@
         android:layout_height="match_parent"
         android:layout_margin="4sp"
         android:layout_gravity="center"
+        android:gravity="center"
+        android:scaleType="centerCrop"
         android:layout_weight="1.5" />
 </LinearLayout>
 
