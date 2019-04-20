@@ -46,6 +46,7 @@
                 android:textStyle="bold" />
 
         </LinearLayout>
+
         <ImageView
             android:id="@+id/extra_course_img"
             android:layout_width="0dp"
