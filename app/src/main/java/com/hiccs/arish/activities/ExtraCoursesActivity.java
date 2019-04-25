@@ -24,7 +24,6 @@ public class ExtraCoursesActivity extends AppCompatActivity {
 
     @BindView(R.id.loadingIndicator)
     RotateLoading loadingIndicator;
-
     @BindView(R.id.ExtraCoursesRecyclerView)
     RecyclerView ExtraCoursesRecyclerView;
 

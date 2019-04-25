@@ -21,9 +21,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class NewsActivity extends AppCompatActivity {
+
     @BindView(R.id.newsRecyclerView)
     RecyclerView mNewsRecyclerView;
-
     @BindView(R.id.loadingIndicator)
     RotateLoading loadingIndicator;
 
@@ -46,7 +46,6 @@ public class NewsActivity extends AppCompatActivity {
     }
 
     private void getNewsOfViewModel() {
-
         showLoadingIndicator();
         NewsViewModel newsViewModel = ViewModelProviders.of(this).get(NewsViewModel.class);
         newsViewModel.getNewsList().observe(this, news -> {
@@ -54,6 +53,12 @@ public class NewsActivity extends AppCompatActivity {
             setNewsToAdapter(news);
         });
 
+    }
+
+    private void setNewsToAdapter(List<News> news) {
+        hideLoadingIndicator();
+        NewsAdapter adapter = new NewsAdapter(this, news);
+        mNewsRecyclerView.setAdapter(adapter);
     }
 
     private void hideLoadingIndicator() {
@@ -64,12 +69,6 @@ public class NewsActivity extends AppCompatActivity {
     private void showLoadingIndicator() {
         mNewsRecyclerView.setVisibility(View.GONE);
         loadingIndicator.start();
-    }
-
-    private void setNewsToAdapter(List<News> news) {
-        hideLoadingIndicator();
-        NewsAdapter adapter = new NewsAdapter(this, news);
-        mNewsRecyclerView.setAdapter(adapter);
     }
 
     @Override

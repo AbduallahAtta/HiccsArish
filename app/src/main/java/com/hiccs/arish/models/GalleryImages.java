@@ -10,6 +10,17 @@ import com.google.gson.annotations.SerializedName;
  * Created by AbdullahAtta on 2/19/2019.
  */
 public class GalleryImages implements Parcelable {
+    public static final Creator<GalleryImages> CREATOR = new Creator<GalleryImages>() {
+        @Override
+        public GalleryImages createFromParcel(Parcel in) {
+            return new GalleryImages(in);
+        }
+
+        @Override
+        public GalleryImages[] newArray(int size) {
+            return new GalleryImages[size];
+        }
+    };
     @SerializedName("id")
     @Expose
     private String id;
@@ -32,18 +43,6 @@ public class GalleryImages implements Parcelable {
     public int describeContents() {
         return 0;
     }
-
-    public static final Creator<GalleryImages> CREATOR = new Creator<GalleryImages>() {
-        @Override
-        public GalleryImages createFromParcel(Parcel in) {
-            return new GalleryImages(in);
-        }
-
-        @Override
-        public GalleryImages[] newArray(int size) {
-            return new GalleryImages[size];
-        }
-    };
 
     public String getId() {
         return id;

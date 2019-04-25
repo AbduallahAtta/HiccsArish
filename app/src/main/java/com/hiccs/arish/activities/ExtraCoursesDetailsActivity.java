@@ -24,13 +24,10 @@ public class ExtraCoursesDetailsActivity extends AppCompatActivity {
 
     @BindView(R.id.extra_course_des)
     TextView extra_course_des;
-
     @BindView(R.id.extra_course_img)
     ImageView extra_course_img;
-
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-
     @BindView(R.id.collapsingToolbar)
     CollapsingToolbarLayout collapsingToolbar;
 

@@ -78,7 +78,9 @@ public class HomeActivity extends AppCompatActivity {
         tapBarMenu.setOnClickListener(v -> tapBarMenu.toggle());
     }
 
-    @OnClick({R.id.studentImageProfile, R.id.staffParent, R.id.galleryParent, R.id.extraCoursesParent, R.id.newsParent, R.id.aboutParent, R.id.hiccsWebSiteImage, R.id.hiccsFacebookImage, R.id.hiccsYoutubeImage, R.id.hiccsLinkedInImage, R.id.hiccsLocationImage, R.id.hiccsLandLineNumberImage})
+    @OnClick({R.id.studentImageProfile, R.id.staffParent, R.id.galleryParent, R.id.extraCoursesParent,
+            R.id.newsParent, R.id.aboutParent, R.id.hiccsWebSiteImage, R.id.hiccsFacebookImage, R.id.hiccsYoutubeImage,
+            R.id.hiccsLinkedInImage, R.id.hiccsLocationImage, R.id.hiccsLandLineNumberImage})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.studentImageProfile:
@@ -121,7 +123,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void startStudentLoginActivity() {
-        Intent intent = new Intent(this, StudentActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 

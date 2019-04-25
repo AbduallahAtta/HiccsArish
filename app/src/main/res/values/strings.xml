@@ -10,7 +10,7 @@
     <string name="list_item_table_day_label">Day</string>
 
 
-    <string name="hicss_full_name">المعهد العالي للعلوم التجارية والحاسب الآلي بالعريش</string>
+    <string name="hicss_full_name">المعهد العالي للعلوم التجارية والحاسب الآلي</string>
     <string name="granted_degrees_title">الدرجات الممنوحة</string>
 
     <string name="granted_degrees"> درجه البكالوريوس في التجاره تخصص.
@@ -24,9 +24,9 @@
     <string name="creation">أنشئ المعهد العالي للعلوم التجارية والحاسب الآلي بالقرار الوزاري
 رقم 840 في 9/6/2002 المعهد معادل لدرجه بكالوريوس تجارة
 التي تمنحها الجامعات المصرية بالقرار الوزارى رقم 75 بتاريخ
-17/5/2007 وذلك في جميع التخصصات بالمعهد بالمع
+17/5/2007 وذلك في جميع التخصصات بالمعهد
     </string>
-    <string name="departments_title">الشعب</string>
+    <string name="departments_title">الشعبة</string>
 
     <string name="departments"> شعبه نظم المعلومات الإدارية والحاسب ألي.
 • شعبه المعلومات التجارية والتخصص فيها يبدأ من الفرقة الرابعة في إحدى التخصص

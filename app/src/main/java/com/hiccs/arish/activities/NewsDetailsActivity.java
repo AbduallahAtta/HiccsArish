@@ -23,13 +23,10 @@ public class NewsDetailsActivity extends AppCompatActivity {
 
     @BindView(R.id.newsBodyTextView)
     TextView newsBodyTextView;
-
     @BindView(R.id.newsImageView)
     ImageView newsImageView;
-
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-
     @BindView(R.id.collapsingToolbar)
     CollapsingToolbarLayout collapsingToolbar;
 

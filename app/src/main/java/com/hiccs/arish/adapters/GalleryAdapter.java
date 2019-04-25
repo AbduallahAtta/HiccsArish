@@ -17,7 +17,6 @@ import com.hiccs.arish.models.GalleryImages;
 import com.hiccs.arish.utils.Constants;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

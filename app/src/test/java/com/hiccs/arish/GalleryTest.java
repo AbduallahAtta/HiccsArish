@@ -22,6 +22,6 @@ public class GalleryTest {
 
     @Test
     public void lastImage_isMatched() {
-        assertEquals(LAST_IMAGE_URL, DataUtils.getGalleryImages().get(IMAGES_COUNT - 1).getImageUrl());
+        assertEquals(LAST_IMAGE_URL, DataUtils.getGalleryImages().get(IMAGES_COUNT - 1).getImgUrl());
     }
 }

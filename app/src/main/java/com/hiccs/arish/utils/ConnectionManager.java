@@ -9,11 +9,11 @@ import android.net.NetworkInfo;
 
 public class ConnectionManager {
     public static boolean isInternetConnected(Context context) {
-        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connectivityManager = (ConnectivityManager)
+                context.getSystemService(Context.CONNECTIVITY_SERVICE);
         assert connectivityManager != null;
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
-        if (networkInfo != null)
-            return true;
-        return false;
+        return networkInfo != null;
     }
 }
+
