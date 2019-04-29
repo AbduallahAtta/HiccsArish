@@ -107,6 +107,14 @@ E-mail:m-saihizoo@hotmail.com
     <string name="image_courses_transition">extra_courses-image-transition</string>
 
 
+    <string name="studentProfile">معلومات الطالب</string>
+    <string name="contactMail">البريد</string>
+    <string name="coursesTable">جدول المحاضرات</string>
+    <string name="lastExams">إمتحانات سابقة</string>
+    <string name="suggest">اقترح</string>
+    <string name="studentGrades">النتيجة</string>
+
+
     <string name="image_news_transition">news-image-transition</string>
     <string name="news_body_label">This is a body</string>
     <string name="share_article_text">Share</string>

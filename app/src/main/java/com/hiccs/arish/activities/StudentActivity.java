@@ -13,21 +13,26 @@ import com.hiccs.arish.utils.Constants;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class StudentActivity extends AppCompatActivity {
 
-    @BindView(R.id.studentProfileImage)
+    @BindView(R.id.studentProfile)
     ImageView studentProfileImage;
-    @BindView(R.id.contactMailImage)
+    @BindView(R.id.galleryImageView)
     ImageView contactMailImage;
-    @BindView(R.id.coursesTableImage)
+    @BindView(R.id.coursesTableImageView)
     ImageView coursesTableImage;
-    @BindView(R.id.lastExamsImage)
+    @BindView(R.id.lastExamsImageView)
     ImageView lastExamsImage;
-    @BindView(R.id.suggestImage)
+    @BindView(R.id.suggestImageView)
     ImageView suggestImage;
-    @BindView(R.id.studentGradesImage)
+    @BindView(R.id.studentGradesImageView)
     ImageView studentGradesImage;
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,24 +63,61 @@ public class StudentActivity extends AppCompatActivity {
                 .into(studentGradesImage);
     }
 
-    public void StudentAccount(View view) {
+    @OnClick({R.id.studentProfile, R.id.contactMail, R.id.coursesTable, R.id.lastExams, R.id.suggest, R.id.studentGrades})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.studentProfile:
+                startstudentProfileActivity();
+                break;
+            case R.id.contactMail:
+                startcontactMailActivity();
+                break;
+            case R.id.coursesTable:
+                startcoursesTableActivity();
+                break;
+            case R.id.lastExams:
+                startlastExamsActivity();
+                break;
+            case R.id.suggest:
+                startsuggestActivity();
+                break;
+            case R.id.studentGrades:
+                startstudentGradesActivity();
+                break;
 
-        Intent i = new Intent(StudentActivity.this, StudentAccountActivity.class);
-        startActivity(i);
+        }
     }
 
-    public void inbox(View view) {
+    private void startstudentProfileActivity() {
+        Intent intent = new Intent(this, StudentAccountActivity.class);
+        startActivity(intent);
     }
 
-    public void Courses_table(View view) {
+    private void startcontactMailActivity() {
+        Intent intent = new Intent(this,AcademicMailActivity .class);
+        startActivity(intent);
     }
 
-    public void previos_exams(View view) {
+    private void startcoursesTableActivity() {
+        Intent intent = new Intent(this,CoursesTableActivity .class);
+        startActivity(intent);
     }
 
-    public void suggestion(View view) {
+    private void startlastExamsActivity() {
+        Intent intent = new Intent(this,CoursesTableActivity .class);
+        startActivity(intent);
     }
 
-    public void report(View view) {
+
+    private void startstudentGradesActivity() {
+        Intent intent = new Intent(this, StudentGradesActivity.class);
+        startActivity(intent);
     }
+
+    private void startsuggestActivity() {
+        Intent intent = new Intent(this, SuggestionActivity.class);
+        startActivity(intent);
+    }
+
+
 }

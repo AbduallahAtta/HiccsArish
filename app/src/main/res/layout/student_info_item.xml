@@ -4,27 +4,42 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:shrinkColumns="*"
-    android:stretchColumns="*">
+    android:stretchColumns="*"
+    android:id="@+id/StudentInformations">
 
 
     <!-- Row 1 with single column -->
     <TableRow
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0sp"
+        android:layout_weight="1"
         android:gravity="center_horizontal">
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@color/secondaryColor"
+            android:layout_gravity="center"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/user_id"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_span="3"
-            android:background="#b0b0b0"
-            android:padding="18dip"
-            android:text="Row 1"
-            android:textColor="#000"
-            android:textSize="18dp" />
+            android:layout_margin="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/student_login_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/primaryColor"
+            android:layout_gravity="center"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginImage" />
 
 
     </TableRow>
@@ -33,62 +48,202 @@
 
 
     <TableRow
-        android:id="@+id/tableRow1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="fill_parent"
+        android:layout_height="0sp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal|center_vertical">
 
         <TextView
-            android:id="@+id/TextView0g4"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
-            android:gravity="center"
-            android:padding="20dip"
-            android:text="Row 2 column 1"
-            android:textColor="#000000" />
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/student_login_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/primaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginImage" />
+
 
         <TextView
-            android:id="@+id/TextVigew04"
-            android:layout_weight="1"
-            android:background="#d3d3d3"
-            android:gravity="center"
-            android:padding="20dip"
-            android:text="Row 2 column 2"
-            android:textColor="#000000" />
+            android:id="@+id/FullNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/student_login_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/primaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginImage" />
 
-        <TextView
-            android:id="@+id/TextView07"
-            android:layout_weight="1"
-            android:background="#cac9c9"
-            android:gravity="center"
-            android:padding="20dip"
-            android:text="Row 2 column 3"
-            android:textColor="#000000" />
 
     </TableRow>
 
     <!-- Row 3 with 2 columns -->
     <TableRow
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
+        android:layout_height="0sp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|center_vertical">
 
         <TextView
-            android:id="@+id/TextView06"
-            android:layout_weight="1  "
-            android:background="#b0b0b0"
-            android:gravity="center"
-            android:padding="18dip"
-            android:text="Row 3 column 1"
-            android:textColor="#000000" />
+            android:id="@+id/loginLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/student_login_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/primaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginImage" />
+
 
         <TextView
-            android:id="@+id/TextView05"
-            android:layout_weight="1"
-            android:background="#a09f9f"
-            android:gravity="center"
-            android:padding="18dip"
-            android:text="Row 3 column 2"
-            android:textColor="#000000" />
+            android:id="@+id/AcademicYearTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/student_login_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/primaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginImage" />
+
+
     </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="0sp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|center_vertical">
 
+        <TextView
+            android:id="@+id/Department"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/student_login_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/primaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginImage" />
+
+
+        <TextView
+            android:id="@+id/DepartmentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/student_login_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/primaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginImage" />
+
+
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="0sp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|center_vertical">
+
+        <TextView
+            android:id="@+id/Gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/student_login_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/primaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginImage" />
+
+
+        <TextView
+            android:id="@+id/GenderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/student_login_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/primaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginImage" />
+
+
+    </TableRow>  <TableRow
+    android:layout_width="fill_parent"
+    android:layout_height="0sp"
+    android:layout_weight="1"
+    android:gravity="center_horizontal|center_vertical">
+
+    <TextView
+        android:id="@+id/Phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/student_login_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/primaryColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginImage" />
+
+
+    <TextView
+        android:id="@+id/PhoneTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/student_login_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/primaryColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginImage" />
+
+
+</TableRow> <TableRow
+    android:layout_width="fill_parent"
+    android:layout_height="0sp"
+    android:layout_weight="1"
+    android:gravity="center_horizontal|center_vertical">
+
+    <TextView
+        android:id="@+id/Address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/student_login_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/primaryColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginImage" />
+
+
+    <TextView
+        android:id="@+id/AddressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/student_login_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/primaryColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginImage" />
+
+
+</TableRow>
 </TableLayout>

@@ -58,7 +58,7 @@ dependencies {
     implementation 'android.arch.lifecycle:extensions:1.1.1'
 
     implementation 'com.victor:lib:1.0.4'
-
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
     implementation 'com.flaviofaria:kenburnsview:1.0.7'
 
     implementation 'com.github.chrisbanes:PhotoView:2.1.4'
