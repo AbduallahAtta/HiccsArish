@@ -29,12 +29,9 @@ public class StudentAccountActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_account);
-
         ButterKnife.bind(this);
         StudentInfoData();
     }
-
-
     private void StudentInfoData() {
         logger("Started to fetch StudentInformation");
         APIUtils.getHiccsAPI().StudentInformation(1)
@@ -51,7 +48,6 @@ public class StudentAccountActivity extends AppCompatActivity {
                         } else {
                             logger("response code = " + response.code());
                         }
-
                     }
 
                     @Override
@@ -73,5 +69,4 @@ public class StudentAccountActivity extends AppCompatActivity {
         StudentInformations.setLayoutManager(linearLayoutManager);
         StudentInformations.setAdapter(adapter);
     }
-
 }
