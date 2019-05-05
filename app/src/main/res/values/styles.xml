@@ -6,7 +6,7 @@
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="colorAccent">@color/secondaryColor</item>
-        <item name="android:fontFamily">@font/ubuntu</item>
+        <item name="android:fontFamily">@font/cairo</item>
     </style>
 
 
@@ -68,11 +68,20 @@
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="colorAccent">@color/secondaryColor</item>
-        <item name="android:fontFamily">@font/ubuntu</item>
+        <item name="android:fontFamily">@font/cairo</item>
     </style>
 
     <style name="FABStyle">
         <item name="android:layout_width">56dp</item>
         <item name="android:layout_height">56dp</item>
+    </style>
+
+    <style name="StudentProfileText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/student_profile_text_margin</item>
+        <item name="android:drawablePadding">@dimen/student_profile_text_drawable_padding</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:textSize">@dimen/student_profile_text_size</item>
     </style>
 </resources>

@@ -64,5 +64,14 @@
     <dimen name="suggest_edit_text_margin">8dp</dimen>
     <dimen name="suggest_edit_text_padding">4dp</dimen>
     <dimen name="submit_suggest_button_margin">16dp</dimen>
+    <dimen name="student_profile_card_margin">1dp</dimen>
+    <dimen name="student_profile_card_corner_radius">2dp</dimen>
+    <dimen name="student_profile_card_elevation">1dp</dimen>
+    <dimen name="student_profile_image_background_height">300dp</dimen>
+    <dimen name="student_profile_image_margin_start">16dp</dimen>
+    <dimen name="student_profile_image_margin_top">100dp</dimen>
+    <dimen name="student_profile_text_margin">8dp</dimen>
+    <dimen name="student_profile_text_drawable_padding">4dp</dimen>
+    <dimen name="student_profile_text_size">18sp</dimen>
 
 </resources>

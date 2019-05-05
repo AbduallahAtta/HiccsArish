@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,23 +10,21 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/home_activity_visitors_features_margin_top"
         android:layout_gravity="center"
+        android:layout_marginTop="@dimen/home_activity_visitors_features_margin_top"
         android:gravity="center"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_gravity="center"
+            android:layout_weight="1"
             android:gravity="center"
 
             android:orientation="horizontal">
 
             <android.support.v7.widget.CardView
-                android:id="@+id/studentProfile"
                 style="@style/visitorFeatureCardStyle"
                 android:stateListAnimator="@animator/left_on_touch"
                 app:cardCornerRadius="@dimen/visitor_feature_card_corner_radius"
@@ -38,7 +35,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/studentProfileImage"
+                        android:id="@+id/studentProfile"
                         style="@style/visitorFeatureImageStyle"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -48,9 +45,9 @@
                         android:id="@+id/studentProfileTextView"
                         style="@style/visitorFeatureTitleStyle"
                         android:text="@string/studentProfile"
-                        app:layout_constraintBottom_toBottomOf="@+id/studentProfileImage"
+                        app:layout_constraintBottom_toBottomOf="@+id/studentProfile"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/studentProfileImage"
+                        app:layout_constraintTop_toTopOf="@+id/studentProfile"
                         app:layout_constraintVertical_bias="1.0" />
                 </android.support.constraint.ConstraintLayout>
             </android.support.v7.widget.CardView>
@@ -93,8 +90,7 @@
 
             android:orientation="horizontal">
 
-            <android.support.v7.widget.CardView
-                xmlns:android="http://schemas.android.com/apk/res/android"
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/coursesTable"
                 style="@style/visitorFeatureCardStyle"

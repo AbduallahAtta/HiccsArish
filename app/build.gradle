@@ -5,7 +5,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.hiccs.arish"
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -63,4 +63,7 @@ dependencies {
 
     implementation 'com.github.chrisbanes:PhotoView:2.1.4'
 
+
+    implementation 'jp.wasabeef:glide-transformations:4.0.1'
+    implementation 'com.andkulikov:transitionseverywhere:1.8.1'
 }

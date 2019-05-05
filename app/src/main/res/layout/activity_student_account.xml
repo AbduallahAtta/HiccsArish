@@ -1,10 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:id="@+id/StudentInformations"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-tools:context=".activities.StudentAccountActivity">
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/student_profile_card_margin"
+        android:clickable="true"
+        android:focusable="true"
+        android:stateListAnimator="@animator/left_on_touch"
+        app:cardCornerRadius="@dimen/student_profile_card_corner_radius"
+        app:cardElevation="@dimen/student_profile_card_elevation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</android.support.v7.widget.RecyclerView>
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/blurredBackgroundImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/student_profile_image_background_height"
+                android:contentDescription="@string/student_profile_image_background_content_description"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/studentProfileImage"
+                android:layout_width="@dimen/student_profile_image_width"
+                android:layout_height="@dimen/student_profile_image_height"
+                android:layout_marginStart="@dimen/student_profile_image_margin_start"
+                android:layout_marginTop="@dimen/student_profile_image_margin_top"
+                android:src="@color/secondaryColor"
+                app:layout_constraintStart_toStartOf="@+id/blurredBackgroundImage"
+                app:layout_constraintTop_toTopOf="@+id/blurredBackgroundImage" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/studentNameTextView"
+        style="@style/StudentProfileText"
+        android:drawableStart="@drawable/ic_person"
+        android:text="@string/student_profile_name_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/studentAddressTextView"
+        style="@style/StudentProfileText"
+        android:drawableStart="@drawable/ic_location"
+        android:text="@string/student_profile_address_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentNameTextView" />
+
+    <TextView
+        android:id="@+id/studentPhoneTextView"
+        style="@style/StudentProfileText"
+        android:drawableStart="@drawable/ic_phone_student"
+        android:text="@string/student_profile_phone_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentAddressTextView" />
+
+    <TextView
+        android:id="@+id/studentDepartmentTextView"
+        style="@style/StudentProfileText"
+        android:drawableStart="@drawable/ic_department"
+        android:text="@string/student_profile_department_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentPhoneTextView" />
+
+    <TextView
+        android:id="@+id/studentAcademicYearTextView"
+        style="@style/StudentProfileText"
+        android:drawableStart="@drawable/ic_calendar"
+        android:text="@string/student_profile_year_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentDepartmentTextView" />
+
+    <com.victor.loading.rotate.RotateLoading
+        android:id="@+id/loadingIndicator"
+        style="@style/loadingIndicatorStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:loading_color="@color/primaryColor"
+        app:loading_width="@dimen/loading_indicator_border_width" />
+
+    <android.support.constraint.Group
+        android:id="@+id/studentProfileGroupViews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:constraint_referenced_ids="studentAcademicYearTextView,
+studentDepartmentTextView,
+studentPhoneTextView,
+studentAddressTextView,
+studentNameTextView,
+cardView" />
+</android.support.constraint.ConstraintLayout>

@@ -30,10 +30,6 @@ public class StudentActivity extends AppCompatActivity {
     @BindView(R.id.studentGradesImageView)
     ImageView studentGradesImage;
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,17 +90,17 @@ public class StudentActivity extends AppCompatActivity {
     }
 
     private void startcontactMailActivity() {
-        Intent intent = new Intent(this,AcademicMailActivity .class);
+        Intent intent = new Intent(this, AcademicMailActivity.class);
         startActivity(intent);
     }
 
     private void startcoursesTableActivity() {
-        Intent intent = new Intent(this,CoursesTableActivity .class);
+        Intent intent = new Intent(this, CoursesTableActivity.class);
         startActivity(intent);
     }
 
     private void startlastExamsActivity() {
-        Intent intent = new Intent(this,CoursesTableActivity .class);
+        Intent intent = new Intent(this, CoursesTableActivity.class);
         startActivity(intent);
     }
 

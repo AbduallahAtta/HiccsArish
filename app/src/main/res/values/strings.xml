@@ -124,6 +124,12 @@ E-mail:m-saihizoo@hotmail.com
     <string name="staff_image_shared_transition">staff-image-transition</string>
     <string name="suggest_edit_text_hint">Suggest</string>
     <string name="submit_suggest_button_label">إقترح</string>
+    <string name="student_profile_image_background_content_description">Student Image</string>
+    <string name="student_profile_name_label">name:</string>
+    <string name="student_profile_address_label">address:</string>
+    <string name="student_profile_phone_label">phone:</string>
+    <string name="student_profile_department_label">department:</string>
+    <string name="student_profile_year_label">year:</string>
 
 
 </resources>
