@@ -3,6 +3,7 @@ package com.hiccs.arish.activities;
 import android.app.Activity;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -15,7 +16,6 @@ import com.bumptech.glide.Glide;
 import com.flaviofaria.kenburnsview.KenBurnsView;
 import com.hiccs.arish.R;
 import com.hiccs.arish.models.GalleryImages;
-import com.hiccs.arish.utils.Validation;
 import com.hiccs.arish.viewmodel.GalleryImagesViewModel;
 
 import java.util.ArrayList;
@@ -98,19 +98,22 @@ public class LoginActivity extends AppCompatActivity {
 
     @OnClick(R.id.loginButton)
     public void onViewClicked() {
-        if (Validation.isTextNotEmpty(getUsername())) {
-            if (Validation.isPasswordLengthEligible(getPassword())) {
-                loginStudent();
-            } else {
-                loginPasswordEditText.setError("Make sure you typed the password correctly");
-            }
-        } else {
-            loginUserNameEditText.setError("Make sure you typed the password correctly");
-        }
+        loginStudent();
+//        if (Validation.isTextNotEmpty(getUsername())) {
+//            if (Validation.isPasswordLengthEligible(getPassword())) {
+//                loginStudent();
+//            } else {
+//                loginPasswordEditText.setError("Make sure you typed the password correctly");
+//            }
+//        } else {
+//            loginUserNameEditText.setError("Make sure you typed the password correctly");
+//        }
     }
 
     private void loginStudent() {
         // TODO: 4/9/2019 login
+        Intent intent = new Intent(this, StudentActivity.class);
+        startActivity(intent);
     }
 
     @NonNull

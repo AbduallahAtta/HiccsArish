@@ -130,6 +130,9 @@ E-mail:m-saihizoo@hotmail.com
     <string name="student_profile_phone_label">phone:</string>
     <string name="student_profile_department_label">department:</string>
     <string name="student_profile_year_label">year:</string>
+    <string name="dialog_image_content_description">Suggest posted successfully</string>
+    <string name="dialog_button_text">Hooray!</string>
+    <string name="dialog_message_text">Thanks for reaching. your suggestions are highly appreciated!</string>
 
 
 </resources>

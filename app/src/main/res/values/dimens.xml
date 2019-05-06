@@ -73,5 +73,10 @@
     <dimen name="student_profile_text_margin">8dp</dimen>
     <dimen name="student_profile_text_drawable_padding">4dp</dimen>
     <dimen name="student_profile_text_size">18sp</dimen>
+    <dimen name="dialog_image_height">300dp</dimen>
+    <dimen name="dialog_button_margin">32dp</dimen>
+    <dimen name="dialog_message_margin">8dp</dimen>
+    <dimen name="dialog_parent_corner_radius">4dp</dimen>
+    <dimen name="dialog_parent_corner_elevation">1dp</dimen>
 
 </resources>

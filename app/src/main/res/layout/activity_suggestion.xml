@@ -14,7 +14,7 @@
         android:background="@drawable/suggest_background"
         android:gravity="start"
         android:hint="@string/suggest_edit_text_hint"
-        android:inputType="textPersonName"
+        android:inputType="textMultiLine"
         android:padding="@dimen/suggest_edit_text_padding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,4 +32,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/suggestBodyEditText" />
+
+    <com.victor.loading.rotate.RotateLoading
+        android:id="@+id/loadingIndicator"
+        style="@style/loadingIndicatorStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:loading_color="@color/primaryColor"
+        app:loading_width="@dimen/loading_indicator_border_width" />
+
+    <android.support.constraint.Group
+        android:id="@+id/suggestionGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:constraint_referenced_ids="suggestBodyEditText,
+submitSuggestButton" />
 </android.support.constraint.ConstraintLayout>

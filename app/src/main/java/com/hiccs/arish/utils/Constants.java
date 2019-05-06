@@ -8,6 +8,10 @@ package com.hiccs.arish.utils;
  */
 public class Constants {
 
+    /**
+     * Firestore collection keys
+     */
+    public static final String SUGGESTIONS_COLLECTION_NAME = "Suggestions";
     public static final String GALLERY_LIST_INTENT_KEY = "com.hiccs.arish.gallery_list_key";
     public static final String GALLERY_POSITION_INTENT_KEY = "com.hiccs.arish.gallery_position_key";
     public static final String NEWS_SELECTED_INTENT_KEY = "com.hiccs.arish.selected_news_key";
