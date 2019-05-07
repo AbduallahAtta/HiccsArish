@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.flaviofaria.kenburnsview.KenBurnsView;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.hiccs.arish.R;
 import com.hiccs.arish.utils.Constants;
 import com.michaldrabik.tapbarmenulib.TapBarMenu;
@@ -39,13 +40,20 @@ public class HomeActivity extends AppCompatActivity {
     @BindView(R.id.aboutImageView)
     ImageView aboutImageView;
 
+    private FirebaseFirestore mDatabase;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
         loadImages();
+        loadDatabase();
         setupSocialNetworksMenuClick();
+    }
+
+    private void loadDatabase() {
+
     }
 
     private void loadImages() {

@@ -100,7 +100,7 @@ public class StudentActivity extends AppCompatActivity {
     }
 
     private void startlastExamsActivity() {
-        Intent intent = new Intent(this, CoursesTableActivity.class);
+        Intent intent = new Intent(this, ExamsActivity.class);
         startActivity(intent);
     }
 

@@ -15,7 +15,11 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.StudentGradesActivity"></activity>
+        <activity
+            android:name=".activities.ExamImageDetailsActivity"
+            android:theme="@style/NoActionBarActivityStyle"></activity>
+        <activity android:name=".activities.ExamsActivity" />
+        <activity android:name=".activities.StudentGradesActivity" />
         <activity android:name=".activities.AcademicMailActivity" />
         <activity android:name=".activities.SuggestionActivity" />
         <activity android:name=".activities.LoginActivity" />
@@ -33,7 +37,6 @@
             android:name=".activities.StaffDetailsActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.StudentAccountActivity" />
-
         <activity
             android:name=".activities.MapsActivity"
             android:label="@string/title_activity_maps" />
@@ -72,7 +75,6 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />

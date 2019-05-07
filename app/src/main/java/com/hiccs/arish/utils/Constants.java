@@ -12,8 +12,12 @@ public class Constants {
      * Firestore collection keys
      */
     public static final String SUGGESTIONS_COLLECTION_NAME = "Suggestions";
-    public static final String GALLERY_LIST_INTENT_KEY = "com.hiccs.arish.gallery_list_key";
+    public static final String EXAMS_COLLECTION_NAME = "Exams";
+    public static final String EXAMS_IMAGES_POSITION_INTENT_KEY = "com.hiccs.arish.exams_position_key";
+    public static final String EXAMS_IMAGES_LIST_INTENT_KEY = "com.hiccs.arish.exams_list_key";
+
     public static final String GALLERY_POSITION_INTENT_KEY = "com.hiccs.arish.gallery_position_key";
+    public static final String GALLERY_LIST_INTENT_KEY = "com.hiccs.arish.gallery_list_key";
     public static final String NEWS_SELECTED_INTENT_KEY = "com.hiccs.arish.selected_news_key";
     public static final String Staff_SELECTED_INTENT_KEY = "com.hiccs.arish.selected_staff_key";
     public static final String EXTRA_COURSES_SELECTED_INTENT_KEY = "com.hiccs.arish.selected_extra_courses_kay";
