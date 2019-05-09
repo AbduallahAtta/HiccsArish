@@ -1,95 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
-    <android.support.constraint.ConstraintLayout
+    <com.flaviofaria.kenburnsview.KenBurnsView
+        android:id="@+id/loginImage"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <com.flaviofaria.kenburnsview.KenBurnsView
-            android:id="@+id/loginImage"
+    <TextView
+        android:id="@+id/loginLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/student_login_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/primaryColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginImage" />
+
+    <com.hiccs.arish.custom.LoginTextInputLayout
+        android:id="@+id/usernameTextLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginLabel">
+
+        <EditText
+            android:id="@+id/loginUserNameEditText"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_background"
+            android:drawablePadding="4dp"
+            android:ems="10"
+            android:gravity="start|center"
+            android:hint="Username"
+            android:inputType="textEmailAddress"
+            android:padding="4dp" />
 
-        <TextView
-            android:id="@+id/loginLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:layout_marginTop="12dp"
-            android:text="@string/student_login_label"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:textColor="@color/primaryColor"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginImage" />
+    </com.hiccs.arish.custom.LoginTextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/usernameTextLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            app:hintEnabled="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginLabel">
+    <com.hiccs.arish.custom.LoginTextInputLayout
+        android:id="@+id/loginPasswordTextLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameTextLayout"
+        app:passwordToggleEnabled="true">
 
-            <EditText
-                android:id="@+id/loginUserNameEditText"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/edit_text_background"
-                android:drawablePadding="4dp"
-                android:ems="10"
-                android:gravity="start|center"
-                android:hint="Username"
-                android:inputType="textEmailAddress"
-                android:padding="4dp" />
+        <EditText
+            android:id="@+id/loginPasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_background"
+            android:gravity="start|center"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:padding="4dp" />
 
-        </android.support.design.widget.TextInputLayout>
+    </com.hiccs.arish.custom.LoginTextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/loginPasswordTextLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            app:hintEnabled="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/usernameTextLayout"
-            app:passwordToggleEnabled="true">
+    <Button
+        android:id="@+id/loginButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/colored_button_background"
+        android:text="سجل الاّن "
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginPasswordTextLayout" />
 
-            <EditText
-                android:id="@+id/loginPasswordEditText"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/edit_text_background"
-                android:gravity="start|center"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:padding="4dp" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <Button
-            android:id="@+id/loginButton"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:background="@drawable/colored_button_background"
-            android:text="سجل الاّن "
-            android:textAllCaps="false"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginPasswordTextLayout" />
-
-    </android.support.constraint.ConstraintLayout>
-
-</ScrollView>
+</android.support.constraint.ConstraintLayout>

@@ -40,6 +40,7 @@
             android:gravity="right"
             android:textSize="20sp"
             android:textStyle="bold" />
+
         <TextView
             android:id="@+id/student_mark"
             android:layout_width="0dp"
@@ -49,6 +50,7 @@
             android:gravity="right"
             android:textSize="20sp"
             android:textStyle="bold" />
+
         <TextView
             android:id="@+id/student_grade"
             android:layout_width="0dp"

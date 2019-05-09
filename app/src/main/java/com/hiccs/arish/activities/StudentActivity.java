@@ -1,15 +1,18 @@
 package com.hiccs.arish.activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.hiccs.arish.R;
 import com.hiccs.arish.utils.Constants;
+import com.hiccs.arish.utils.StudentSharedPreferenceHelper;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,6 +39,15 @@ public class StudentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_student);
         ButterKnife.bind(this);
         loadImages();
+        Toast.makeText(this,
+                StudentSharedPreferenceHelper.getStudentIdFromSharedPreference(getSharedPreferences(Constants.STUDENT_SHARED_PREFERENCES_FILE_NAME, MODE_PRIVATE))
+                , Toast.LENGTH_SHORT).show();
+
+    }
+
+    private String getId() {
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.STUDENT_SHARED_PREFERENCES_FILE_NAME, MODE_PRIVATE);
+        return sharedPreferences.getString(Constants.STUDENT_DETAILS_SHARED_PREFERENCES_KEY, null);
     }
 
     private void loadImages() {

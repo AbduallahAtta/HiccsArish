@@ -30,8 +30,9 @@ import retrofit2.http.Query;
  */
 public interface HiccsAPI {
 
-    @POST("login.php")
-    Call<Student> loginStudent(Student student);
+    @GET("login.php")
+    Call<List<Student>> loginStudent(@Query("StudentUserName") String studentUsername,
+                                     @Query("StudentPassword") String studentPassword);
 
     @POST("suggestin.php")
     Call<Suggestion> postSuggestion(Suggestion suggestion);
@@ -49,7 +50,7 @@ public interface HiccsAPI {
     Call<List<StaffModel>> Assistants();
 
     @GET("students.php")
-    Call<List<StudentAccountModel>> StudentInformation(@Query("studentID") int studentID);
+    Call<List<StudentAccountModel>> StudentInformation(@Query("StudentID") int studentID);
 
     @GET("grade.php")
     Call<List<StudentGrades>> StudentGrades(@Query("studentID") int studentID);

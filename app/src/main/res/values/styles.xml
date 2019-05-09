@@ -14,6 +14,9 @@
         <item name="android:windowBackground">@drawable/splash_background</item>
     </style>
 
+    <style name="LoginActivityStyle" parent="@style/NoActionBarActivityStyle">
+        <item name="android:windowEnterTransition">@transition/activity_slide</item>
+    </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>

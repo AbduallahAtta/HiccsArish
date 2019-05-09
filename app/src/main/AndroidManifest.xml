@@ -22,7 +22,9 @@
         <activity android:name=".activities.StudentGradesActivity" />
         <activity android:name=".activities.AcademicMailActivity" />
         <activity android:name=".activities.SuggestionActivity" />
-        <activity android:name=".activities.LoginActivity" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:theme="@style/LoginActivityStyle" />
         <activity
             android:name=".activities.ExtraCoursesDetailsActivity"
             android:theme="@style/NoActionBarActivityStyle" />

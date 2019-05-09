@@ -1,11 +1,14 @@
 package com.hiccs.arish.activities;
 
+import android.app.ActivityOptions;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +20,7 @@ import com.flaviofaria.kenburnsview.KenBurnsView;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.hiccs.arish.R;
 import com.hiccs.arish.utils.Constants;
+import com.hiccs.arish.utils.StudentSharedPreferenceHelper;
 import com.michaldrabik.tapbarmenulib.TapBarMenu;
 
 import butterknife.BindView;
@@ -131,6 +135,30 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void startStudentLoginActivity() {
+        if (StudentSharedPreferenceHelper.isStudentDetailsExists(getSharedPreferences(Constants.STUDENT_SHARED_PREFERENCES_FILE_NAME, MODE_PRIVATE))) {
+            startStudentAccountActivity();
+        } else {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                startLoginActivityWithTransition();
+            } else {
+                startLoginActivity();
+            }
+        }
+    }
+
+    private void startLoginActivity() {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    private void startLoginActivityWithTransition() {
+        Bundle bundle = ActivityOptions.makeSceneTransitionAnimation(this).toBundle();
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent, bundle);
+    }
+
+    private void startStudentAccountActivity() {
         Intent intent = new Intent(this, StudentActivity.class);
         startActivity(intent);
     }

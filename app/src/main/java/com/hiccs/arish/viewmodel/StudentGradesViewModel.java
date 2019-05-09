@@ -1,10 +1,14 @@
 package com.hiccs.arish.viewmodel;
+
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
 import android.util.Log;
+
 import com.hiccs.arish.models.StudentGrades;
 import com.hiccs.arish.rest.APIUtils;
+
 import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -14,9 +18,11 @@ public class StudentGradesViewModel extends ViewModel {
     private int StudentID;
 
     private MutableLiveData<List<StudentGrades>> StudentGradesList;
+
     public StudentGradesViewModel(int StudentID) {
         this.StudentID = StudentID;
     }
+
     public MutableLiveData<List<StudentGrades>> StudentGradesList() {
         if (StudentGradesList == null) {
             StudentGradesList = new MutableLiveData<>();

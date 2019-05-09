@@ -9,6 +9,11 @@ package com.hiccs.arish.utils;
 public class Constants {
 
     /**
+     * Keys for SharedPreferences
+     */
+    public static final String STUDENT_SHARED_PREFERENCES_FILE_NAME = "com.hiccs.arish.student_shared_preferences";
+    public static final String STUDENT_DETAILS_SHARED_PREFERENCES_KEY = "com.hiccs.arish.student_details";
+    /**
      * Firestore collection keys
      */
     public static final String SUGGESTIONS_COLLECTION_NAME = "Suggestions";

@@ -11,12 +11,13 @@ import android.widget.TextView;
 
 import com.hiccs.arish.R;
 import com.hiccs.arish.models.StudentGrades;
+
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class StudentGradesAdapter  extends RecyclerView.Adapter<StudentGradesAdapter.ViewHolder> {
+public class StudentGradesAdapter extends RecyclerView.Adapter<StudentGradesAdapter.ViewHolder> {
     private Context StudentGradesContext;
     private List<StudentGrades> StudentGradesList;
 
@@ -74,9 +75,6 @@ public class StudentGradesAdapter  extends RecyclerView.Adapter<StudentGradesAda
             ButterKnife.bind(this, itemView);
 
         }
-
-
-
 
 
     }

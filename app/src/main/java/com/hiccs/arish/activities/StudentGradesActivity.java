@@ -10,11 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.hiccs.arish.R;
-import com.hiccs.arish.adapters.ExtraCoursesAdapter;
 import com.hiccs.arish.adapters.StudentGradesAdapter;
-import com.hiccs.arish.models.ExtraCoursesModel;
 import com.hiccs.arish.models.StudentGrades;
-import com.hiccs.arish.viewmodel.ExtraCoursesViewModel;
 import com.hiccs.arish.viewmodel.StudentGradesViewModel;
 import com.hiccs.arish.viewmodel.StudentViewModelFactory;
 import com.victor.loading.rotate.RotateLoading;
@@ -87,6 +84,7 @@ public class StudentGradesActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
     private void getgrade(List<StudentGrades> StudentGrades) {
 
     }
