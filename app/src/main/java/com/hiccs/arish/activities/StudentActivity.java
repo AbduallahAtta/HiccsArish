@@ -84,6 +84,7 @@ public class StudentActivity extends AppCompatActivity {
         }
     }
 
+
     private void startstudentProfileActivity() {
         Intent intent = new Intent(this, StudentAccountActivity.class);
         startActivity(intent);
