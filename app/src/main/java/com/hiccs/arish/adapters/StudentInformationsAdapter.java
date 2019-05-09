@@ -41,11 +41,10 @@ public class StudentInformationsAdapter extends RecyclerView.Adapter<StudentInfo
     @Override
     public void onBindViewHolder(@NonNull StudentInformationsAdapter.ViewHolder holder, int position) {
 
-        holder.StudentId.setText(StudentInformationsList.get(position).getId());
+        holder.StudentId.setText(StudentInformationsList.get(position).getStudentID());
         holder.FullName.setText(StudentInformationsList.get(position).getFullName());
         holder.AcademicYear.setText(StudentInformationsList.get(position).getAcademicYear());
         holder.Department.setText(StudentInformationsList.get(position).getDepartment());
-        holder.Gender.setText(StudentInformationsList.get(position).getGender());
         holder.Phone.setText(StudentInformationsList.get(position).getPhone());
         holder.Address.setText(StudentInformationsList.get(position).getAddress());
         Glide.with(StudentInformationsContext).load(StudentInformationsList.get(position).getImgUrl())

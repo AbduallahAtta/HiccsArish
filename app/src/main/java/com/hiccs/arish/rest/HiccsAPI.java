@@ -9,6 +9,7 @@ import com.hiccs.arish.models.GalleryImages;
 import com.hiccs.arish.models.StaffModel;
 import com.hiccs.arish.models.Student;
 import com.hiccs.arish.models.StudentAccountModel;
+import com.hiccs.arish.models.StudentGrades;
 import com.hiccs.arish.models.Suggestion;
 import com.hiccs.arish.models.news.News;
 import com.hiccs.arish.models.suggestionsModel;
@@ -48,7 +49,10 @@ public interface HiccsAPI {
     Call<List<StaffModel>> Assistants();
 
     @GET("students.php")
-    Call<List<StudentAccountModel>> StudentInformation(@Query("id") int id);
+    Call<List<StudentAccountModel>> StudentInformation(@Query("studentID") int studentID);
+
+    @GET("grade.php")
+    Call<List<StudentGrades>> StudentGrades(@Query("studentID") int studentID);
 
     @GET("additional_courses.php")
     Call<List<ExtraCoursesModel>> getExtraCourses();

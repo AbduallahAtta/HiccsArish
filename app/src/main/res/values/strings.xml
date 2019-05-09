@@ -104,6 +104,8 @@ E-mail:m-saihizoo@hotmail.com
     <string name="visitors_feature_extra_courses_label">دورات تدريبة</string>
     <string name="news_toolbar_title">جريدة المعهد</string>
     <string name="extra_courses_toolbar_title">دورات تدريبة</string>
+    <string name="student_grades_toolbar_title">نتيجة الطالب</string>
+
     <string name="image_courses_transition">extra_courses-image-transition</string>
 
 

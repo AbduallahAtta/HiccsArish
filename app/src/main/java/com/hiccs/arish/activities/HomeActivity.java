@@ -131,7 +131,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void startStudentLoginActivity() {
-        Intent intent = new Intent(this, LoginActivity.class);
+        Intent intent = new Intent(this, StudentActivity.class);
         startActivity(intent);
     }
 
