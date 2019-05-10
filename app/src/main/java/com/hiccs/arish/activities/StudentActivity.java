@@ -1,22 +1,34 @@
 package com.hiccs.arish.activities;
 
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.constraint.Group;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.hiccs.arish.R;
+import com.hiccs.arish.models.StudentAccountModel;
+import com.hiccs.arish.models.news.News;
 import com.hiccs.arish.utils.Constants;
 import com.hiccs.arish.utils.StudentSharedPreferenceHelper;
+import com.hiccs.arish.viewmodel.NewsViewModel;
+import com.hiccs.arish.viewmodel.StudentProfileViewModel;
+import com.hiccs.arish.viewmodel.StudentViewModelFactory;
+import com.transitionseverywhere.TransitionManager;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class StudentActivity extends AppCompatActivity {
 
@@ -32,6 +44,16 @@ public class StudentActivity extends AppCompatActivity {
     ImageView suggestImage;
     @BindView(R.id.studentGradesImageView)
     ImageView studentGradesImage;
+    @BindView(R.id.studentImageView)
+    CircleImageView studentImageView;
+    @BindView(R.id.hiccsNewsWidget)
+    TextView hiccsNewsWidget;
+    @BindView(R.id.greetingLabel)
+    TextView greetingLabel;
+    @BindView(R.id.group)
+    Group group;
+    @BindView(R.id.container)
+    NestedScrollView container;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,15 +61,48 @@ public class StudentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_student);
         ButterKnife.bind(this);
         loadImages();
-        Toast.makeText(this,
-                StudentSharedPreferenceHelper.getStudentIdFromSharedPreference(getSharedPreferences(Constants.STUDENT_SHARED_PREFERENCES_FILE_NAME, MODE_PRIVATE))
-                , Toast.LENGTH_SHORT).show();
-
+        hideDetails();
+        getStudentDetails();
+        loadNewsIntoWidget();
     }
 
-    private String getId() {
-        SharedPreferences sharedPreferences = getSharedPreferences(Constants.STUDENT_SHARED_PREFERENCES_FILE_NAME, MODE_PRIVATE);
-        return sharedPreferences.getString(Constants.STUDENT_DETAILS_SHARED_PREFERENCES_KEY, null);
+    private void hideDetails() {
+        group.setVisibility(View.GONE);
+    }
+
+    private void showDetails() {
+        group.setVisibility(View.VISIBLE);
+    }
+
+    private void loadNewsIntoWidget() {
+        NewsViewModel model = ViewModelProviders.of(this).get(NewsViewModel.class);
+        model.getNewsList().observe(this, this::loadNews);
+    }
+
+    private void loadNews(List<News> news) {
+        for (News n :
+                news) {
+            hiccsNewsWidget.append(" -- " + n.getTitle());
+        }
+        hiccsNewsWidget.setSelected(true);
+        showDetails();
+        TransitionManager.beginDelayedTransition(container);
+    }
+
+    private void getStudentDetails() {
+        StudentViewModelFactory factory = new StudentViewModelFactory(
+                Integer.valueOf(StudentSharedPreferenceHelper.getStudentIdFromSharedPreference(getSharedPreferences(Constants.STUDENT_SHARED_PREFERENCES_FILE_NAME, MODE_PRIVATE))));
+
+        StudentProfileViewModel model = ViewModelProviders.of(this, factory).get(StudentProfileViewModel.class);
+        model.getStudent().observe(this, this::setStudentDetails);
+    }
+
+    private void setStudentDetails(StudentAccountModel studentAccountModel) {
+        Glide.with(this)
+                .load(studentAccountModel.getImgUrl())
+                .into(studentImageView);
+        greetingLabel.setText("مرحباً، " + studentAccountModel.getFullName());
+
     }
 
     private void loadImages() {

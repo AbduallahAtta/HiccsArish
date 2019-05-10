@@ -133,12 +133,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (counter > images.size() - 1) {
                     counter = 0;
                 }
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        loginImage.startAnimation(fadeOutAnim);
-                    }
-                }, 2500);
+                new Handler().postDelayed(() -> loginImage.startAnimation(fadeOutAnim), 2500);
                 handler.postDelayed(this, 3500);
             }
         };

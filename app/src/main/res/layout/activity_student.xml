@@ -1,226 +1,264 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="match_parent">
 
-    >
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/home_activity_visitors_features_margin_top"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.Group
+            android:id="@+id/group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:constraint_referenced_ids="studentImageView,
+hiccsNewsWidget,
+greetingLabel" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/studentImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/hiccsNewsWidget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/primaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/studentImageView" />
+
+        <TextView
+            android:id="@+id/greetingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Welcome."
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/studentImageView"
+            app:layout_constraintStart_toEndOf="@+id/studentImageView"
+            app:layout_constraintTop_toTopOf="@+id/studentImageView" />
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hiccsNewsWidget">
 
-            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <android.support.v7.widget.CardView
-                style="@style/visitorFeatureCardStyle"
-                android:stateListAnimator="@animator/left_on_touch"
-                app:cardCornerRadius="@dimen/visitor_feature_card_corner_radius"
-                app:cardElevation="@dimen/visitor_feature_card_elevation">
+                <android.support.v7.widget.CardView
+                    style="@style/studentFeatureCardStyle"
+                    android:stateListAnimator="@animator/left_on_touch"
+                    app:cardCornerRadius="@dimen/visitor_feature_card_corner_radius"
+                    app:cardElevation="@dimen/visitor_feature_card_elevation">
 
-                <android.support.constraint.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                    <ImageView
-                        android:id="@+id/studentProfile"
-                        style="@style/visitorFeatureImageStyle"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:srcCompat="@color/primaryColor" />
+                        <ImageView
+                            android:id="@+id/studentProfile"
+                            style="@style/studentFeatureImageStyle"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@color/primaryColor" />
 
-                    <TextView
-                        android:id="@+id/studentProfileTextView"
-                        style="@style/visitorFeatureTitleStyle"
-                        android:text="@string/studentProfile"
-                        app:layout_constraintBottom_toBottomOf="@+id/studentProfile"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/studentProfile"
-                        app:layout_constraintVertical_bias="1.0" />
-                </android.support.constraint.ConstraintLayout>
-            </android.support.v7.widget.CardView>
+                        <TextView
+                            android:id="@+id/studentProfileTextView"
+                            style="@style/studentFeatureTitleStyle"
+                            android:text="@string/studentProfile"
+                            app:layout_constraintBottom_toBottomOf="@+id/studentProfile"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/studentProfile"
+                            app:layout_constraintVertical_bias="1.0" />
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/contactMail"
-                style="@style/visitorFeatureCardStyle"
-                android:stateListAnimator="@animator/left_on_touch"
-                app:cardCornerRadius="@dimen/visitor_feature_card_corner_radius"
-                app:cardElevation="@dimen/visitor_feature_card_elevation">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/contactMail"
+                    style="@style/studentFeatureCardStyle"
+                    android:stateListAnimator="@animator/left_on_touch"
+                    app:cardCornerRadius="@dimen/visitor_feature_card_corner_radius"
+                    app:cardElevation="@dimen/visitor_feature_card_elevation">
 
-                <android.support.constraint.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                    <ImageView
-                        android:id="@+id/galleryImageView"
-                        style="@style/visitorFeatureImageStyle"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:srcCompat="@color/primaryColor" />
+                        <ImageView
+                            android:id="@+id/galleryImageView"
+                            style="@style/studentFeatureImageStyle"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@color/primaryColor" />
 
-                    <TextView
-                        android:id="@+id/galleryLabelTextView"
-                        style="@style/visitorFeatureTitleStyle"
-                        android:text="@string/contactMail"
-                        app:layout_constraintBottom_toBottomOf="@+id/galleryImageView"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/galleryImageView"
-                        app:layout_constraintVertical_bias="1.0" />
-                </android.support.constraint.ConstraintLayout>
-            </android.support.v7.widget.CardView>
+                        <TextView
+                            android:id="@+id/galleryLabelTextView"
+                            style="@style/studentFeatureTitleStyle"
+                            android:text="@string/contactMail"
+                            app:layout_constraintBottom_toBottomOf="@+id/galleryImageView"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/galleryImageView"
+                            app:layout_constraintVertical_bias="1.0" />
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/coursesTable"
+                    style="@style/studentFeatureCardStyle"
+                    android:stateListAnimator="@animator/left_on_touch"
+                    app:cardCornerRadius="@dimen/visitor_feature_card_corner_radius"
+                    app:cardElevation="@dimen/visitor_feature_card_elevation">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/coursesTableImageView"
+                            style="@style/studentFeatureImageStyle"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@color/primaryColor" />
+
+                        <TextView
+                            android:id="@+id/coursesTableTextView"
+                            style="@style/studentFeatureTitleStyle"
+                            android:text="@string/coursesTable"
+                            app:layout_constraintBottom_toBottomOf="@+id/coursesTableImageView"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/coursesTableImageView"
+                            app:layout_constraintVertical_bias="1.0" />
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/lastExams"
+                    style="@style/studentFeatureCardStyle"
+                    android:stateListAnimator="@animator/left_on_touch"
+                    app:cardCornerRadius="@dimen/visitor_feature_card_corner_radius"
+                    app:cardElevation="@dimen/visitor_feature_card_elevation">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/lastExamsImageView"
+                            style="@style/studentFeatureImageStyle"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@color/primaryColor" />
+
+                        <TextView
+                            android:id="@+id/lastExamsTextView"
+                            style="@style/studentFeatureTitleStyle"
+                            android:text="@string/lastExams"
+                            app:layout_constraintBottom_toBottomOf="@+id/lastExamsImageView"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/lastExamsImageView"
+                            app:layout_constraintVertical_bias="1.0" />
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/suggest"
+                    style="@style/studentFeatureCardStyle"
+                    android:stateListAnimator="@animator/left_on_touch"
+                    app:cardCornerRadius="@dimen/visitor_feature_card_corner_radius"
+                    app:cardElevation="@dimen/visitor_feature_card_elevation">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/suggestImageView"
+                            style="@style/studentFeatureImageStyle"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@color/primaryColor" />
+
+                        <TextView
+                            android:id="@+id/suggestTextView"
+                            style="@style/studentFeatureTitleStyle"
+                            android:text="@string/suggest"
+                            app:layout_constraintBottom_toBottomOf="@+id/suggestImageView"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/suggestImageView"
+                            app:layout_constraintVertical_bias="1.0" />
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/studentGrades"
+                    style="@style/studentFeatureCardStyle"
+                    android:stateListAnimator="@animator/left_on_touch"
+                    app:cardCornerRadius="@dimen/visitor_feature_card_corner_radius"
+                    app:cardElevation="@dimen/visitor_feature_card_elevation">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/studentGradesImageView"
+                            style="@style/studentFeatureImageStyle"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@color/primaryColor" />
+
+                        <TextView
+                            android:id="@+id/studentGradesTextView"
+                            style="@style/studentFeatureTitleStyle"
+                            android:text="@string/studentGrades"
+                            app:layout_constraintBottom_toBottomOf="@+id/studentGradesImageView"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/studentGradesImageView"
+                            app:layout_constraintVertical_bias="1.0" />
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>
 
-            android:orientation="horizontal">
-
-            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/coursesTable"
-                style="@style/visitorFeatureCardStyle"
-                android:stateListAnimator="@animator/left_on_touch"
-                app:cardCornerRadius="@dimen/visitor_feature_card_corner_radius"
-                app:cardElevation="@dimen/visitor_feature_card_elevation">
-
-                <android.support.constraint.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:id="@+id/coursesTableImageView"
-                        style="@style/visitorFeatureImageStyle"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:srcCompat="@color/primaryColor" />
-
-                    <TextView
-                        android:id="@+id/coursesTableTextView"
-                        style="@style/visitorFeatureTitleStyle"
-                        android:text="@string/coursesTable"
-                        app:layout_constraintBottom_toBottomOf="@+id/extraCoursesImageView"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/extraCoursesImageView"
-                        app:layout_constraintVertical_bias="1.0" />
-                </android.support.constraint.ConstraintLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/lastExams"
-                style="@style/visitorFeatureCardStyle"
-                android:stateListAnimator="@animator/left_on_touch"
-                app:cardCornerRadius="@dimen/visitor_feature_card_corner_radius"
-                app:cardElevation="@dimen/visitor_feature_card_elevation">
-
-                <android.support.constraint.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:id="@+id/lastExamsImageView"
-                        style="@style/visitorFeatureImageStyle"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:srcCompat="@color/primaryColor" />
-
-                    <TextView
-                        android:id="@+id/lastExamsTextView"
-                        style="@style/visitorFeatureTitleStyle"
-                        android:text="@string/lastExams"
-                        app:layout_constraintBottom_toBottomOf="@+id/newsImageView"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/newsImageView"
-                        app:layout_constraintVertical_bias="1.0" />
-                </android.support.constraint.ConstraintLayout>
-            </android.support.v7.widget.CardView>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-
-            android:orientation="horizontal">
-
-            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/suggest"
-                style="@style/visitorFeatureCardStyle"
-                android:stateListAnimator="@animator/left_on_touch"
-                app:cardCornerRadius="@dimen/visitor_feature_card_corner_radius"
-                app:cardElevation="@dimen/visitor_feature_card_elevation">
-
-                <android.support.constraint.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:id="@+id/suggestImageView"
-                        style="@style/visitorFeatureImageStyle"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:srcCompat="@color/primaryColor" />
-
-                    <TextView
-                        android:id="@+id/suggestTextView"
-                        style="@style/visitorFeatureTitleStyle"
-                        android:text="@string/suggest"
-                        app:layout_constraintBottom_toBottomOf="@+id/suggestImageView"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/suggestImageView"
-                        app:layout_constraintVertical_bias="1.0" />
-                </android.support.constraint.ConstraintLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/studentGrades"
-                style="@style/visitorFeatureCardStyle"
-                android:stateListAnimator="@animator/left_on_touch"
-                app:cardCornerRadius="@dimen/visitor_feature_card_corner_radius"
-                app:cardElevation="@dimen/visitor_feature_card_elevation">
-
-                <android.support.constraint.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:id="@+id/studentGradesImageView"
-                        style="@style/visitorFeatureImageStyle"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:srcCompat="@color/primaryColor" />
-
-                    <TextView
-                        android:id="@+id/studentGradesTextView"
-                        style="@style/visitorFeatureTitleStyle"
-                        android:text="@string/studentGrades"
-                        app:layout_constraintBottom_toBottomOf="@+id/studentGradesImageView"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/studentGradesImageView"
-                        app:layout_constraintVertical_bias="1.0" />
-                </android.support.constraint.ConstraintLayout>
-            </android.support.v7.widget.CardView>
-        </LinearLayout>
-
-
-    </LinearLayout>
-</LinearLayout>
