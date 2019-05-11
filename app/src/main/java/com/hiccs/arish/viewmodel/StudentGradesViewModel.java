@@ -32,8 +32,8 @@ public class StudentGradesViewModel extends ViewModel {
     }
 
     private void loadStudentGrades() {
-        APIUtils.getHiccsAPI().StudentGrades(1)
-                .enqueue(new Callback<List<StudentGrades>>() {
+        APIUtils.getHiccsAPI().StudentGrades(StudentID)
+                  .enqueue(new Callback<List<StudentGrades>>() {
                     @Override
                     public void onResponse(Call<List<StudentGrades>> call,
                                            Response<List<StudentGrades>> response) {

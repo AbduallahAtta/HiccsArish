@@ -49,8 +49,6 @@ public class StudentGradesActivity extends AppCompatActivity {
     private void getStudentGradesOfViewModel() {
 
         showLoadingIndicator();
-        StudentViewModelFactory factory = new StudentViewModelFactory(1);
-
         StudentGradesViewModel StudentGradesViewModel = ViewModelProviders.of(this).get(StudentGradesViewModel.class);
         StudentGradesViewModel.StudentGradesList().observe(this, StudentGrades -> {
             hideLoadingIndicator();
@@ -85,7 +83,6 @@ public class StudentGradesActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void getgrade(List<StudentGrades> StudentGrades) {
 
-    }
+
 }

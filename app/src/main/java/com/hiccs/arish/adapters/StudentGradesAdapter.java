@@ -44,8 +44,6 @@ public class StudentGradesAdapter extends RecyclerView.Adapter<StudentGradesAdap
         holder.subject_name.setText(StudentGradesList.get(position).getName());
         holder.subject_full_mark.setText(StudentGradesList.get(position).getFullMark());
         holder.student_mark.setText(StudentGradesList.get(position).getScore());
-        holder.student_mark.setText(StudentGradesList.get(position).getScore());
-        holder.student_grade.setText(StudentGradesList.get(position).getScore());
 
 
     }
@@ -78,6 +76,11 @@ public class StudentGradesAdapter extends RecyclerView.Adapter<StudentGradesAdap
 
 
     }
+    private void getgrade(List<StudentGrades> StudentGrades) {
 
 
-}
+    }
+
+
+
+    }

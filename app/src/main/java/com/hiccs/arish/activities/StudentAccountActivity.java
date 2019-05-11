@@ -60,7 +60,7 @@ public class StudentAccountActivity extends AppCompatActivity {
 
     private void loadStudentProfile() {
         showLoadingIndicator();
-        StudentViewModelFactory factory = new StudentViewModelFactory(1);
+        StudentViewModelFactory factory = new StudentViewModelFactory(2);
         StudentProfileViewModel viewModel = ViewModelProviders.of(this, factory).get(StudentProfileViewModel.class);
         viewModel.getStudent().observe(this, this::populateStudentDetails);
     }
