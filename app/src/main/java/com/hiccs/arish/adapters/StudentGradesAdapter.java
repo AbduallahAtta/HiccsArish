@@ -53,6 +53,11 @@ public class StudentGradesAdapter extends RecyclerView.Adapter<StudentGradesAdap
         return StudentGradesList == null ? 0 : StudentGradesList.size();
     }
 
+    private void getgrade(List<StudentGrades> StudentGrades) {
+
+
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.subject_name)
         TextView subject_name;
@@ -76,11 +81,6 @@ public class StudentGradesAdapter extends RecyclerView.Adapter<StudentGradesAdap
 
 
     }
-    private void getgrade(List<StudentGrades> StudentGrades) {
 
 
-    }
-
-
-
-    }
+}

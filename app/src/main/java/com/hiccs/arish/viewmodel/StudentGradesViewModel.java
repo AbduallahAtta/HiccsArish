@@ -33,10 +33,11 @@ public class StudentGradesViewModel extends ViewModel {
 
     private void loadStudentGrades() {
         APIUtils.getHiccsAPI().StudentGrades(StudentID)
-                  .enqueue(new Callback<List<StudentGrades>>() {
+                .enqueue(new Callback<List<StudentGrades>>() {
                     @Override
                     public void onResponse(Call<List<StudentGrades>> call,
                                            Response<List<StudentGrades>> response) {
+                        logger(response.toString());
                         if (response.isSuccessful()) {
                             StudentGradesList.setValue(response.body());
 

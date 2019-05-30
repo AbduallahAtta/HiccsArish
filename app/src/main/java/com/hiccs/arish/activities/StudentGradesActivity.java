@@ -12,8 +12,10 @@ import android.view.View;
 import com.hiccs.arish.R;
 import com.hiccs.arish.adapters.StudentGradesAdapter;
 import com.hiccs.arish.models.StudentGrades;
+import com.hiccs.arish.utils.Constants;
+import com.hiccs.arish.utils.StudentSharedPreferenceHelper;
 import com.hiccs.arish.viewmodel.StudentGradesViewModel;
-import com.hiccs.arish.viewmodel.StudentViewModelFactory;
+import com.hiccs.arish.viewmodel.StudentGradesViewModelFactory;
 import com.victor.loading.rotate.RotateLoading;
 
 import java.util.List;
@@ -47,9 +49,9 @@ public class StudentGradesActivity extends AppCompatActivity {
     }
 
     private void getStudentGradesOfViewModel() {
-
         showLoadingIndicator();
-        StudentGradesViewModel StudentGradesViewModel = ViewModelProviders.of(this).get(StudentGradesViewModel.class);
+        StudentGradesViewModelFactory factory = new StudentGradesViewModelFactory(Integer.getInteger(StudentSharedPreferenceHelper.getStudentIdFromSharedPreference(getSharedPreferences(Constants.STUDENT_SHARED_PREFERENCES_FILE_NAME, MODE_PRIVATE))));
+        StudentGradesViewModel StudentGradesViewModel = ViewModelProviders.of(this, factory).get(StudentGradesViewModel.class);
         StudentGradesViewModel.StudentGradesList().observe(this, StudentGrades -> {
             hideLoadingIndicator();
             setStudentGradesAdapter(StudentGrades);
@@ -82,7 +84,6 @@ public class StudentGradesActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 
 
 }

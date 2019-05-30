@@ -10,17 +10,13 @@ import com.hiccs.arish.models.StaffModel;
 import com.hiccs.arish.models.Student;
 import com.hiccs.arish.models.StudentAccountModel;
 import com.hiccs.arish.models.StudentGrades;
-import com.hiccs.arish.models.Suggestion;
 import com.hiccs.arish.models.news.News;
-import com.hiccs.arish.models.suggestionsModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
-import retrofit2.http.Field;
 import retrofit2.http.GET;
-import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 /**
@@ -33,9 +29,6 @@ public interface HiccsAPI {
     @GET("login.php")
     Call<List<Student>> loginStudent(@Query("StudentUserName") String studentUsername,
                                      @Query("StudentPassword") String studentPassword);
-
-    @POST("suggestin.php")
-    Call<Suggestion> postSuggestion(Suggestion suggestion);
 
     @GET("Gallery.php")
     Call<ArrayList<GalleryImages>> getGalleryImages();
@@ -57,9 +50,6 @@ public interface HiccsAPI {
 
     @GET("additional_courses.php")
     Call<List<ExtraCoursesModel>> getExtraCourses();
-
-    @POST("suggestions.php")
-    Call<List<suggestionsModel>> postSuggestions(@Field("title") String title, @Field("content") String content);
 
 }
 

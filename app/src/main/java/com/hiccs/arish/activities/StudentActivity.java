@@ -2,7 +2,6 @@ package com.hiccs.arish.activities;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.constraint.Group;
 import android.support.v4.widget.NestedScrollView;
