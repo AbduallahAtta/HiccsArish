@@ -50,7 +50,8 @@ public class StudentGradesActivity extends AppCompatActivity {
 
     private void getStudentGradesOfViewModel() {
         showLoadingIndicator();
-        StudentGradesViewModelFactory factory = new StudentGradesViewModelFactory(Integer.getInteger(StudentSharedPreferenceHelper.getStudentIdFromSharedPreference(getSharedPreferences(Constants.STUDENT_SHARED_PREFERENCES_FILE_NAME, MODE_PRIVATE))));
+        String studentId = StudentSharedPreferenceHelper.getStudentIdFromSharedPreference(getSharedPreferences(Constants.STUDENT_SHARED_PREFERENCES_FILE_NAME, MODE_PRIVATE));
+        StudentGradesViewModelFactory factory = new StudentGradesViewModelFactory(studentId);
         StudentGradesViewModel StudentGradesViewModel = ViewModelProviders.of(this, factory).get(StudentGradesViewModel.class);
         StudentGradesViewModel.StudentGradesList().observe(this, StudentGrades -> {
             hideLoadingIndicator();

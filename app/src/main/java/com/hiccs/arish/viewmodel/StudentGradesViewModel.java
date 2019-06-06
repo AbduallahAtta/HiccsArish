@@ -15,11 +15,11 @@ import retrofit2.Response;
 
 public class StudentGradesViewModel extends ViewModel {
     private static final String TAG = StudentGradesViewModel.class.getSimpleName();
-    private int StudentID;
+    private String StudentID;
 
     private MutableLiveData<List<StudentGrades>> StudentGradesList;
 
-    public StudentGradesViewModel(int StudentID) {
+    public StudentGradesViewModel(String StudentID) {
         this.StudentID = StudentID;
     }
 

@@ -8,9 +8,9 @@ import android.support.annotation.NonNull;
  * Created by AbdullahAtta on 5/31/2019.
  */
 public class StudentGradesViewModelFactory extends ViewModelProvider.NewInstanceFactory {
-    private int mStudentId;
+    private String mStudentId;
 
-    public StudentGradesViewModelFactory(int mStudentId) {
+    public StudentGradesViewModelFactory(String mStudentId) {
         this.mStudentId = mStudentId;
     }
 
