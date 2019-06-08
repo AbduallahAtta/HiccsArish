@@ -78,9 +78,9 @@ public class StudentAccountActivity extends AppCompatActivity {
 
         studentNameTextView.setText(studentAccountModel.getFullName());
         studentAddressTextView.setText(studentAccountModel.getAddress());
-        studentAcademicYearTextView.setText(String.valueOf(studentAccountModel.getAcademicYear()));
+        studentAcademicYearTextView.setText(String.valueOf(studentAccountModel.getAcademicYearNum()));
         studentPhoneTextView.setText(String.valueOf(studentAccountModel.getPhone()));
-        studentDepartmentTextView.setText(studentAccountModel.getDepartment());
+        studentDepartmentTextView.setText(studentAccountModel.getDepartmentName());
     }
 
     private void showLoadingIndicator() {

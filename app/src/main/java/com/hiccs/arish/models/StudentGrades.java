@@ -18,6 +18,9 @@ public class StudentGrades {
     @SerializedName("Score")
     @Expose
     private String score;
+    @SerializedName("grade")
+    @Expose
+    private String grade;
 
     public String getStudentID() {
         return studentID;
@@ -49,6 +52,14 @@ public class StudentGrades {
 
     public void setScore(String score) {
         this.score = score;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
     }
 
 }

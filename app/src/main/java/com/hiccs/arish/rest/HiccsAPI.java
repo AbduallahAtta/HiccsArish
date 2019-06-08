@@ -46,7 +46,7 @@ public interface HiccsAPI {
     Call<List<StudentAccountModel>> StudentInformation(@Query("StudentID") int studentID);
 
     @GET("grade.php")
-    Call<List<StudentGrades>> StudentGrades(@Query("StudentID") String StudentID);
+    Call<List<StudentGrades>> StudentGrades(@Query("StudentID") int StudentID);
 
     @GET("additional_courses.php")
     Call<List<ExtraCoursesModel>> getExtraCourses();

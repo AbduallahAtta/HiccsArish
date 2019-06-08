@@ -5,33 +5,28 @@ import com.google.gson.annotations.SerializedName;
 
 public class StudentAccountModel {
 
+
     @SerializedName("StudentID")
     @Expose
     private String studentID;
-    @SerializedName("StudentUserName")
-    @Expose
-    private String studentUserName;
-    @SerializedName("StudentPassword")
-    @Expose
-    private String studentPassword;
     @SerializedName("FullName")
     @Expose
     private String fullName;
-    @SerializedName("ImgUrl")
-    @Expose
-    private String imgUrl;
-    @SerializedName("Phone")
-    @Expose
-    private String phone;
     @SerializedName("address")
     @Expose
     private String address;
-    @SerializedName("department")
+    @SerializedName("Phone")
     @Expose
-    private String department;
-    @SerializedName("AcademicYear")
+    private String phone;
+    @SerializedName("ImgUrl")
     @Expose
-    private String academicYear;
+    private String imgUrl;
+    @SerializedName("Department_Name")
+    @Expose
+    private String departmentName;
+    @SerializedName("academic_year_num")
+    @Expose
+    private String academicYearNum;
 
     public String getStudentID() {
         return studentID;
@@ -39,22 +34,6 @@ public class StudentAccountModel {
 
     public void setStudentID(String studentID) {
         this.studentID = studentID;
-    }
-
-    public String getStudentUserName() {
-        return studentUserName;
-    }
-
-    public void setStudentUserName(String studentUserName) {
-        this.studentUserName = studentUserName;
-    }
-
-    public String getStudentPassword() {
-        return studentPassword;
-    }
-
-    public void setStudentPassword(String studentPassword) {
-        this.studentPassword = studentPassword;
     }
 
     public String getFullName() {
@@ -65,12 +44,12 @@ public class StudentAccountModel {
         this.fullName = fullName;
     }
 
-    public String getImgUrl() {
-        return imgUrl;
+    public String getAddress() {
+        return address;
     }
 
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getPhone() {
@@ -81,28 +60,28 @@ public class StudentAccountModel {
         this.phone = phone;
     }
 
-    public String getAddress() {
-        return address;
+    public String getImgUrl() {
+        return imgUrl;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
-    public String getDepartment() {
-        return department;
+    public String getDepartmentName() {
+        return departmentName;
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
     }
 
-    public String getAcademicYear() {
-        return academicYear;
+    public String getAcademicYearNum() {
+        return academicYearNum;
     }
 
-    public void setAcademicYear(String academicYear) {
-        this.academicYear = academicYear;
+    public void setAcademicYearNum(String academicYearNum) {
+        this.academicYearNum = academicYearNum;
     }
 
 }

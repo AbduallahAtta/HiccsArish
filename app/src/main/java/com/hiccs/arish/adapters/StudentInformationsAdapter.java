@@ -43,8 +43,8 @@ public class StudentInformationsAdapter extends RecyclerView.Adapter<StudentInfo
 
         holder.StudentId.setText(StudentInformationsList.get(position).getStudentID());
         holder.FullName.setText(StudentInformationsList.get(position).getFullName());
-        holder.AcademicYear.setText(StudentInformationsList.get(position).getAcademicYear());
-        holder.Department.setText(StudentInformationsList.get(position).getDepartment());
+        holder.AcademicYear.setText(StudentInformationsList.get(position).getAcademicYearNum());
+        holder.Department.setText(StudentInformationsList.get(position).getDepartmentName());
         holder.Phone.setText(StudentInformationsList.get(position).getPhone());
         holder.Address.setText(StudentInformationsList.get(position).getAddress());
         Glide.with(StudentInformationsContext).load(StudentInformationsList.get(position).getImgUrl())

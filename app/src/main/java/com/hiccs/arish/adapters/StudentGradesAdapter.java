@@ -44,6 +44,8 @@ public class StudentGradesAdapter extends RecyclerView.Adapter<StudentGradesAdap
         holder.subject_name.setText(StudentGradesList.get(position).getName());
         holder.subject_full_mark.setText(StudentGradesList.get(position).getFullMark());
         holder.student_mark.setText(StudentGradesList.get(position).getScore());
+        holder.student_grade.setText(StudentGradesList.get(position).getGrade());
+
 
 
     }
@@ -53,10 +55,7 @@ public class StudentGradesAdapter extends RecyclerView.Adapter<StudentGradesAdap
         return StudentGradesList == null ? 0 : StudentGradesList.size();
     }
 
-    private void getgrade(List<StudentGrades> StudentGrades) {
 
-
-    }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.subject_name)
