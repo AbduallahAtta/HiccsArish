@@ -6,7 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:fillViewport="true">
 
     <TableLayout
@@ -77,19 +76,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/creation"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="4"
-                    android:text="@string/creation"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textSize="14sp" />
 
-                <View
-                    style="@style/Widget.Design.Snackbar"
-                    android:layout_width="1.5dp"
-                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/creation_title"
@@ -102,6 +89,20 @@
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textSize="20sp" />
+                <View
+                    style="@style/Widget.Design.Snackbar"
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/creation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="@string/creation"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="14sp" />
+
+
 
             </LinearLayout>
 
@@ -115,6 +116,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
+
+
+
+                <TextView
+                    android:id="@+id/granted_degrees"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/granted_degrees_title"
+                    android:textAllCaps="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="20sp" />
+                <View
+                    style="@style/Widget.Design.Snackbar"
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/granted_degrees_title"
@@ -128,23 +148,6 @@
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textSize="14sp" />
 
-                <View
-                    style="@style/Widget.Design.Snackbar"
-                    android:layout_width="1.5dp"
-                    android:layout_height="match_parent" />
-
-                <TextView
-                    android:id="@+id/granted_degrees"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/granted_degrees_title"
-                    android:textAllCaps="true"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="20sp" />
-
             </LinearLayout>
 
             <View
@@ -158,22 +161,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/duration_of_study"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="4"
-                    android:gravity="right"
-                    android:text="@string/duration_of_study"
-
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textSize="14sp" />
-
-                <View
-                    style="@style/Widget.Design.Snackbar"
-                    android:layout_width="1.5dp"
-                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/duration_of_study_title"
@@ -187,6 +174,23 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textSize="20sp" />
 
+                <View
+                    style="@style/Widget.Design.Snackbar"
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/duration_of_study"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:gravity="right"
+                    android:text="@string/duration_of_study"
+
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="14sp" />
+
             </LinearLayout>
 
             <View
@@ -199,22 +203,9 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/departments"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="4"
-                    android:gravity="right"
-                    android:text="@string/departments"
 
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textSize="14sp" />
 
-                <View
-                    style="@style/Widget.Design.Snackbar"
-                    android:layout_width="1.5dp"
-                    android:layout_height="match_parent" />
+
 
                 <TextView
                     android:id="@+id/departments_title"
@@ -227,6 +218,21 @@
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textSize="30dp" />
+                <View
+                    style="@style/Widget.Design.Snackbar"
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/departments"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:gravity="right"
+                    android:text="@string/departments"
+
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
@@ -240,21 +246,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/admission_requirements"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="4"
-                    android:gravity="right"
-                    android:text="@string/admission_requirements"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textSize="14sp" />
 
-                <View
-                    style="@style/Widget.Design.Snackbar"
-                    android:layout_width="1.5dp"
-                    android:layout_height="match_parent" />
+
 
                 <TextView
                     android:id="@+id/admission_requirements_title"
@@ -267,6 +260,22 @@
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textSize="20sp" />
+                <View
+                    style="@style/Widget.Design.Snackbar"
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                android:id="@+id/admission_requirements"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:gravity="right"
+                android:text="@string/admission_requirements"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="14sp" />
+
 
             </LinearLayout>
 
@@ -280,21 +289,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/goals"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="4"
-                    android:gravity="right"
-                    android:text="@string/goals"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textSize="14sp" />
 
-                <View
-                    style="@style/Widget.Design.Snackbar"
-                    android:layout_width="1.5dp"
-                    android:layout_height="match_parent" />
+
 
                 <TextView
                     android:id="@+id/goals_title"
@@ -307,6 +303,21 @@
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textSize="20sp" />
+                <View
+                    style="@style/Widget.Design.Snackbar"
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/goals"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:gravity="right"
+                    android:text="@string/goals"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="14sp" />
+
 
             </LinearLayout>
 
@@ -320,21 +331,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/address"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="4"
-                    android:gravity="right"
-                    android:text="@string/address"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textSize="14sp" />
 
-                <View
-                    style="@style/Widget.Design.Snackbar"
-                    android:layout_width="1.5dp"
-                    android:layout_height="match_parent" />
+
 
                 <TextView
                     android:id="@+id/address_title"
@@ -347,6 +345,21 @@
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textSize="20sp" />
+                <View
+                    style="@style/Widget.Design.Snackbar"
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:gravity="right"
+                    android:text="@string/address"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
@@ -359,23 +372,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/connection_info"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="4"
-                    android:gravity="right"
-                    android:text="@string/connection_info"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textSize="14sp" />
-
-                <View
-                    style="@style/Widget.Design.Snackbar"
-                    android:layout_width="1.5dp"
-                    android:layout_height="match_parent" />
-
                 <TextView
                     android:id="@+id/connection_info_title"
                     android:layout_width="0dp"
@@ -387,6 +383,23 @@
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textSize="20sp" />
+                <View
+                    style="@style/Widget.Design.Snackbar"
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/connection_info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:gravity="right"
+                    android:text="@string/connection_info"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="14sp" />
+
+
+
 
             </LinearLayout>
 

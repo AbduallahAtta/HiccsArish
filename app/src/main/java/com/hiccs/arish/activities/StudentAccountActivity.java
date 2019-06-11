@@ -14,6 +14,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.hiccs.arish.R;
 import com.hiccs.arish.models.StudentAccountModel;
+import com.hiccs.arish.utils.Constants;
+import com.hiccs.arish.utils.StudentSharedPreferenceHelper;
 import com.hiccs.arish.viewmodel.StudentProfileViewModel;
 import com.hiccs.arish.viewmodel.StudentViewModelFactory;
 import com.transitionseverywhere.Fade;
@@ -60,7 +62,9 @@ public class StudentAccountActivity extends AppCompatActivity {
 
     private void loadStudentProfile() {
         showLoadingIndicator();
-        StudentViewModelFactory factory = new StudentViewModelFactory(2);
+        int studentId = Integer.parseInt(StudentSharedPreferenceHelper.getStudentIdFromSharedPreference
+                (getSharedPreferences(Constants.STUDENT_SHARED_PREFERENCES_FILE_NAME, MODE_PRIVATE)));
+        StudentViewModelFactory factory = new StudentViewModelFactory(studentId);
         StudentProfileViewModel viewModel = ViewModelProviders.of(this, factory).get(StudentProfileViewModel.class);
         viewModel.getStudent().observe(this, this::populateStudentDetails);
     }

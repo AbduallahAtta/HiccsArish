@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.hiccs.arish">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -15,11 +16,16 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
+
+
         <activity
             android:name=".activities.ExamImageDetailsActivity"
             android:theme="@style/NoActionBarActivityStyle"></activity>
         <activity android:name=".activities.ExamsActivity" />
-        <activity android:name=".activities.StudentGradesActivity" />
+
+        <activity
+            android:name=".activities.StudentGradesActivity"
+            android:parentActivityName=".activities.StudentActivity" />
         <activity android:name=".activities.AcademicMailActivity" />
         <activity android:name=".activities.SuggestionActivity" />
         <activity
