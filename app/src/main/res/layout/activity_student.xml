@@ -79,14 +79,16 @@ greetingLabel" />
 
                         <ImageView
                             android:id="@+id/studentProfile"
-                            style="@style/studentFeatureImageStyle"
+                            style="@style/visitorFeatureImageStyle"
                             app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:srcCompat="@color/primaryColor" />
 
                         <TextView
-                            android:id="@+id/studentProfileTextView"
-                            style="@style/studentFeatureTitleStyle"
+                            android:id="@+id/aboutLabelTextView"
+                            style="@style/visitorFeatureTitleStyle"
+                            android:gravity="center"
                             android:text="@string/studentProfile"
                             app:layout_constraintBottom_toBottomOf="@+id/studentProfile"
                             app:layout_constraintStart_toStartOf="parent"
@@ -95,34 +97,7 @@ greetingLabel" />
                     </android.support.constraint.ConstraintLayout>
                 </android.support.v7.widget.CardView>
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/contactMail"
-                    style="@style/studentFeatureCardStyle"
-                    android:stateListAnimator="@animator/left_on_touch"
-                    app:cardCornerRadius="@dimen/visitor_feature_card_corner_radius"
-                    app:cardElevation="@dimen/visitor_feature_card_elevation">
 
-                    <android.support.constraint.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:id="@+id/galleryImageView"
-                            style="@style/studentFeatureImageStyle"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:srcCompat="@color/primaryColor" />
-
-                        <TextView
-                            android:id="@+id/galleryLabelTextView"
-                            style="@style/studentFeatureTitleStyle"
-                            android:text="@string/contactMail"
-                            app:layout_constraintBottom_toBottomOf="@+id/galleryImageView"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/galleryImageView"
-                            app:layout_constraintVertical_bias="1.0" />
-                    </android.support.constraint.ConstraintLayout>
-                </android.support.v7.widget.CardView>
             </LinearLayout>
 
             <LinearLayout

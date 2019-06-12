@@ -37,11 +37,11 @@
 في إحدى التخصص (محاسبه -وإدارة اعمال)
     </string>
 
-    <string name="duration_of_study_title">فترة الدراسة</string>
+    <string name="duration_of_study_title">فترة         \nالدراسة</string>
 
     <string name="duration_of_study">• مدة الدراسة ف المعهد 4 سنوات دراسية.
     </string>
-    <string name="admission_requirements_title">القبول في المعهد</string>
+    <string name="admission_requirements_title">القبول        \n في        \n المعهد</string>
 
     <string name="admission_requirements">
 • المعهد يقبل المؤهلات التالية:.
@@ -61,7 +61,7 @@
 • يقبل المعهد التحويلات من جميع المعاهد والجامعات الخاصة والحكومية.
 
     </string>
-    <string name="goals_title">اهداف المعهد</string>
+    <string name="goals_title">اهداف         \nالمعهد</string>
 
     <string name="goals">-بناء شخصية قادرة علي أتخاذ القرار.
 2-تخصص التنمية الشاملة.

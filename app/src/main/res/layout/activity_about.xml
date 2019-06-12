@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/customborder"
     android:fillViewport="true">
 
     <TableLayout
@@ -88,7 +89,7 @@
                     android:text="@string/creation_title"
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="20sp" />
+                    android:textSize="17sp" />
                 <View
                     style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
@@ -130,7 +131,7 @@
                     android:text="@string/granted_degrees_title"
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="20sp" />
+                    android:textSize="17sp" />
                 <View
                     style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
@@ -172,7 +173,7 @@
                     android:text="@string/duration_of_study_title"
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="20sp" />
+                    android:textSize="17sp" />
 
                 <View
                     style="@style/Widget.Design.Snackbar"
@@ -217,7 +218,7 @@
                     android:text="@string/departments_title"
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="30dp" />
+                    android:textSize="17sp" />
                 <View
                     style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
@@ -259,7 +260,7 @@
                     android:text="@string/admission_requirements_title"
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="20sp" />
+                    android:textSize="17sp" />
                 <View
                     style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
@@ -302,7 +303,7 @@
                     android:text="@string/goals_title"
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="20sp" />
+                    android:textSize="17sp" />
                 <View
                     style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
@@ -344,7 +345,7 @@
                     android:text="@string/address_title"
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="20sp" />
+                    android:textSize="17sp" />
                 <View
                     style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
@@ -382,7 +383,7 @@
                     android:text="@string/connection_info_title"
                     android:textAllCaps="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="20sp" />
+                    android:textSize="17sp" />
                 <View
                     style="@style/Widget.Design.Snackbar"
                     android:layout_width="1.5dp"
